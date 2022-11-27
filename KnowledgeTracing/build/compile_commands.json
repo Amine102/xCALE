@@ -1,0 +1,77 @@
+[
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/usecases/main.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/main.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/usecases/main.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/core/src/genericBKTModel.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/genericBKTModel.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/core/src/genericBKTModel.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/student.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/core/src/student.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/core/src/exercise.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/exercise.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/core/src/exercise.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/core/src/tools.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/tools.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/core/src/tools.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/debugtools.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/core/src/debugtools.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o -c /home/amine102/projects/jsoncpp/dist/jsoncpp.cpp",
+  "file": "/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/progressiveBKT.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/usecases/src/progressiveBKT.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/usecases/src/studentTest.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/studentTest.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/usecases/src/studentTest.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/usecases/src/scalabilityTest.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/scalabilityTest.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/usecases/src/scalabilityTest.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/usecases/src/impacted.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/impacted.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/usecases/src/impacted.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/serialize_deserialize.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/usecases/src/serialize_deserialize.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/xcaleAUTO.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/usecases/src/xcaleAUTO.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/xcale.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/usecases/src/xcale.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/prerequisite.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/usecases/src/prerequisite.cpp"
+}
+]

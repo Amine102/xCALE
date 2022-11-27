@@ -1,0 +1,40 @@
+FROM ubuntu:latest
+
+ARG PROBT_CI_READ_TOKEN
+
+# We dont use alpine here becase the gcc builder image is used for coverage test and debug test (asan/ubsan etc).
+# The sanitizers and coverage dont work with alpine because it uses MUSL
+
+# apt s**u
+ENV DEBIAN_FRONTEND=noninteractive
+ENV HTTP_PROXY="http://proxy-serveur.univ-nantes.prive:3128"
+ENV HTTPS_PROXY="http://proxy-serveur.univ-nantes.prive:3128"
+ENV http_proxy="http://proxy-serveur.univ-nantes.prive:3128"
+ENV https_proxy="http://proxy-serveur.univ-nantes.prive:3128"
+
+RUN apt update && \
+    apt -y install ninja-build cmake build-essential gcc g++ libboost-dev libboost-system-dev libboost-filesystem-dev git p7zip-full && \
+    apt-get -y clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# We dont leak the secret because the image is rolled back !
+RUN git clone "https://${PROBT_CI_READ_TOKEN}@gitlab.univ-nantes.fr/PILGRIM/libprobt.git" libprobt && \
+    cd libprobt && \
+    mkdir build && \
+    cd build && \
+    cmake -DPROBT_CI_PACKAGE_NAME=ON -DCMAKE_BUILD_TYPE=Release .. && \
+    cmake --build . --target package && \
+    apt install ./__package__.deb && \
+    cd ../.. && \
+    rm -rf libprobt
+
+RUN apt update && \
+    apt -y install lcov && \
+    apt-get -y clean && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY /test/runcoverage.sh /opt/ci/bin/
+
+RUN chmod +x /opt/ci/bin/runcoverage.sh
+
+ENV PATH="/opt/ci/bin:${PATH}"

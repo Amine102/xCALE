@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Asia_dsl" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="VisitToAsia">
+			<state id="NoVisit" />
+			<state id="Visit" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="Tuberculosis">
+			<state id="Absent" />
+			<state id="Present" />
+			<parents>VisitToAsia</parents>
+			<probabilities>0.99 0.01 0.95 0.05</probabilities>
+		</cpt>
+		<cpt id="Smoking">
+			<state id="NonSmoker" />
+			<state id="Smoker" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="LungCancer">
+			<state id="Absent" />
+			<state id="Present" />
+			<parents>Smoking</parents>
+			<probabilities>0.99 0.01 0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="TbOrCa">
+			<state id="Nothing" />
+			<state id="CancerORTuberculosis" />
+			<parents>Tuberculosis LungCancer</parents>
+			<probabilities>1 0 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="XRay">
+			<state id="Normal" />
+			<state id="Abnormal" />
+			<parents>TbOrCa</parents>
+			<probabilities>0.95 0.05 0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="Bronchitis">
+			<state id="Absent" />
+			<state id="Present" />
+			<parents>Smoking</parents>
+			<probabilities>0.7 0.3 0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="Dyspnea">
+			<state id="Absent" />
+			<state id="Present" />
+			<parents>TbOrCa Bronchitis</parents>
+			<probabilities>0.9 0.1 0.2 0.8 0.3 0.7 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.4334.1" name="Asia network by David Spiegelhalter" faultnameformat="nodestate">
+			<comment>This is an example graphical model useful in demonstrating basics concepts of Bayesian networks in diagnosis.\nIt first appeared in:\nLauritzen, Steffen L. &amp; Spiegelhalter, David J. (1988). Local computations with probabilities on graphical structures and their application to expert systems, Journal of the Royal Statistical Society B, 50(2):157-224.</comment>
+			<node id="VisitToAsia">
+				<name>Visit To Asia?</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>15 23 95 59</position>
+				<comment>The node models whether the individual in question visited Asia recently. This is considered to be a risk factor in tuberculosis.</comment>
+			</node>
+			<node id="Tuberculosis">
+				<name>Tuberculosis?</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>16 82 94 118</position>
+				<comment>Presence or absence of tuberculosis.</comment>
+			</node>
+			<node id="Smoking">
+				<name>Smoking?</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>172 23 239 59</position>
+				<comment>Does the individual smoke or not? This is a serious risk factor in both lung cancer and in bronchitis.</comment>
+			</node>
+			<node id="LungCancer">
+				<name>Lung Cancer?</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>187 97 269 133</position>
+				<comment>Does the individual suffer from lung cancer?</comment>
+			</node>
+			<node id="TbOrCa">
+				<name>Tuberculosis or Lung Cancer?</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>67 142 142 178</position>
+				<comment>Does the individual suffer from either tuberculosis or lung cancer? This node models practically existence of changes in the lungs, such as presence of condensed mass in the lungs.</comment>
+			</node>
+			<node id="XRay">
+				<name>X-Ray Result</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>16 203 94 239</position>
+				<comment>This node models the X-ray result. Both tuberculosis and lung cancer can be discovered on the X-ray because of presence of condensed mass in the lungs.</comment>
+			</node>
+			<node id="Bronchitis">
+				<name>Bronchitis?</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>465 205 535 241</position>
+				<comment>Does the individual suffer from bronchitis?</comment>
+			</node>
+			<node id="Dyspnea">
+				<name>Dyspnea?</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>261 280 337 316</position>
+				<comment>Does the individual suffer from dyspnea (shortness of breath)? Each of the diseases modeled can result in shortness of breath.</comment>
+			</node>
+		</genie>
+	</extensions>
+</smile>

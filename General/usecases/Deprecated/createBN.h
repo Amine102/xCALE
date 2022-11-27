@@ -1,0 +1,8 @@
+#include <string>
+#include <stdlib.h>
+#include <pl.h>
+#include <pilgrim/general/pmBayesianNetwork.h>
+#include <pilgrim/general/pmDynamicBayesianNetwork.h>
+
+void createBN();
+void createBN2();

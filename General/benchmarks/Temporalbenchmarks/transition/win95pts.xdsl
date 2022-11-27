@@ -1,0 +1,1899 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Sub0" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="AppOK1">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.995 0.005</probabilities>
+		</cpt>
+		<cpt id="DataFile2">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.995 0.005</probabilities>
+		</cpt>
+		<cpt id="AppData3">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9999 0.0001</probabilities>
+		</cpt>
+		<cpt id="DskLocal4">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.97 0.03</probabilities>
+		</cpt>
+		<cpt id="PrtSpool5">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.95 0.05</probabilities>
+		</cpt>
+		<cpt id="PrtOn6">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="PrtPaper7">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.98 0.02</probabilities>
+		</cpt>
+		<cpt id="NetPrint8">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.8 0.2</probabilities>
+		</cpt>
+		<cpt id="PrtDriver9">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="PrtThread10">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9999 0.0001</probabilities>
+		</cpt>
+		<cpt id="EMFOK11">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="GDIIN12">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="DrvSet13">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="DrvOK14">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="GDIOUT15">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="PrtSel16">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="PrtDataOut17">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="PrtPath18">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.97 0.03</probabilities>
+		</cpt>
+		<cpt id="NtwrkCnfg19">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.98 0.02</probabilities>
+		</cpt>
+		<cpt id="PTROFFLINE20">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.7 0.3</probabilities>
+		</cpt>
+		<cpt id="NetOK21">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="PrtCbl22">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.98 0.02</probabilities>
+		</cpt>
+		<cpt id="PrtPort23">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="CblPrtHrdwrOK24">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="LclOK25">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.999 0.001</probabilities>
+		</cpt>
+		<cpt id="DSApplctn26">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.15 0.85</probabilities>
+		</cpt>
+		<cpt id="PrtMpTPth27">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.8 0.2</probabilities>
+		</cpt>
+		<cpt id="DS_NTOK28">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="DS_LCLOK29">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="PC2PRT30">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtMem31">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtTimeOut32">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.94 0.06</probabilities>
+		</cpt>
+		<cpt id="FllCrrptdBffr33">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.85 0.15</probabilities>
+		</cpt>
+		<cpt id="TnrSpply34">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.995 0.005</probabilities>
+		</cpt>
+		<cpt id="PrtData35">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Problem136">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="AppDtGnTm37">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="PrntPrcssTm38">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9900000099000001 0.009999990099999903</probabilities>
+		</cpt>
+		<cpt id="DeskPrntSpd39">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9990000099900002 0.0009999900099999003</probabilities>
+		</cpt>
+		<cpt id="PgOrnttnOK40">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.95 0.05</probabilities>
+		</cpt>
+		<cpt id="PrntngArOK41">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.98 0.02</probabilities>
+		</cpt>
+		<cpt id="ScrnFntNtPrntrFnt42">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.95 0.05</probabilities>
+		</cpt>
+		<cpt id="CmpltPgPrntd43">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="GrphcsRltdDrvrSttngs44">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.95 0.05</probabilities>
+		</cpt>
+		<cpt id="EPSGrphc45">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="NnPSGrphc46">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.999 0.001</probabilities>
+		</cpt>
+		<cpt id="PrtPScript47">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="PSGRAPHIC48">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.999 0.001</probabilities>
+		</cpt>
+		<cpt id="Problem449">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0 1</probabilities>
+		</cpt>
+		<cpt id="TrTypFnts50">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="FntInstlltn51">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.98 0.02</probabilities>
+		</cpt>
+		<cpt id="PrntrAccptsTrtyp52">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="TTOK53">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9900000099000001 0.009999990099999903</probabilities>
+		</cpt>
+		<cpt id="NnTTOK54">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9900000099000001 0.009999990099999903</probabilities>
+		</cpt>
+		<cpt id="Problem555">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0 1</probabilities>
+		</cpt>
+		<cpt id="LclGrbld56">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="NtGrbld57">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="GrbldOtpt58">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="HrglssDrtnAftrPrnt59">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="REPEAT60">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="AvlblVrtlMmry61">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.98 0.02</probabilities>
+		</cpt>
+		<cpt id="PSERRMEM62">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="TstpsTxt63">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9990000099900002 0.0009999900099999003</probabilities>
+		</cpt>
+		<cpt id="GrbldPS64">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="IncmpltPS65">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="PrtFile66">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.8 0.2</probabilities>
+		</cpt>
+		<cpt id="PrtIcon67">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9999 0.0001</probabilities>
+		</cpt>
+		<cpt id="Problem668">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="Problem369">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0 1</probabilities>
+		</cpt>
+		<cpt id="PrtQueue70">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="NtSpd71">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9990000099900002 0.0009999900099999003</probabilities>
+		</cpt>
+		<cpt id="Problem272">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="PrtStatPaper73">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9990000099900002 0.0009999900099999003</probabilities>
+		</cpt>
+		<cpt id="PrtStatToner74">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>TnrSpply34</parents>
+			<probabilities>0.9990000099900002 0.0009999900099999003 0.0009999900099999003 0.9990000099900002</probabilities>
+		</cpt>
+		<cpt id="PrtStatMem75">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9990000099900002 0.0009999900099999003</probabilities>
+		</cpt>
+		<cpt id="PrtStatOff76">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9900000099000001 0.009999990099999903</probabilities>
+		</cpt>
+		<cpt id="AppOK77">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>DS_LCLOK29</parents>
+			<probabilities>0.9978625700641229 0.002137429935877102 0.9374708000000001 0.06252919999999999</probabilities>
+		</cpt>
+		<cpt id="DataFile78">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>CmpltPgPrntd43</parents>
+			<probabilities>0.9987710499385526 0.001228950061447503 0.9642376289271289 0.03576237107287113</probabilities>
+		</cpt>
+		<cpt id="AppData79">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>AppOK77 DataFile78</parents>
+			<probabilities>0.9999 0.0001 0 1 0 1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="DskLocal80">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtDataOut17 PrtPath18</parents>
+			<probabilities>0.9756022292680668 0.02439777073193312 0.9462573378502934 0.05374266214970648 0.9940889089468002 0.00591109105319982 0.6427535 0.3572465</probabilities>
+		</cpt>
+		<cpt id="PrtSpool81">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>REPEAT60 PrtThread10</parents>
+			<probabilities>0.9493456430392615 0.05065435696073859 0.9950152223888127 0.004984777611187346 0.9867360703979179 0.01326392960208211 0.9891379901086201 0.0108620098913799</probabilities>
+		</cpt>
+		<cpt id="PrtOn82">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtCbl22</parents>
+			<probabilities>0.8979032 0.1020968 0.9987108720360957 0.001289127963904417</probabilities>
+		</cpt>
+		<cpt id="PrtPaper83">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>GrbldPS64</parents>
+			<probabilities>0.9793139406912732 0.02068605930872669 0.9850598038745195 0.01494019612548041</probabilities>
+		</cpt>
+		<cpt id="NetPrint84">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.8 0.2</probabilities>
+		</cpt>
+		<cpt id="PrtDriver85">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtIcon67 DrvOK14</parents>
+			<probabilities>0.8896211000000001 0.1103789 0.9896124703116258 0.01038752968837411 0.93578200935782 0.0642179906421799 0.9943872268484552 0.005612773151544875</probabilities>
+		</cpt>
+		<cpt id="PrtThread86">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtSel16</parents>
+			<probabilities>0.9999001194280484 9.98805719516235e-005 0.9998813236090669 0.0001186763909331237</probabilities>
+		</cpt>
+		<cpt id="EMFOK87">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>AppData79 DskLocal80 PrtThread86</parents>
+			<probabilities>0.99 0.01 0.05 0.95 0 1 0.5 0.5 0.1 0.9 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GDIIN88">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>AppData79 PrtSpool81 EMFOK87</parents>
+			<probabilities>1 0 0 1 1 0 1 0 0 1 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="DrvSet89">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="DrvOK90">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtPort23 EMFOK11</parents>
+			<probabilities>0.9935656427233226 0.006434357276677362 0.9821020705369378 0.01789792946306211 0.9199741183994823 0.08002588160051762 0.9255930092559299 0.0744069907440699</probabilities>
+		</cpt>
+		<cpt id="GDIOUT91">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtDriver85 GDIIN88 DrvSet89 DrvOK90</parents>
+			<probabilities>0.99 0.01 0.2 0.8 0.9 0.1 0.5 0.5 0.1 0.9 0.5 0.5 0.5 0.5 0.5 0.5 0.1 0.9 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtSel92">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtCbl22 PrtThread10</parents>
+			<probabilities>0.9904202782107539 0.009579721789246121 0.9740191389607655 0.02598086103923444 0.7925837 0.2074163 0.9886027703419168 0.01139722965808311</probabilities>
+		</cpt>
+		<cpt id="PrtDataOut93">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>GDIOUT91 PrtSel92</parents>
+			<probabilities>0.99 0.01 0 1 0 1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtPath94">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.97 0.03</probabilities>
+		</cpt>
+		<cpt id="NtwrkCnfg95">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>TrTypFnts50</parents>
+			<probabilities>0.980661809806618 0.0193381901933819 0.9741222000000001 0.0258778</probabilities>
+		</cpt>
+		<cpt id="PTROFFLINE96">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtCbl22 DSApplctn26 PrtPScript47</parents>
+			<probabilities>0.999792114696944 0.0002078853030559139 0.9666056193321125 0.03339438066788762 0.2564486 0.7435514 0.9634812614607495 0.03651873853925046 0.8946022 0.1053978 0.9952378049761892 0.004762195023810976 0.9232902538354875 0.07670974616451269 0.99623916413539 0.003760835864609909</probabilities>
+		</cpt>
+		<cpt id="NetOK97">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtPath94 NtwrkCnfg95 PTROFFLINE96</parents>
+			<probabilities>0.99 0.01 0 1 0.1 0.9 0.5 0.5 0 1 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtCbl98">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>GrbldOtpt58 PTROFFLINE20</parents>
+			<probabilities>0.9827870705163878 0.01721292948361212 0.9650113 0.0349887 0.995992725895811 0.004007274104189127 0.8451598 0.1548402</probabilities>
+		</cpt>
+		<cpt id="PrtPort99">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>Problem136</parents>
+			<probabilities>0.9924155722123641 0.007584427787636023 0.9868523 0.0131477</probabilities>
+		</cpt>
+		<cpt id="CblPrtHrdwrOK100">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="LclOK101">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtCbl98 PrtPort99 CblPrtHrdwrOK100</parents>
+			<probabilities>0.999 0.001 0.01 0.99 0 1 0.5 0.5 0 1 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="DSApplctn102">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtStatToner74 Problem449 PSERRMEM62</parents>
+			<probabilities>0.2010055 0.7989945000000001 0.2037074 0.7962926 0.1470478 0.8529522000000001 0.009036234509051163 0.9909637654909489 0.106643 0.893357 0.06512010651201065 0.9348798934879894 0.03539033247732327 0.9646096675226767 0.1757654 0.8242346</probabilities>
+		</cpt>
+		<cpt id="PrtMpTPth103">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>FntInstlltn51 Problem449</parents>
+			<probabilities>0.8166741 0.1833259 0.5759349 0.4240651 0.7957443 0.2042557 0.9762178 0.0237822</probabilities>
+		</cpt>
+		<cpt id="DS_NTOK104">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>AppData79 PrtPath94 PrtMpTPth103 NtwrkCnfg95 PTROFFLINE96</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="DS_LCLOK105">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>AppData79 PrtCbl98 PrtPort99 CblPrtHrdwrOK100</parents>
+			<probabilities>1 0 0.1 0.9 0 1 0.5 0.5 0 1 0.5 0.5 0.5 0.5 0.5 0.5 0.1 0.9 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PC2PRT106">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>NetPrint84 PrtDataOut93 NetOK97 LclOK101 DSApplctn102 DS_NTOK104 DS_LCLOK105</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtMem107">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtTimeOut108">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtPort23 PrtSpool5 GrbldOtpt58</parents>
+			<probabilities>0.9751242195024843 0.02487578049751561 0.9440772283223168 0.05592277167768315 0.6104745 0.3895255 0.9566759478337973 0.0433240521662026 0.8065447 0.1934553 0.7755600775560079 0.2244399224439923 0.9368390281051708 0.06316097189482915 0.8246642824664282 0.1753357175335718</probabilities>
+		</cpt>
+		<cpt id="FllCrrptdBffr109">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>DSApplctn26</parents>
+			<probabilities>0.8594833718966745 0.1405166281033256 0.848153269630654 0.1518467303693461</probabilities>
+		</cpt>
+		<cpt id="TnrSpply110">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.995 0.005</probabilities>
+		</cpt>
+		<cpt id="PrtData111">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtOn82 PrtPaper83 PC2PRT106 PrtMem107 PrtTimeOut108 FllCrrptdBffr109 TnrSpply110</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Problem1112">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="AppDtGnTm113">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtSpool81</parents>
+			<probabilities>1 0 0.9900000099000001 0.009999990099999903</probabilities>
+		</cpt>
+		<cpt id="PrntPrcssTm114">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtSpool81</parents>
+			<probabilities>0.9900000099000001 0.009999990099999903 1 0</probabilities>
+		</cpt>
+		<cpt id="DeskPrntSpd115">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtMem107 AppDtGnTm113 PrntPrcssTm114</parents>
+			<probabilities>0.9990000099900002 0.0009999900099999003 0.0009999900099999003 0.9990000099900002 0.0009999900099999003 0.9990000099900002 0.5 0.5 0.25 0.75 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PgOrnttnOK116">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.95 0.05</probabilities>
+		</cpt>
+		<cpt id="PrntngArOK117">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.98 0.02</probabilities>
+		</cpt>
+		<cpt id="ScrnFntNtPrntrFnt118">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtCbl22</parents>
+			<probabilities>0.9491405810171884 0.05085941898281162 0.9904589257519321 0.009541074248067929</probabilities>
+		</cpt>
+		<cpt id="CmpltPgPrntd119">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtMem107 PgOrnttnOK116 PrntngArOK117</parents>
+			<probabilities>0.99 0.01 0.1 0.9 0.009999990099999903 0.9900000099000001 0.5 0.5 0.3 0.7 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GrphcsRltdDrvrSttngs120">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>EPSGrphc45 PrtStatOff76</parents>
+			<probabilities>0.9479485620820576 0.05205143791794248 0.9582055808358886 0.04179441916411162 0.9700945291028359 0.02990547089716413 0.5283631 0.4716369</probabilities>
+		</cpt>
+		<cpt id="EPSGrphc121">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>FllCrrptdBffr33 LclOK25</parents>
+			<probabilities>0.9881298901187012 0.0118701098812989 0.9973853800522925 0.002614619947707601 0.999202411590748 0.0007975884092520255 0.9981537700553869 0.001846229944613102</probabilities>
+		</cpt>
+		<cpt id="NnPSGrphc122">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtMem107 GrphcsRltdDrvrSttngs120 EPSGrphc121</parents>
+			<probabilities>0.999 0.001 0 1 0.1 0.9 0.5 0.5 0.25 0.75 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtPScript123">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtStatMem75 PrntrAccptsTrtyp52 PrntngArOK41</parents>
+			<probabilities>0.3742981374298138 0.6257018625701862 0.9714713874324249 0.02852861256757513 0.4436029443602945 0.5563970556397057 0.1176213117621312 0.8823786882378689 0.1437870143787015 0.8562129856212987 0.1427025142702514 0.8572974857297486 0.7601124760112477 0.2398875239887524 0.7633690763369077 0.2366309236630924</probabilities>
+		</cpt>
+		<cpt id="PSGRAPHIC124">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtMem107 GrphcsRltdDrvrSttngs120 EPSGrphc121</parents>
+			<probabilities>0.999 0.001 1 0 0.1 0.9 0.5 0.5 0.25 0.75 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Problem4125">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>NnPSGrphc122 PrtPScript123 PSGRAPHIC124</parents>
+			<probabilities>0 1 1 0 0 1 0 1 0 1 1 0 1 0 1 0</probabilities>
+		</cpt>
+		<cpt id="TrTypFnts126">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>LclGrbld56</parents>
+			<probabilities>0.887545 0.112455 0.997377762099645 0.002622237900354959</probabilities>
+		</cpt>
+		<cpt id="FntInstlltn127">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.98 0.02</probabilities>
+		</cpt>
+		<cpt id="PrntrAccptsTrtyp128">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>NnPSGrphc46 PrtPScript47 DrvSet13</parents>
+			<probabilities>0.8743900874390088 0.1256099125609913 0.9095321636672514 0.09046783633274855 0.9170820275124608 0.08291797248753917 0.8986461898646191 0.101353810135381 0.9580917191618343 0.04190828083816561 0.9751023195020463 0.02489768049795361 0.9643291000000001 0.0356709 0.873938874787775 0.1260611252122251</probabilities>
+		</cpt>
+		<cpt id="TTOK129">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtMem107 FntInstlltn127 PrntrAccptsTrtyp128</parents>
+			<probabilities>0.9900000099000001 0.009999990099999903 0 1 0.1 0.9 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="NnTTOK130">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtMem107 ScrnFntNtPrntrFnt118 FntInstlltn127</parents>
+			<probabilities>0.9900000099000001 0.009999990099999903 0.1 0.9 0.1 0.9 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Problem5131">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>TrTypFnts126 TTOK129 NnTTOK130</parents>
+			<probabilities>0 1 0 1 1 0 1 0 0 1 1 0 0 1 1 0</probabilities>
+		</cpt>
+		<cpt id="LclGrbld132">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>AppData79 PrtDriver85 PrtMem107 CblPrtHrdwrOK100</parents>
+			<probabilities>1 0 0.1 0.9 0.2 0.8 0.5 0.5 0.4 0.6 0.5 0.5 0.5 0.5 0.5 0.5 0.2 0.8 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="NtGrbld133">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>AppData79 PrtDriver85 PrtMem107 NtwrkCnfg95</parents>
+			<probabilities>1 0 0.4 0.6 0.2 0.8 0.5 0.5 0.4 0.6 0.5 0.5 0.5 0.5 0.5 0.5 0.3 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GrbldOtpt134">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>NetPrint84 LclGrbld132 NtGrbld133</parents>
+			<probabilities>1 0 1 0 0 1 0 1 1 0 0 1 1 0 0 1</probabilities>
+		</cpt>
+		<cpt id="HrglssDrtnAftrPrnt135">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>AppDtGnTm113</parents>
+			<probabilities>0.99 0.01 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="REPEAT136">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>CblPrtHrdwrOK100 NtwrkCnfg95</parents>
+			<probabilities>1 0 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="AvlblVrtlMmry137">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtPScript123</parents>
+			<probabilities>0.98 0.02 1 0</probabilities>
+		</cpt>
+		<cpt id="PSERRMEM138">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtPScript123 AvlblVrtlMmry137</parents>
+			<probabilities>1 0 0.05 0.95 1 0 1 0</probabilities>
+		</cpt>
+		<cpt id="TstpsTxt139">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtPScript123 AvlblVrtlMmry137</parents>
+			<probabilities>0.9990000099900002 0.0009999900099999003 0.0009999900099999003 0.9990000099900002 1 0 1 0</probabilities>
+		</cpt>
+		<cpt id="GrbldPS140">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>GrbldOtpt134 AvlblVrtlMmry137</parents>
+			<probabilities>1 0 0.1 0.9 0 1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="IncmpltPS141">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>CmpltPgPrntd119 AvlblVrtlMmry137</parents>
+			<probabilities>1 0 0.3 0.7 0 1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtFile142">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtDataOut93</parents>
+			<probabilities>0.8 0.2 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="PrtIcon143">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>NtwrkCnfg95 PTROFFLINE96</parents>
+			<probabilities>0.9999 0.0001 0.7 0.3 0.25 0.75 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Problem6144">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>GrbldOtpt134 PrtPScript123 GrbldPS140</parents>
+			<probabilities>1 0 0 1 1 0 1 0 1 0 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="Problem3145">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>CmpltPgPrntd119 PrtPScript123 IncmpltPS141</parents>
+			<probabilities>0 1 1 0 0 1 0 1 0 1 1 0 1 0 1 0</probabilities>
+		</cpt>
+		<cpt id="PrtQueue146">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="NtSpd147">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>DeskPrntSpd115 NtwrkCnfg95 PrtQueue146</parents>
+			<probabilities>0.9990000099900002 0.0009999900099999003 0.25 0.75 0.25 0.75 0.5 0.5 0 1 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Problem2148">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>NetPrint84 DeskPrntSpd115 NtSpd147</parents>
+			<probabilities>1 0 1 0 0 1 0 1 1 0 0 1 1 0 0 1</probabilities>
+		</cpt>
+		<cpt id="PrtStatPaper149">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtPaper83</parents>
+			<probabilities>0.9990000099900002 0.0009999900099999003 0.0009999900099999003 0.9990000099900002</probabilities>
+		</cpt>
+		<cpt id="PrtStatToner150">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>TnrSpply110</parents>
+			<probabilities>0.9990000099900002 0.0009999900099999003 0.0009999900099999003 0.9990000099900002</probabilities>
+		</cpt>
+		<cpt id="PrtStatMem151">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtMem107</parents>
+			<probabilities>0.9990000099900002 0.0009999900099999003 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="PrtStatOff152">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PrtOn82</parents>
+			<probabilities>0.9900000099000001 0.009999990099999903 0.009999990099999903 0.9900000099000001</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.3887.0" name="Sub0" faultnameformat="nodestate">
+			<node id="AppOK1">
+				<name>AppOK1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>659 14 735 50</position>
+			</node>
+			<node id="DataFile2">
+				<name>DataFile2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>791 139 867 175</position>
+			</node>
+			<node id="AppData3">
+				<name>AppData3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>682 66 758 102</position>
+			</node>
+			<node id="DskLocal4">
+				<name>DskLocal4</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>784 42 860 78</position>
+			</node>
+			<node id="PrtSpool5">
+				<name>PrtSpool5</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>751 1 827 37</position>
+			</node>
+			<node id="PrtOn6">
+				<name>PrtOn6</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>136 46 212 82</position>
+			</node>
+			<node id="PrtPaper7">
+				<name>PrtPaper7</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>9 251 85 287</position>
+			</node>
+			<node id="NetPrint8">
+				<name>NetPrint8</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>31 321 107 357</position>
+			</node>
+			<node id="PrtDriver9">
+				<name>PrtDriver9</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>56 380 132 416</position>
+			</node>
+			<node id="PrtThread10">
+				<name>PrtThread10</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>94 99 170 135</position>
+			</node>
+			<node id="EMFOK11">
+				<name>EMFOK11</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>71 152 147 188</position>
+			</node>
+			<node id="GDIIN12">
+				<name>GDIIN12</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>106 230 182 266</position>
+			</node>
+			<node id="DrvSet13">
+				<name>DrvSet13</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>113 312 189 348</position>
+			</node>
+			<node id="DrvOK14">
+				<name>DrvOK14</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>141 409 217 445</position>
+			</node>
+			<node id="GDIOUT15">
+				<name>GDIOUT15</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>239 500 315 536</position>
+			</node>
+			<node id="PrtSel16">
+				<name>PrtSel16</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>158 480 234 516</position>
+			</node>
+			<node id="PrtDataOut17">
+				<name>PrtDataOut17</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>351 40 427 76</position>
+			</node>
+			<node id="PrtPath18">
+				<name>PrtPath18</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>183 76 259 112</position>
+			</node>
+			<node id="NtwrkCnfg19">
+				<name>NtwrkCnfg19</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>178 146 254 182</position>
+			</node>
+			<node id="PTROFFLINE20">
+				<name>PTROFFLINE20</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>177 254 253 290</position>
+			</node>
+			<node id="NetOK21">
+				<name>NetOK21</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>75 519 151 555</position>
+			</node>
+			<node id="PrtCbl22">
+				<name>PrtCbl22</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>575 369 651 405</position>
+			</node>
+			<node id="PrtPort23">
+				<name>PrtPort23</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>217 196 293 232</position>
+			</node>
+			<node id="CblPrtHrdwrOK24">
+				<name>CblPrtHrdwrOK24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>267 54 343 90</position>
+			</node>
+			<node id="LclOK25">
+				<name>LclOK25</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>450 524 526 560</position>
+			</node>
+			<node id="DSApplctn26">
+				<name>DSApplctn26</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>307 485 383 521</position>
+			</node>
+			<node id="PrtMpTPth27">
+				<name>PrtMpTPth27</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>244 436 320 472</position>
+			</node>
+			<node id="DS_NTOK28">
+				<name>DS_NTOK28</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>242 363 318 399</position>
+			</node>
+			<node id="DS_LCLOK29">
+				<name>DS_LCLOK29</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>132 375 208 411</position>
+			</node>
+			<node id="PC2PRT30">
+				<name>PC2PRT30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>259 107 335 143</position>
+			</node>
+			<node id="PrtMem31">
+				<name>PrtMem31</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>272 161 348 197</position>
+			</node>
+			<node id="PrtTimeOut32">
+				<name>PrtTimeOut32</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>287 222 363 258</position>
+			</node>
+			<node id="FllCrrptdBffr33">
+				<name>FllCrrptdBffr33</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>315 319 391 355</position>
+			</node>
+			<node id="TnrSpply34">
+				<name>TnrSpply34</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>320 382 396 418</position>
+			</node>
+			<node id="PrtData35">
+				<name>PrtData35</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>348 86 424 122</position>
+			</node>
+			<node id="Problem136">
+				<name>Problem136</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>628 84 704 120</position>
+			</node>
+			<node id="AppDtGnTm37">
+				<name>AppDtGnTm37</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>697 126 773 162</position>
+			</node>
+			<node id="PrntPrcssTm38">
+				<name>PrntPrcssTm38</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>345 262 421 298</position>
+			</node>
+			<node id="DeskPrntSpd39">
+				<name>DeskPrntSpd39</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>347 134 423 170</position>
+			</node>
+			<node id="PgOrnttnOK40">
+				<name>PgOrnttnOK40</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>415 62 491 98</position>
+			</node>
+			<node id="PrntngArOK41">
+				<name>PrntngArOK41</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>502 395 578 431</position>
+			</node>
+			<node id="ScrnFntNtPrntrFnt42">
+				<name>ScrnFntNtPrntrFnt42</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>391 499 467 535</position>
+			</node>
+			<node id="CmpltPgPrntd43">
+				<name>CmpltPgPrntd43</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>614 499 690 535</position>
+			</node>
+			<node id="GrphcsRltdDrvrSttngs44">
+				<name>GrphcsRltdDrvrSttngs44</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>412 190 488 226</position>
+			</node>
+			<node id="EPSGrphc45">
+				<name>EPSGrphc45</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>345 420 421 456</position>
+			</node>
+			<node id="NnPSGrphc46">
+				<name>NnPSGrphc46</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>554 528 630 564</position>
+			</node>
+			<node id="PrtPScript47">
+				<name>PrtPScript47</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>430 336 506 372</position>
+			</node>
+			<node id="PSGRAPHIC48">
+				<name>PSGRAPHIC48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>503 488 579 524</position>
+			</node>
+			<node id="Problem449">
+				<name>Problem449</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>394 352 470 388</position>
+			</node>
+			<node id="TrTypFnts50">
+				<name>TrTypFnts50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>584 45 660 81</position>
+			</node>
+			<node id="FntInstlltn51">
+				<name>FntInstlltn51</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>742 170 818 206</position>
+			</node>
+			<node id="PrntrAccptsTrtyp52">
+				<name>PrntrAccptsTrtyp52</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>504 59 580 95</position>
+			</node>
+			<node id="TTOK53">
+				<name>TTOK53</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>426 111 502 147</position>
+			</node>
+			<node id="NnTTOK54">
+				<name>NnTTOK54</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>507 191 583 227</position>
+			</node>
+			<node id="Problem555">
+				<name>Problem555</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>437 222 513 258</position>
+			</node>
+			<node id="LclGrbld56">
+				<name>LclGrbld56</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>450 268 526 304</position>
+			</node>
+			<node id="NtGrbld57">
+				<name>NtGrbld57</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>492 388 568 424</position>
+			</node>
+			<node id="GrbldOtpt58">
+				<name>GrbldOtpt58</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>582 429 658 465</position>
+			</node>
+			<node id="HrglssDrtnAftrPrnt59">
+				<name>HrglssDrtnAftrPrnt59</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>525 121 601 157</position>
+			</node>
+			<node id="REPEAT60">
+				<name>REPEAT60</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>562 302 638 338</position>
+			</node>
+			<node id="AvlblVrtlMmry61">
+				<name>AvlblVrtlMmry61</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>511 231 587 267</position>
+			</node>
+			<node id="PSERRMEM62">
+				<name>PSERRMEM62</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>693 509 769 545</position>
+			</node>
+			<node id="TstpsTxt63">
+				<name>TstpsTxt63</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>589 152 665 188</position>
+			</node>
+			<node id="GrbldPS64">
+				<name>GrbldPS64</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>609 201 685 237</position>
+			</node>
+			<node id="IncmpltPS65">
+				<name>IncmpltPS65</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>629 306 705 342</position>
+			</node>
+			<node id="PrtFile66">
+				<name>PrtFile66</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>660 361 736 397</position>
+			</node>
+			<node id="PrtIcon67">
+				<name>PrtIcon67</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>776 279 852 315</position>
+			</node>
+			<node id="Problem668">
+				<name>Problem668</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>704 181 780 217</position>
+			</node>
+			<node id="Problem369">
+				<name>Problem369</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>641 239 717 275</position>
+			</node>
+			<node id="PrtQueue70">
+				<name>PrtQueue70</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>677 301 753 337</position>
+			</node>
+			<node id="NtSpd71">
+				<name>NtSpd71</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>774 487 850 523</position>
+			</node>
+			<node id="Problem272">
+				<name>Problem272</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>816 417 892 453</position>
+			</node>
+			<node id="PrtStatPaper73">
+				<name>PrtStatPaper73</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>897 417 973 453</position>
+			</node>
+			<node id="PrtStatToner74">
+				<name>PrtStatToner74</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>705 234 781 270</position>
+			</node>
+			<node id="PrtStatMem75">
+				<name>PrtStatMem75</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>699 459 775 495</position>
+			</node>
+			<node id="PrtStatOff76">
+				<name>PrtStatOff76</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>730 348 806 384</position>
+			</node>
+			<node id="AppOK77">
+				<name>AppOK77</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1226 372 1302 408</position>
+			</node>
+			<node id="DataFile78">
+				<name>DataFile78</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1206 83 1282 119</position>
+			</node>
+			<node id="AppData79">
+				<name>AppData79</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1242 495 1318 531</position>
+			</node>
+			<node id="DskLocal80">
+				<name>DskLocal80</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1275 445 1351 481</position>
+			</node>
+			<node id="PrtSpool81">
+				<name>PrtSpool81</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1255 350 1331 386</position>
+			</node>
+			<node id="PrtOn82">
+				<name>PrtOn82</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1231 252 1307 288</position>
+			</node>
+			<node id="PrtPaper83">
+				<name>PrtPaper83</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1234 164 1310 200</position>
+			</node>
+			<node id="NetPrint84">
+				<name>NetPrint84</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1219 40 1295 76</position>
+			</node>
+			<node id="PrtDriver85">
+				<name>PrtDriver85</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1240 190 1316 226</position>
+			</node>
+			<node id="PrtThread86">
+				<name>PrtThread86</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1329 196 1405 232</position>
+			</node>
+			<node id="EMFOK87">
+				<name>EMFOK87</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1390 381 1466 417</position>
+			</node>
+			<node id="GDIIN88">
+				<name>GDIIN88</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1378 360 1454 396</position>
+			</node>
+			<node id="DrvSet89">
+				<name>DrvSet89</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1462 215 1538 251</position>
+			</node>
+			<node id="DrvOK90">
+				<name>DrvOK90</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1409 191 1485 227</position>
+			</node>
+			<node id="GDIOUT91">
+				<name>GDIOUT91</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1460 182 1536 218</position>
+			</node>
+			<node id="PrtSel92">
+				<name>PrtSel92</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1336 137 1412 173</position>
+			</node>
+			<node id="PrtDataOut93">
+				<name>PrtDataOut93</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1435 163 1511 199</position>
+			</node>
+			<node id="PrtPath94">
+				<name>PrtPath94</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1267 97 1343 133</position>
+			</node>
+			<node id="NtwrkCnfg95">
+				<name>NtwrkCnfg95</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1354 186 1430 222</position>
+			</node>
+			<node id="PTROFFLINE96">
+				<name>PTROFFLINE96</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1381 103 1457 139</position>
+			</node>
+			<node id="NetOK97">
+				<name>NetOK97</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1366 156 1442 192</position>
+			</node>
+			<node id="PrtCbl98">
+				<name>PrtCbl98</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1456 294 1532 330</position>
+			</node>
+			<node id="PrtPort99">
+				<name>PrtPort99</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1318 335 1394 371</position>
+			</node>
+			<node id="CblPrtHrdwrOK100">
+				<name>CblPrtHrdwrOK100</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1388 291 1464 327</position>
+			</node>
+			<node id="LclOK101">
+				<name>LclOK101</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1364 115 1440 151</position>
+			</node>
+			<node id="DSApplctn102">
+				<name>DSApplctn102</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1472 186 1548 222</position>
+			</node>
+			<node id="PrtMpTPth103">
+				<name>PrtMpTPth103</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1425 172 1501 208</position>
+			</node>
+			<node id="DS_NTOK104">
+				<name>DS_NTOK104</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1340 122 1416 158</position>
+			</node>
+			<node id="DS_LCLOK105">
+				<name>DS_LCLOK105</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1456 203 1532 239</position>
+			</node>
+			<node id="PC2PRT106">
+				<name>PC2PRT106</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1480 315 1556 351</position>
+			</node>
+			<node id="PrtMem107">
+				<name>PrtMem107</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1462 306 1538 342</position>
+			</node>
+			<node id="PrtTimeOut108">
+				<name>PrtTimeOut108</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1401 387 1477 423</position>
+			</node>
+			<node id="FllCrrptdBffr109">
+				<name>FllCrrptdBffr109</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1280 240 1356 276</position>
+			</node>
+			<node id="TnrSpply110">
+				<name>TnrSpply110</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1384 129 1460 165</position>
+			</node>
+			<node id="PrtData111">
+				<name>PrtData111</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1338 202 1414 238</position>
+			</node>
+			<node id="Problem1112">
+				<name>Problem1112</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1264 62 1340 98</position>
+			</node>
+			<node id="AppDtGnTm113">
+				<name>AppDtGnTm113</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1261 397 1337 433</position>
+			</node>
+			<node id="PrntPrcssTm114">
+				<name>PrntPrcssTm114</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1310 343 1386 379</position>
+			</node>
+			<node id="DeskPrntSpd115">
+				<name>DeskPrntSpd115</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1257 283 1333 319</position>
+			</node>
+			<node id="PgOrnttnOK116">
+				<name>PgOrnttnOK116</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1214 297 1290 333</position>
+			</node>
+			<node id="PrntngArOK117">
+				<name>PrntngArOK117</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1313 244 1389 280</position>
+			</node>
+			<node id="ScrnFntNtPrntrFnt118">
+				<name>ScrnFntNtPrntrFnt118</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1452 217 1528 253</position>
+			</node>
+			<node id="CmpltPgPrntd119">
+				<name>CmpltPgPrntd119</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1256 121 1332 157</position>
+			</node>
+			<node id="GrphcsRltdDrvrSttngs120">
+				<name>GrphcsRltdDrvrSttngs120</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1345 70 1421 106</position>
+			</node>
+			<node id="EPSGrphc121">
+				<name>EPSGrphc121</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1477 108 1553 144</position>
+			</node>
+			<node id="NnPSGrphc122">
+				<name>NnPSGrphc122</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1299 168 1375 204</position>
+			</node>
+			<node id="PrtPScript123">
+				<name>PrtPScript123</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1313 489 1389 525</position>
+			</node>
+			<node id="PSGRAPHIC124">
+				<name>PSGRAPHIC124</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1323 420 1399 456</position>
+			</node>
+			<node id="Problem4125">
+				<name>Problem4125</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1308 274 1384 310</position>
+			</node>
+			<node id="TrTypFnts126">
+				<name>TrTypFnts126</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1361 317 1437 353</position>
+			</node>
+			<node id="FntInstlltn127">
+				<name>FntInstlltn127</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1328 50 1404 86</position>
+			</node>
+			<node id="PrntrAccptsTrtyp128">
+				<name>PrntrAccptsTrtyp128</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1318 137 1394 173</position>
+			</node>
+			<node id="TTOK129">
+				<name>TTOK129</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1397 197 1473 233</position>
+			</node>
+			<node id="NnTTOK130">
+				<name>NnTTOK130</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1351 445 1427 481</position>
+			</node>
+			<node id="Problem5131">
+				<name>Problem5131</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1401 473 1477 509</position>
+			</node>
+			<node id="LclGrbld132">
+				<name>LclGrbld132</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1371 522 1447 558</position>
+			</node>
+			<node id="NtGrbld133">
+				<name>NtGrbld133</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1453 498 1529 534</position>
+			</node>
+			<node id="GrbldOtpt134">
+				<name>GrbldOtpt134</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1415 419 1491 455</position>
+			</node>
+			<node id="HrglssDrtnAftrPrnt135">
+				<name>HrglssDrtnAftrPrnt135</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1469 83 1545 119</position>
+			</node>
+			<node id="REPEAT136">
+				<name>REPEAT136</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1406 45 1482 81</position>
+			</node>
+			<node id="AvlblVrtlMmry137">
+				<name>AvlblVrtlMmry137</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1271 200 1347 236</position>
+			</node>
+			<node id="PSERRMEM138">
+				<name>PSERRMEM138</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1396 89 1472 125</position>
+			</node>
+			<node id="TstpsTxt139">
+				<name>TstpsTxt139</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1387 284 1463 320</position>
+			</node>
+			<node id="GrbldPS140">
+				<name>GrbldPS140</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1456 248 1532 284</position>
+			</node>
+			<node id="IncmpltPS141">
+				<name>IncmpltPS141</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1371 237 1447 273</position>
+			</node>
+			<node id="PrtFile142">
+				<name>PrtFile142</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1352 381 1428 417</position>
+			</node>
+			<node id="PrtIcon143">
+				<name>PrtIcon143</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1439 365 1515 401</position>
+			</node>
+			<node id="Problem6144">
+				<name>Problem6144</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1462 440 1538 476</position>
+			</node>
+			<node id="Problem3145">
+				<name>Problem3145</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1453 315 1529 351</position>
+			</node>
+			<node id="PrtQueue146">
+				<name>PrtQueue146</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1441 147 1517 183</position>
+			</node>
+			<node id="NtSpd147">
+				<name>NtSpd147</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1481 188 1557 224</position>
+			</node>
+			<node id="Problem2148">
+				<name>Problem2148</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1445 180 1521 216</position>
+			</node>
+			<node id="PrtStatPaper149">
+				<name>PrtStatPaper149</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1454 116 1530 152</position>
+			</node>
+			<node id="PrtStatToner150">
+				<name>PrtStatToner150</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1333 113 1409 149</position>
+			</node>
+			<node id="PrtStatMem151">
+				<name>PrtStatMem151</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1364 162 1440 198</position>
+			</node>
+			<node id="PrtStatOff152">
+				<name>PrtStatOff152</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1301 75 1377 111</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

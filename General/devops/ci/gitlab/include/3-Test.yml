@@ -1,0 +1,82 @@
+########################################
+# Helper jobs
+########################################
+
+.TestVariantBase:
+  extends:
+    - .3-Test:rules:TestVariantBase
+  variables:
+    BUILD_TYPE: Release
+  image: ${LOCAL_CI_IMAGE_REPO}/ci:${IMAGE_VARIANT}
+  stage: 3-Test
+  script:
+    - cd build/${BUILD_IMAGE_VARIANT}.${BUILD_TYPE}
+    - 7z x arch.7z && rm -f arch.7z
+    # TODO(Etienne M): Should we run the tests in parallel, -j Xcpu
+    # TODO(Etienne M): Dirty trick to still have the ctest result as junittest format even if we fail
+    - ctest -T Test --output-on-failure --schedule-random || (ctest2junit.py . /opt/ci/common/junittemplate.xsl > test_as_junit.xml && find . -type f ! -name 'test_as_junit.xml' -exec rm -f {} + && false)
+    - ctest2junit.py . /opt/ci/common/junittemplate.xsl > test_as_junit.xml
+    # Compress before gitlab artifact compression to avoid faulty size limit check (test the size before compression and not after, thus can reject something large that compresses well).
+    - 7z a arch.7z *
+    - find . -type f ! \( -name '*.7z' -o -name 'test_as_junit.xml' \) -exec rm -f {} +
+  artifacts:
+    reports:
+      junit: build/${BUILD_IMAGE_VARIANT}.${BUILD_TYPE}/test_as_junit.xml
+    expire_in: 120 mins
+
+########################################
+# Tests variants
+# TODO(Etienne M): find a way to avoid repeting the same thing when defined jobs..
+########################################
+
+Test debug and produce coverage data:
+  extends:
+    - .TestVariantBase
+  variables:
+    IMAGE_VARIANT:        test.amd64.linux
+    BUILD_IMAGE_VARIANT: build.amd64.linux.gcc
+    BUILD_TYPE:          Debug
+  dependencies: # Replace with needs and artifacts: true
+    - Debug for tests and coverage
+  artifacts:
+    paths:
+        # The coverage job needs everything !
+        - build/${BUILD_IMAGE_VARIANT}.${BUILD_TYPE}
+
+
+test.amd64.linux.gcc:
+  extends:
+    - .TestVariantBase
+  variables:
+    IMAGE_VARIANT:        test.amd64.linux
+    BUILD_IMAGE_VARIANT: build.amd64.linux.gcc
+  dependencies: # Replace with needs and artifacts: true
+    - build.amd64.linux.gcc
+
+# test.amd64.linux.clang:
+#   extends:
+#     - .TestVariantBase
+#   variables:
+#     IMAGE_VARIANT:        test.amd64.linux
+#     BUILD_IMAGE_VARIANT: build.amd64.linux.clang
+#   dependencies: # Replace with needs and artifacts: true
+#     - build.amd64.linux.clang
+
+# test.amd64.windows.clang: # Will requiere some tweaks to the base
+#   extends:
+#     - .TestVariantBase
+#   variables:
+#     IMAGE_VARIANT:        test.amd64.windows
+#     BUILD_IMAGE_VARIANT: build.amd64.windows.clang
+#   dependencies: # Replace with needs and artifacts: true
+#     - build.amd64.windows.clang
+  
+# test.amd64.darwin.clang:
+#   extends:
+#     - .TestVariantBase
+#   variables:
+#     IMAGE_VARIANT:        test.amd64.darwin
+#     BUILD_IMAGE_VARIANT: build.amd64.darwin.clang
+#   dependencies: # Replace with needs and artifacts: true
+#     - build.amd64.darwin.clang
+

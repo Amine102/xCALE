@@ -1,0 +1,72 @@
+########################################
+# Helper jobs
+########################################
+
+.PackageAsDEBVariantBase: &PackageAsDEBVariantBase
+  extends:
+    - .5-Packaging:rules:PackageVariantBase
+  variables:
+    BUILD_TYPE: Release
+  image: ${LOCAL_CI_IMAGE_REPO}/ci:${IMAGE_VARIANT}
+  stage: 5-Packaging
+  script:
+    - cd build/${BUILD_IMAGE_VARIANT}.${BUILD_TYPE}
+    - 7z x arch.7z && rm -f arch.7z
+    - cpack -G DEB
+    - mkdir -p ../packages
+    - if [ -z ${CI_COMMIT_TAG+sub} ]; then CI_COMMIT_TAG=${CI_COMMIT_SHORT_SHA}; fi
+    - cp __package__.deb ../packages/${PACKAGE_NAME}-${CI_COMMIT_TAG}.${BUILD_IMAGE_VARIANT}.deb
+  artifacts:
+    paths:
+      - build/packages
+    expire_in: 7 days
+
+# .PackageAsRPMVariantBase: &PackageAsRPMVariantBase
+#   - TODO
+
+# .PackageAsMSIVariantBase: &PackageAsMSIVariantBase
+#   - TODO
+
+# .PackageAsPKGVariantBase: &PackageAsPKGVariantBase
+#   - TODO
+
+
+########################################
+# Coverage jobs
+########################################
+
+package.amd64.linux.gcc:
+  extends:
+    - .PackageAsDEBVariantBase
+  variables:
+    IMAGE_VARIANT:       package.amd64.linux
+    BUILD_IMAGE_VARIANT:   build.amd64.linux.gcc
+  dependencies: # Replace with needs and artifacts: true
+    - build.amd64.linux.gcc
+
+# package.amd64.linux.clang:   *BuildVariantBase
+#   extends:
+#     - .PackageAsDEBVariantBase
+#   variables:
+#     IMAGE_VARIANT:       package.amd64.linux
+#     BUILD_IMAGE_VARIANT:   build.amd64.linux.clang
+#   dependencies: # Replace with needs and artifacts: true
+#     - build.amd64.linux.clang
+
+# package.amd64.windows.clang: *BuildVariantBase # Will requiere some tweaks to the base
+#   extends:
+#     - .PackageAsMSIVariantBase
+#   variables:
+#     IMAGE_VARIANT:       package.amd64.windows
+#     BUILD_IMAGE_VARIANT:   build.amd64.windows.clang
+#   dependencies: # Replace with needs and artifacts: true
+#     - build.amd64.windows.clang
+
+# package.amd64.darwin.clang:  *BuildVariantBase
+#   extends:
+#     - .PackageAsPKGVariantBase
+#   variables:
+#     IMAGE_VARIANT:       package.amd64.darwin
+#     BUILD_IMAGE_VARIANT:   build.amd64.darwin.clang
+#   dependencies: # Replace with needs and artifacts: true
+#     - build.amd64.darwin.clang

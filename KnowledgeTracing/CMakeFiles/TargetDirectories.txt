@@ -1,0 +1,3 @@
+/home/amine102/projects/KnowledgeTracing/CMakeFiles/knowledge_tracing.dir
+/home/amine102/projects/KnowledgeTracing/CMakeFiles/edit_cache.dir
+/home/amine102/projects/KnowledgeTracing/CMakeFiles/rebuild_cache.dir

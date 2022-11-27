@@ -1,0 +1,55 @@
+########################################
+# Clang format checks for incorrect file formating
+########################################
+
+# Clang-format:
+#   extends:
+#     - .1-Static.Test:rules:StaticTests
+#   image: alpine
+#   stage: 1-Static Test
+#   # No "needs", we may have to build the CI image before running this job !
+#   script:
+#     - echo TODO
+#   allow_failure: false
+
+
+########################################
+# Clang format checks for dubious code constructs
+########################################
+
+# Clang-tidy:
+#   extends:
+#     - .1-Static.Test:rules:StaticTests
+#   image: alpine
+#   stage: 1-Static Test
+#   # No "needs", we may have to build the CI image before running this job !
+#   script:
+#     - echo TODO
+#   allow_failure: false
+
+
+########################################
+# Analyse the licenses in the repository and try to detect a conflict
+########################################
+
+# variables:
+#   SECURE_ANALYZERS_PREFIX: registry.gitlab.com/gitlab-org/security-products/analyzers
+
+#   LICENSE_MANAGEMENT_SETUP_CMD: ''  # If needed, specify a command to setup your environment with a custom package manager.
+#   LICENSE_MANAGEMENT_VERSION: 3
+
+# license_scanning:
+#   stage: analyze_and_test
+#   image:
+#     name: ${SECURE_ANALYZERS_PREFIX}/license-finder:${LICENSE_MANAGEMENT_VERSION}
+#     entrypoint: ['']
+#   variables:
+#     LM_REPORT_VERSION: 2.1
+#     SETUP_CMD: $LICENSE_MANAGEMENT_SETUP_CMD
+#   allow_failure: true
+#   script:
+#     - /run.sh analyze .
+#   artifacts:
+#     reports:
+#       license_scanning: gl-license-scanning-report.json
+#   dependencies: []

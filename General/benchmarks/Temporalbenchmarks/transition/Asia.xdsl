@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Sub0" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="VisitToAsia1">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="Tuberculosis2">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>VisitToAsia1</parents>
+			<probabilities>0.99 0.01 0.95 0.05</probabilities>
+		</cpt>
+		<cpt id="Smoking3">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="LungCancer4">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>Smoking3</parents>
+			<probabilities>0.99 0.01 0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="TbOrCa5">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>Tuberculosis2 LungCancer4</parents>
+			<probabilities>1 0 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="XRay6">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>TbOrCa5</parents>
+			<probabilities>0.95 0.05 0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="Bronchitis7">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>Smoking3</parents>
+			<probabilities>0.7 0.3 0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="Dyspnea8">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>TbOrCa5 Bronchitis7</parents>
+			<probabilities>0.9 0.1 0.2 0.8 0.3 0.7 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="VisitToAsia9">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>Smoking3 Dyspnea8 LungCancer4</parents>
+			<probabilities>0.9734466707965999 0.02655332920340012 0.9991670134887548 0.000832986511245318 0.9988761689224556 0.001123831077544344 0.9980864850287028 0.001913514971297276 0.9952907009952907 0.0047092990047093 0.9901187 0.009881300000000001 0.9975923970072228 0.002407602992777191 0.9990329266741791 0.0009670733258208578</probabilities>
+		</cpt>
+		<cpt id="Tuberculosis10">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>VisitToAsia9</parents>
+			<probabilities>0.99 0.01 0.95 0.05</probabilities>
+		</cpt>
+		<cpt id="Smoking11">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>LungCancer4 TbOrCa5</parents>
+			<probabilities>0.4692363 0.5307637 0.579549 0.420451 0.403308359669164 0.596691640330836 0.9735868707923938 0.02641312920760612</probabilities>
+		</cpt>
+		<cpt id="LungCancer12">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>Smoking11</parents>
+			<probabilities>0.99 0.01 0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="TbOrCa13">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>Tuberculosis10 LungCancer12</parents>
+			<probabilities>1 0 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="XRay14">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>TbOrCa13</parents>
+			<probabilities>0.95 0.05 0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="Bronchitis15">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>Smoking11</parents>
+			<probabilities>0.7 0.3 0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="Dyspnea16">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>TbOrCa13 Bronchitis15</parents>
+			<probabilities>0.9 0.1 0.2 0.8 0.3 0.7 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.3887.0" name="Sub0" faultnameformat="nodestate">
+			<node id="VisitToAsia1">
+				<name>VisitToAsia1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>11 16 87 52</position>
+			</node>
+			<node id="Tuberculosis2">
+				<name>Tuberculosis2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>22 153 98 189</position>
+			</node>
+			<node id="Smoking3">
+				<name>Smoking3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>142 40 218 76</position>
+			</node>
+			<node id="LungCancer4">
+				<name>LungCancer4</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>93 106 169 142</position>
+			</node>
+			<node id="TbOrCa5">
+				<name>TbOrCa5</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>78 220 154 256</position>
+			</node>
+			<node id="XRay6">
+				<name>XRay6</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>19 344 95 380</position>
+			</node>
+			<node id="Bronchitis7">
+				<name>Bronchitis7</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>168 221 244 257</position>
+			</node>
+			<node id="Dyspnea8">
+				<name>Dyspnea8</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>146 351 222 387</position>
+			</node>
+			<node id="VisitToAsia9">
+				<name>VisitToAsia9</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>352 30 428 66</position>
+			</node>
+			<node id="Tuberculosis10">
+				<name>Tuberculosis10</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>347 153 423 189</position>
+			</node>
+			<node id="Smoking11">
+				<name>Smoking11</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>529 17 605 53</position>
+			</node>
+			<node id="LungCancer12">
+				<name>LungCancer12</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>460 106 536 142</position>
+			</node>
+			<node id="TbOrCa13">
+				<name>TbOrCa13</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>440 176 516 212</position>
+			</node>
+			<node id="XRay14">
+				<name>XRay14</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>373 332 449 368</position>
+			</node>
+			<node id="Bronchitis15">
+				<name>Bronchitis15</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>579 114 655 150</position>
+			</node>
+			<node id="Dyspnea16">
+				<name>Dyspnea16</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>536 315 612 351</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

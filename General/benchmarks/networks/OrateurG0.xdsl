@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Network10" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="Orateur_t0">
+			<state id="A" />
+			<state id="B" />
+			<probabilities>0.9 0.09999999999999998</probabilities>
+		</cpt>
+		<cpt id="Mot_t0">
+			<state id="wii" />
+			<state id="miam" />
+			<state id="dodo" />
+			<parents>Orateur_t0</parents>
+			<probabilities>0.8 0.1 0.09999999999999998 0.3 0.5 0.2</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.5590.0" name="Network10" faultnameformat="nodestate">
+			<node id="Orateur_t0">
+				<name>Orateur_t0</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>206 185 298 225</position>
+			</node>
+			<node id="Mot_t0">
+				<name>Mot_t0</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>233 322 354 373</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

@@ -1,0 +1,23 @@
+########################################
+# Coverage jobs
+########################################
+
+Compute coverage from build.amd64.linux.gcc.Debug:
+  extends:
+    - .4-coverage:rules:CoverageBase
+  variables:
+    BUILD_IMAGE_VARIANT: build.amd64.linux.gcc
+    BUILD_TYPE:          Debug
+  image: ${LOCAL_CI_IMAGE_REPO}/ci:coverage.amd64.linux.gcc
+  stage: 4-Coverage
+  dependencies: # Replace with needs and artifacts: true
+    - Test debug and produce coverage data
+  script:
+    - cd build/${BUILD_IMAGE_VARIANT}.${BUILD_TYPE}
+    - 7z x arch.7z && rm -f arch.7z
+    - runcoverage.sh
+  coverage: '/lines\.*: +\d+\.\d+/'
+  artifacts:
+    paths:
+      - build/${BUILD_IMAGE_VARIANT}.${BUILD_TYPE}/coverage
+    expire_in: 7 days

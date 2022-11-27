@@ -1,0 +1,324 @@
+/*==============================================================================
+ * Product        : PILGRIM
+ * File           : AlgoMT_MMHC.h
+ * Author         :
+
+ * Creation       : January 2021
+ * WARINING /!\	  : STATUS ON PROGRESS
+
+
+
+  *=============================================================================
+
+ *        (c) Copyright 2013, PILGRIM - all rights reserved
+ *==============================================================================
+ */
+
+#ifndef _LoadAlgoMTMMHC_H
+#define _LoadAlgoMTMMHC_H
+
+#include <iostream>
+#include <ostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <cmath>
+#include <chrono>
+#include <pilgrim/general/pmBayesianNetwork.h>
+#include "pilgrim/general/pmMTSimilarityMeasures.h"
+#include "pilgrim/general/pmMTCSVDataSet.h"
+#include "plVariablesConjunction.h"
+#include <pilgrim/general/scores/ScoreBIC.h>
+#include <pilgrim/general/scores/Score.h>
+#include <pilgrim/general/scores/ScoreAIC.h>
+#include <pilgrim/general/scores/ScoreBDeu.h>
+#include <pilgrim/general/scores/ScoreMDL.h>
+#include <pilgrim/general/scores/ScoreQNML.h>
+#include <pilgrim/general/pmFrequencyCounter.h>
+#include "pilgrim/general/scores/pmMTpScore.h"
+
+
+
+struct F_assocF {
+	int F;
+	float assocF;
+	bool assoc_Test;
+};
+
+struct pmGraphOp_MT 
+{
+    int nodeA_indx;
+    int nodeB_indx;
+    enum op_type 
+    {
+        SL_EDGE_INVALID = 0,
+        SL_EDGE_ABS,
+        SL_EDGE_NOT,
+        SL_EDGE_ADD,
+        SL_EDGE_REM,
+        SL_EDGE_REV
+    } op;
+
+    pmGraphOp_MT(int nodeA_, int nodeB_, op_type op_)
+        : nodeA_indx(nodeA_), nodeB_indx(nodeB_), op(op_) {}
+};
+
+struct pmGraphOp
+{
+    pmNode nodeA;
+    pmNode nodeB;
+    enum op_type
+    {
+        SL_EDGE_INVALID = 0,
+        SL_EDGE_ABS,
+        SL_EDGE_NOT,
+        SL_EDGE_ADD,
+        SL_EDGE_REM,
+        SL_EDGE_REV
+    } op;
+
+    pmGraphOp(pmNode nodeA_, pmNode nodeB_, op_type op_)
+        : nodeA(nodeA_), nodeB(nodeB_), op(op_) {}
+
+    pmGraphOp() : nodeA(), nodeB(), op(SL_EDGE_INVALID) {}
+
+    void apply(pmGraph& graph) const
+    {
+        // added by Yasin
+        pmEdge e;
+        bool edgeAdded;
+        property_map<pmGraph, edge_weight_t>::type weightMap = get(edge_weight, graph);
+
+        switch (op)
+        {
+        case SL_EDGE_ABS:
+            break; // do nothing to avoid crushing
+        case SL_EDGE_NOT:
+            break; // do nothing
+        case SL_EDGE_ADD:
+            boost::tie(e, edgeAdded) = add_edge(nodeA, nodeB, graph);
+            put(weightMap, e, 2); // added by YASIN
+            break;
+        case SL_EDGE_REV:
+            remove_edge(nodeA, nodeB, graph);
+            boost::tie(e, edgeAdded) = add_edge(nodeB, nodeA, graph);
+            put(weightMap, e, 2); // added by YASIN
+            break;
+        case SL_EDGE_REM:
+            remove_edge(nodeA, nodeB, graph);
+            break;
+        default:
+            throw std::runtime_error("invalid operation in Glutton Search");
+        }
+    }
+
+    void unapply(pmGraph& graph) const
+    {
+        // added by Yasin
+        pmEdge e;
+        bool edgeAdded;
+        property_map<pmGraph, edge_weight_t>::type weightMap = get(edge_weight, graph);
+
+        switch (op)
+        {
+        case SL_EDGE_ABS:
+            break; // do nothing to avoid crushing
+        case SL_EDGE_NOT:
+            break; // do nothing
+        case SL_EDGE_ADD:
+            remove_edge(nodeA, nodeB, graph);
+            break;
+        case SL_EDGE_REV:
+            remove_edge(nodeB, nodeA, graph);
+            boost::tie(e, edgeAdded) = add_edge(nodeA, nodeB, graph);
+            put(weightMap, e, 2); // added by YASIN
+            break;
+        case SL_EDGE_REM:
+            boost::tie(e, edgeAdded) = add_edge(nodeA, nodeB, graph);
+            put(weightMap, e, 2); // added by YASIN
+            break;
+        default:
+            throw std::runtime_error("invalid operation in Glutton Search");
+        }
+    }
+
+    std::ostream& print(std::ostream& out, const pmGraph& g) const
+    {
+        switch (op)
+        {
+        case SL_EDGE_ABS:
+            out << "ABS";
+            break;
+        case SL_EDGE_NOT:
+            out << "NOT";
+            break;
+        case SL_EDGE_ADD:
+            out << "ADD";
+            break;
+        case SL_EDGE_REM:
+            out << "REM";
+            break;
+        case SL_EDGE_REV:
+            out << "REV";
+            break;
+        default:
+            throw std::runtime_error("invalid operation in Glutton Search");
+        }
+        out << "(" << get(vertex_index, g)[nodeA]
+            << "->" << get(vertex_index, g)[nodeB]
+            << ")";
+        return out;
+    }
+};
+
+namespace PILGRIM {
+	class AlgoMT_MMHC {
+
+	public:
+		/*=====Attributs=====*/
+		std::vector<std::vector<unsigned int>> allCPC_T; // to store CPC(T) for each variable T (ie CPC(variable i) = allCPC_T[i])
+		std::vector<pmGraph> all_CPCgraphs; // to store all CPCs for each task generated by MMHC
+		std::vector<pmGraph> all_graphs; // = configuration (to store each graph for each task/data)
+	    std::vector<pmGraphOp_MT> all_possible_MTop; // all possible operations considering all variables in csv_data
+        std::vector<pair<int, int>> all_poss_pairsOfNodes; // all possible pairs of nodes in csv_data
+
+        double delta = 0.0000001; // to do : set_delta so that it can be modified
+        std::vector<double> individual_priors; // to do : set_indiv_priors so that it can be modified
+        int z = 1; // to do : set_z
+
+        int df_jaug = 0;
+
+        std::vector<unsigned int> varList;
+
+
+		/*
+		=====CONSTRUCTORS=====
+		*/
+		AlgoMT_MMHC(pmMTCSVDataSet& csv_data, pmMTpScore& mt_Score);
+
+		/*
+		=====DESTRUCTOR=====
+		*/
+		//~AlgoMT_MMHC(void);
+
+		/*
+		=====PUSHERS=====
+		*/
+
+		/*
+		=====SETTERS=====
+		*/
+        void set_allgraphs(std::vector<pmGraph> configuration);
+
+        void set_allCPCgraphs(std::vector<pmGraph> CPCconfiguration);
+
+        void set_Z(int factor);
+
+        void set_delta(double param_delta);
+
+        void set_individual_priors(std::vector<double> indiv_priors);
+
+		/*
+		=====PRINTERS=====
+		*/
+
+        void print_allgraphs();
+
+		/*
+		=====UTILS AND INIT=====
+		*/
+		// Get all subsets of CPC set
+		std::vector<std::vector<unsigned int>> compute_subsets(std::vector<unsigned int> set);
+
+		// initialze graphs (empty or initiated with one and only one random edge)
+		void initgraphs(std::vector<pmGraph>& set_graphs, pmMTCSVDataSet csv_data, bool empty);
+
+        // init graphs with object pmScore;
+        void initgraphs_forScore(pmMTCSVDataSet& csv_data, pmMTpScore& mt_Score);
+
+		// update CPC graphs
+		void update_CPCgraphs(int data_indx, std::vector<std::vector<unsigned int>> CPC_set);
+
+        // Methods copied with no modification from AlgoGS
+        bool remainsADAG(const pmNode& nodeInit, const pmNode& node, const pmGraph& graph);
+        bool remainsADAG(pmGraph& graph, const pmGraphOp& op);
+
+        // Compute number of edges that exists in graph 1 and not in graph2
+        int oneway_edge_distance(int d1, int d2, pmGraph graph1, pmGraph graph2, pmMTCSVDataSet csv_data);
+
+        // Compute symmetric distance (number of edges that exists in one graph but not in the other)
+        int symMT_distance(int d1, int d2, pmGraph graph1, pmGraph graph2, pmMTCSVDataSet csv_data);
+
+        // Convert pmGraphOp_MT structure to pmGraphOp
+        void adapt_operation(pmGraphOp &adaptedOp, pmGraphOp_MT operation_MT, int data_index, pmMTCSVDataSet csv_data);
+
+        // Compute all possible pairs of variables within all data, or compute all possible operations considering all variables
+        void compute_allMTop(pmMTCSVDataSet csv_data);
+        void compute_allMTpairs(pmMTCSVDataSet csv_data);
+
+        // Save all graphs in empty bns
+        void save_as_emptybns(std::string dir_path, std::string name, pmMTCSVDataSet csv_data);
+
+        // Save all CPCgraphs in empty bns (ie with no parameters)
+        void save_CPCgraphs(std::string dir_path, std::string name, pmMTCSVDataSet csv_data);
+
+
+		/*
+		===== METHODS=====
+		*/
+
+        /*=================================== MT_MMHC CPCs identification part ===================================*/
+		
+        // Compute mininum combined association between var1 and var2 knowing CPC_set and return minimum association value with its independent test result
+        std::pair<bool, float> computeMinAssoc(int data_indx, int var1, int var2, std::vector<unsigned int> CPC_set, pmMTCSVDataSet& csv_data, pmMTSimilarityMeasures& sim_measures);
+
+        // Compute max min heuristic for var_T in data data_indx and return the maximum value and argmax
+		F_assocF compute_MT_MaxMinHeuristic(int data_indx, int var_T, std::vector<unsigned int> CPC_set, pmMTCSVDataSet& csv_data, pmMTSimilarityMeasures& sim_measures);
+
+        // Corresponding to forward phase in MMHC algorithm
+		void Phase1(int data_indx, int var_T, std::vector<unsigned int >& CPC_T, pmMTCSVDataSet& csv_data, pmMTSimilarityMeasures& sim_measures);
+
+        // Corresponding to backward phase in MMHC algorithm
+		void Phase2(int data_indx, int var_T, std::vector<unsigned int>& CPC_T, pmMTCSVDataSet& csv_data, pmMTSimilarityMeasures& sim_measures);
+
+        // Identification of CPC_set of var_T
+		void MT_MMPCbar(int data_indx, int var_T, std::vector<unsigned int>& CPC_T, pmMTCSVDataSet& csv_data, pmMTSimilarityMeasures& sim_measures);
+
+        // Exclude false positives in CPC_set of var_T
+		void MT_MMPC(int data_indx, pmMTCSVDataSet& csv_data, pmMTSimilarityMeasures& sim_measures);
+
+        // Gathering all phases and computing all CPC sets for all variables in data data_indx
+		//void MT_MMHC_CPC(int data_indx, pmMTCSVDataSet csv_data, pmMTSimilarityMeasures sim_measures);
+
+        // Running MT_MMHC_part1 (identification of CPC sets) to all tasks (datasets)
+        void run_MT_MMHC_ph1(pmMTCSVDataSet csv_data);
+
+        /*=================================== MT_Greedy search part ===================================*/
+
+        // Compute MT_prior as described in Niculescu & al approach
+        // If used outside scope, don't forget to set z, delta, individual_priors, all_graphs and all_CPCgraphs attributes
+        double compute_prior(int level, std::vector<pmGraphOp_MT> operations_MT, pmMTCSVDataSet& csv_data);
+
+        // Compute individual scores
+        pmScoreValueType compute_indiv_score(pmGraphOp& operation, int task_id, pmMTpScore& mt_Score);
+
+        // Compute best delta scores when selecting two same nodes in this->all_graphs
+        std::vector<pmScoreValueType> compute_bestq(pair<int, int> pair_of_MTNodes, pmMTpScore& mt_Score, pmMTCSVDataSet& csv_data);
+
+        // Compute global score when applying operation in all_graphs
+        double compute_score(int level, std::vector<pmGraphOp_MT> operations_MT, pmMTCSVDataSet& csv_data, pmMTpScore& mt_Score);
+
+        // Generate neighbourhood and cuting branches that have lower score that actual best score
+        double branch_and_bound(std::vector<pmGraphOp_MT>& held_operations, pmMTCSVDataSet& csv_data, pmMTpScore& mt_Score);
+
+        // Multi-task Greedy search
+        void MT_Greedy(pmMTCSVDataSet& csv_data, pmMTpScore& mt_Score);
+
+        // Run both MT MMHC and Greedy search 
+        void run(pmMTCSVDataSet& csv_data, pmMTpScore& mt_Score);
+
+	};
+};
+
+
+#endif

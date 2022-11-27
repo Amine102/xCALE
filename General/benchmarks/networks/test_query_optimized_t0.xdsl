@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Network2" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="AAA_t0">
+			<state id="False" />
+			<state id="True" />
+			<probabilities>0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="BBB_t0">
+			<state id="False" />
+			<state id="True" />
+			<probabilities>0.75 0.25</probabilities>
+		</cpt>
+		<cpt id="CCC_t0">
+			<state id="False" />
+			<state id="True" />
+			<parents>BBB_t0 AAA_t0</parents>
+			<probabilities>0.4 0.6 0.2 0.8 0.1 0.9 0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="DDD_t0">
+			<state id="False" />
+			<state id="True" />
+			<parents>AAA_t0</parents>
+			<probabilities>0.9 0.1 0.3 0.7</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.5590.0" name="Network2" faultnameformat="nodestate">
+			<node id="AAA_t0">
+				<name>AAA_t0</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>542 155 576 176</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="BBB_t0">
+				<name>BBB_t0</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>789 349 823 370</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="CCC_t0">
+				<name>CCC_t0</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>603 506 637 527</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="DDD_t0">
+				<name>DDD_t0</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>377 354 411 375</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>

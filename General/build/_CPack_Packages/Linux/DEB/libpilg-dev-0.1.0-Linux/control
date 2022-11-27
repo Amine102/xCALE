@@ -1,0 +1,11 @@
+Architecture: amd64
+Depends: libprobt-dev, libboost-system-dev, libboost-filesystem-dev
+Description: ProbabIListic Graphical and RelatIonal Models
+Homepage: https://www.ls2n.fr/equipe/duke/
+Maintainer: LS2N
+Package: libpilg-dev
+Priority: optional
+Section: devel
+Version: 0.1.0
+Installed-Size: 22022
+

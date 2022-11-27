@@ -1,0 +1,77 @@
+########################################
+# Upload packages to make them available for download on release
+########################################
+
+Upload packages on default branch action:
+  extends:
+    - .6-Publish:rules:Upload packages on default branch action
+  image: ${LOCAL_CI_IMAGE_REPO}/ci:publish
+  stage: 6-Publish  
+  dependencies: # Replace with needs and artifacts: true
+    - package.amd64.linux.gcc
+    # - package.amd64.linux.clang
+    # - package.amd64.windows.clang
+    # - package.amd64.darwin.clang
+
+    # - package.arm.linux.gcc
+    # - package.arm.linux.clang
+
+    # - package.arm64.linux.gcc
+    # - package.arm64.linux.clang
+    # - package.arm64.darwin.clang
+  script:
+    - cd build/packages
+    - | # TODO(Etienne M): I could use ${CI_COMMIT_REF_NAME} instead of CurrentHead but it may contain / which would break the command
+      for FILE in *; do
+        curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file ${FILE} ${PACKAGE_REGISTRY_URL}/${PACKAGE_NAME}/latest_commit/${FILE};
+      done
+
+Upload packages on tag action:
+  extends:
+    - .6-Publish:rules:Upload packages on tag action
+  image: ${LOCAL_CI_IMAGE_REPO}/ci:publish
+  stage: 6-Publish  
+  dependencies: # Replace with needs and artifacts: true
+    - package.amd64.linux.gcc
+    # - package.amd64.linux.clang
+    # - package.amd64.windows.clang
+    # - package.amd64.darwin.clang
+
+    # - package.arm.linux.gcc
+    # - package.arm.linux.clang
+
+    # - package.arm64.linux.gcc
+    # - package.arm64.linux.clang
+    # - package.arm64.darwin.clang
+  script:
+    - cd build/packages
+    # This'll just get all the version (*.*.*) represented as tag in the repository.
+    # Then it'll sort them and return the latest according to the sorting predicate.
+    - IS_LATEST_RELEASE=false
+    # TODO(Etienne M): fix that command
+    # - LATEST_GIT_TAG=$(git -c versionsort.prereleaseSuffix="-rc" -c versionsort.prereleaseSuffix="-RC" tag -l "*.*.*" --sort=-v:refname | awk '!/rc/' | head -n 1)
+    - if [ "${CI_COMMIT_TAG}" = "${LATEST_GIT_TAG}" ]; then IS_LATEST_RELEASE=true; fi
+    - echo "Commit tag is ${CI_COMMIT_TAG} - latest git tag is ${LATEST_GIT_TAG}."
+    - |
+      for FILE in *; do
+        curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file ${FILE} ${PACKAGE_REGISTRY_URL}/${PACKAGE_NAME}/${CI_COMMIT_TAG}/${FILE};
+        if [ "$IS_LATEST_RELEASE" = "true" ]; then 
+          curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file ${FILE} ${PACKAGE_REGISTRY_URL}/${PACKAGE_NAME}/latest_release/${FILE}; 
+        fi
+      done
+
+
+########################################
+# Prepare a description
+########################################
+
+Generate release description based on tag description:
+  extends:
+    - .6-Publish:rules:Generate release description based on tag description
+  image: ${LOCAL_CI_IMAGE_REPO}/ci:publish
+  stage: 6-Publish  
+  script:
+    - echo "DESCRIPTION=$(git tag --format="%(contents:subject)" --list ${CI_COMMIT_TAG} | sed 's|\r |\n|g')" > description.env
+  artifacts:
+    reports:
+      dotenv: description.env

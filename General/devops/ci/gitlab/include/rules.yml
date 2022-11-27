@@ -1,0 +1,133 @@
+################################################################################
+# Rules used to constrain the pipeline execution
+################################################################################
+
+########################################
+# Predicate on variable
+########################################
+
+.Predicate: &TriggerOn_CIImageGeneration
+  if: '$LOCAL_SCHEDULE_CI_IMAGE_GENERATION' # Should only be set by a special scheduled pipeline
+
+# Branch name relative to the action
+.Predicate: &TriggerOn_DefaultBranchAction
+  if: '$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH'
+
+.Predicate: &TriggerOn_developAction
+  if: '$CI_COMMIT_REF_NAME == "develop"'
+
+.Predicate: &TriggerOn_MergeRequest
+  if: '$CI_MERGE_REQUEST_IID'
+
+.Predicate: &TriggerOn_TagAction
+  if: '$CI_COMMIT_TAG'
+
+.Preficate: &TriggerOn_ApprovedMergeRequest
+  if: '$CI_MERGE_REQUEST_IID && $CI_MERGE_REQUEST_APPROVED == "true"'
+
+.Preficate: &TriggerOn_NotApprovedMergeRequest
+  if: '$CI_MERGE_REQUEST_IID && $CI_MERGE_REQUEST_APPROVED != "true"'
+
+.Preficate: &TriggerOn_ScheduledDefaultBranchAction
+  if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE == "schedule"'
+
+########################################
+# Predicate on file change
+########################################
+
+.Pattern: &Match_CIStuff
+  - 'devops/ci/gitlab/**/*'
+
+.Pattern: &Match_CIImageStuff
+  - '${LOCAL_CI_DOCKERFILE_DIR}/*'
+  # - '' I could add all file that the images depend on
+  # or do a Pattern per image
+
+# .Pattern: &Match_Docs
+#   - ''
+
+# .Pattern: &Match_Dependency
+#   - ''
+
+# .Pattern: &Match_Code
+#   - ''
+
+
+########################################
+# Rules
+########################################
+
+.workflow:rules:
+  rules:
+    # If we are doing a regular ci image generation pass
+    # that is, its time to rebuild the image used when running the "normal" 
+    # pipeline
+    - <<: *TriggerOn_CIImageGeneration
+    - <<: *TriggerOn_MergeRequest
+    - <<: *TriggerOn_DefaultBranchAction
+    - <<: *TriggerOn_developAction
+    - <<: *TriggerOn_TagAction
+
+
+# For now we only regenerate the images on demande (schedule)
+.0-Prepare:rules:BuildCIImageVariantAndPushItToGitlabRegistryBase:
+  rules:
+    - <<: *TriggerOn_CIImageGeneration
+    # ONLY on default branch, I dont want someone to be able to change the Dockerimage stored on the registry by 
+    # commiting to develop
+    # - <<: *TriggerOn_DefaultBranchAction
+    #   changes: *Match_CIImageDockerfile
+
+
+.1-Static.Test:rules:StaticTests:
+  rules:
+    - <<: *TriggerOn_MergeRequest
+    - <<: *TriggerOn_DefaultBranchAction
+    - <<: *TriggerOn_TagAction
+
+
+.2-Build:rules:BuildVariantBase:
+  rules:
+    - <<: *TriggerOn_MergeRequest
+    - <<: *TriggerOn_DefaultBranchAction
+    - <<: *TriggerOn_developAction
+    - <<: *TriggerOn_TagAction
+
+
+.3-Test:rules:TestVariantBase:
+  rules:
+    - <<: *TriggerOn_MergeRequest
+    - <<: *TriggerOn_DefaultBranchAction
+    - <<: *TriggerOn_developAction
+    - <<: *TriggerOn_TagAction
+
+
+.4-coverage:rules:CoverageBase:
+  rules:
+    - <<: *TriggerOn_MergeRequest
+    - <<: *TriggerOn_DefaultBranchAction
+    - <<: *TriggerOn_developAction
+    - <<: *TriggerOn_TagAction
+
+
+.5-Packaging:rules:PackageVariantBase:
+  rules:
+    - <<: *TriggerOn_DefaultBranchAction
+    - <<: *TriggerOn_TagAction
+
+.6-Publish:rules:Upload packages on default branch action:
+  rules:
+    - <<: *TriggerOn_DefaultBranchAction
+
+.6-Publish:rules:Upload packages on tag action:
+  rules:
+    - <<: *TriggerOn_TagAction
+
+.6-Publish:rules:Generate release description based on tag description:
+  rules:
+    - <<: *TriggerOn_TagAction
+
+
+.7-Release:rules:Release the packages:
+  rules:
+    - <<: *TriggerOn_TagAction

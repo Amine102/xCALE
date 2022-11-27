@@ -1,0 +1,16 @@
+{
+	"Bkt_setting":
+	{
+		"enable_prerequisite": false
+	},
+
+	"Bkt_params":
+	{
+		"pinit"  : [0.80, 0.10, 0.08, 0.02],
+		"plearn" : [0.60, 0.10, 0.10],
+		"pguess" : 0.10, 
+		"pslip"  : 0.05,
+		"pforget": 0
+	}
+
+}

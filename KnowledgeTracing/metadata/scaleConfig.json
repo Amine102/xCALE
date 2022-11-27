@@ -1,0 +1,89 @@
+{
+	"difficulty_scale":
+	{
+		"difficulty_scale_01":
+		{
+			"name" : "DIFF_EASY",
+			"label": "1 - facile",
+			"scale": 1
+		},
+
+		"difficulty_scale_02":
+		{
+			"name" : "DIFF_NORMAL",
+			"label": "2 - moyen",
+			"scale":2
+		},
+
+		"difficulty_scale_03":
+		{
+			"name" : "DIFF_HARD",
+			"label": "3 - dur",
+			"scale": 3
+		}
+	},
+
+	"mastery_level":
+	{
+		"mastery_level_01":
+		{
+			"name" : "MLS_INS",
+			"label": "1 - insuffisant",
+			"scale": 1
+		},
+
+		"mastery_level_02":
+		{
+			"name" : "MLS_FRG",
+			"label": "2 - fragile",
+			"scale": 2
+		},
+
+		"mastery_level_03":
+		{
+			"name" : "MLS_SAT",
+			"label": "3 - satisfaisant",
+			"scale": 3
+		},
+
+		"mastery_level_04":
+		{
+			"name" : "MLS_VGOOD",
+			"label": "4 - tres bien",
+			"scale": 4
+		}
+
+	},
+
+	"speed_scale":
+	{
+		"speed_scale_01":
+		{
+			"name" : "SPS_NULL",
+			"label": "1 - nulle",
+			"scale": 1
+		},
+
+		"speed_scale_02":
+		{
+			"name" : "SPS_SLOW",
+			"label": "2 - lent",
+			"scale": 2
+		},
+
+		"speed_scale_03":
+		{
+			"name" : "SPS_AVG",
+			"label": "3 - moyen",
+			"scale": 3
+		},
+
+		"speed_scale_04":
+		{
+			"name" : "SPS_FAST",
+			"label": "4 - rapide",
+			"scale": 4
+		}
+	}
+	
+}

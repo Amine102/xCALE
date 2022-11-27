@@ -1,0 +1,435 @@
+{ 	
+	"Exercise_01_01": 
+	{
+		"name": "Melodie",
+		"version": 2,
+		"difficulty": 1,
+		"mobilised_skills": ["C1"],
+		"observed_skills" : ["C1"]
+	},
+
+	"Exercise_01_02": 
+	{
+		"name":"Melodie",
+		"version": 3,
+		"difficulty": 2,
+		"mobilised_skills": ["C2"],
+		"observed_skills" : ["C2"]
+	},
+
+	"Exercise_01_03":
+	 {
+	 	"name":"Melodie",
+	 	"Version": 4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C2"],
+	 	"observed_skills" : ["C2"]
+	 },
+
+
+	 "Exercise_02_01":
+	 {
+	 	"name":"Alternance",
+	 	"Version": 2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1", "C2", "C3"],
+	 	"observed_skills" : ["C3"]
+	 },
+	 
+	 "Exercise_02_02":
+	 {
+	 	"name":"Alternance",
+	 	"Version": 3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C1", "C2", "C3"],
+	 	"observed_skills" : ["C3"]
+	 },
+
+	 "Exercise_02_03":
+	 {
+	 	"name":"Alternance",
+	 	"Version": 4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C1", "C2", "C3"],
+	 	"observed_skills" : ["C3"]
+	 },
+
+	 "Exercise_03_01":
+	 {
+	 	"name":"Show Lumineux",
+	 	"Version": 2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1", "C2", "C3"],
+	 	"observed_skills" : ["C3"]
+	 },
+	 
+	 "Exercise_03_02":
+	 {
+	 	"name":"Show Lumineux",
+	 	"Version": 3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C1", "C2", "C3"],
+	 	"observed_skills" : ["C3"]
+	 },
+
+	 "Exercise_03_03":
+	 {
+	 	"name":"Show Lumineux",
+	 	"Version": 4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C1", "C2", "C3"],
+	 	"observed_skills" : ["C3"]
+	 },
+
+	 "Exercise_04_01":
+	 {
+	 	"name":"Quelle Direction",
+	 	"Version": 2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1", "C2", "C4", "C6"],
+	 	"observed_skills" : ["C6"]
+	 },
+	 
+	 "Exercise_04_02":
+	 {
+	 	"name":"Quelle Direction",
+	 	"Version": 3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C1", "C2", "C4", "C6"],
+	 	"observed_skills" : ["C6"]
+	 },
+
+	 "Exercise_04_03":
+	 {
+	 	"name":"Quelle Direction",
+	 	"Version": 4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C1", "C2", "C4", "C6"],
+	 	"observed_skills" : ["C6"]
+	 },
+
+	 "Exercise_05_01":
+	 {
+	 	"name":"Instrument",
+	 	"Version": 2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1", "C2", "C4", "C6", "C7"],
+	 	"observed_skills" : ["C7"]
+	 },
+	 
+	 "Exercise_05_02":
+	 {
+	 	"name":"Instrument",
+	 	"Version": 3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C1", "C2", "C4", "C6", "C7"],
+	 	"observed_skills" : ["C7"]
+	 },
+
+	 "Exercise_05_03":
+	 {
+	 	"name":"Instrument",
+	 	"Version": 4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C1", "C2", "C4", "C6", "C7"],
+	 	"observed_skills" : ["C7"]
+	 },
+
+	 "Exercise_06_01":
+	 {
+	 	"name":"Show Luminuex 2",
+	 	"Version": 2,
+        "difficulty": 1,
+	 	"mobilised_skills": ["C2", "C5", "C6"],
+	 	"observed_skills" : ["C5"]
+	 },
+	 
+	 "Exercise_06_02":
+	 {
+	 	"name":"Show Luminuex 2",
+	 	"Version":3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C2", "C5", "C6"],
+	 	"observed_skills" : ["C5"]
+	 },
+
+	 "Exercise_06_03":
+	 {
+	 	"name":"Show Luminuex 2",
+	 	"Version":4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C2", "C5", "C6"],
+	 	"observed_skills" : ["C5"]
+	 },
+
+	 "Exercise_07_01":
+	 {
+	 	"name":"Avertisseur",
+	 	"Version":2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C4", "C6", "C7"],
+	 	"observed_skills" : ["C6"]
+	 },
+	 
+	 "Exercise_07_02":
+	 {
+	 	"name":"Avertisseur",
+	 	"Version":3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C4", "C6", "C7"],
+	 	"observed_skills" : ["C6"]
+	 },
+
+	 "Exercise_07_03":
+	 {
+	 	"name":"Avertisseur",
+	 	"Version":4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C4", "C6", "C7"],
+	 	"observed_skills" : ["C6"]
+	 },
+
+	 "Exercise_08_01":
+	 {
+	 	"name":"Servo Chronometre",
+	 	"Version":2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C4", "C6", "C7"],
+	 	"observed_skills" : ["C7"]
+	 },
+	 
+	 "Exercise_08_02":
+	 {
+	 	"name":"Servo Chronometre",
+	 	"Version":3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C2", "C3", "C4", "C6", "C7"],
+	 	"observed_skills" : ["C7"]
+	 },
+
+	 "Exercise_08_03":
+	 {
+	 	"name":"Servo Chronometre",
+	 	"Version":4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C2", "C3", "C4", "C6", "C7"],
+	 	"observed_skills" : ["C7"]
+	 },
+
+	 "Exercise_09_01":
+	 {
+	 	"name":"Sommeil Agreable",
+	 	"Version":2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C2", "C4", "C6", "C7", "C10"],
+	 	"observed_skills" : ["C7"]
+	 },
+	 
+	 "Exercise_09_02":
+	 {
+	 	"name":"Sommeil Agreable",
+	 	"Version":3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C2", "C4", "C6", "C7", "C10"],
+	 	"observed_skills" : ["C7"]
+	 },
+
+	 "Exercise_09_03":
+	 {
+	 	"name":"Sommeil Agreable",
+	 	"Version":4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C2", "C4", "C6", "C7", "C10"],
+	 	"observed_skills" : ["C7"]
+	 },
+
+	 "Exercise_10_01":
+	 {
+	 	"name":"Reveil Matin",
+	 	"Version":2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1", "C2", "C4", "C9"],
+	 	"observed_skills" : ["C4"]
+	 },
+	 
+	 "Exercise_10_02":
+	 {
+	 	"name":"Reveil Matin",
+	 	"Version":3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C1", "C2", "C4", "C9", "C10"],
+	 	"observed_skills" : ["C4"]
+	 },
+
+	 "Exercise_10_03":
+	 {
+	 	"name":"Reveil Matin",
+	 	"Version":4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C1", "C2", "C4", "C9", "C10"],
+	 	"observed_skills" : ["C4"]
+	 },
+
+	 "Exercise_11_01":
+	 {
+	 	"name":"Secousses",
+	 	"Version":2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1" ,"C2" ,"C4" ,"C6" ,"C7" ,"C8" ,"C9" ,"C11" ,"C12"],
+	 	"observed_skills" : ["C11"]
+	 },
+	 
+	 "Exercise_11_02":
+	 {
+	 	"name":"Secousses",
+	 	"Version":3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C1" ,"C2" ,"C4" ,"C6" ,"C7" ,"C8" ,"C9" ,"C10" ,"C11" ,"C12"],
+	 	"observed_skills" : ["C11"]
+	 },
+
+	 "Exercise_11_03":
+	 {
+	 	"name":"Secousses",
+	 	"Version":4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C1" ,"C2" ,"C4" ,"C6" ,"C7" ,"C8" ,"C9" ,"C10" ,"C11" ,"C12"],
+	 	"observed_skills" : ["C11"]
+	 },
+
+	 "Exercise_12_01":
+	 {
+	 	"name":"Detection mouvement",
+	 	"Version":2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1" ,"C2" ,"C3" ,"C4" ,"C6" ,"C7" ,"C8" ,"C9", "C11" ,"C12"],
+	 	"observed_skills" : ["C11"]
+	 },
+	 
+	 "Exercise_12_02":
+	 {
+	 	"name":"Detection mouvement",
+	 	"Version":3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C1" ,"C2" ,"C3" ,"C4" ,"C6" ,"C7" ,"C8" ,"C9" ,"C10" ,"C11" ,"C12"],
+	 	"observed_skills" : ["C11"]
+	 },
+
+	 "Exercise_12_03":
+	 {
+	 	"name":"Detection mouvement",
+	 	"Version":4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C1" ,"C2" ,"C3" ,"C4" ,"C6" ,"C7" ,"C8" ,"C9" ,"C10" ,"C11" ,"C12"],
+	 	"observed_skills" : ["C11"]
+	 },
+
+	 "Exercise_13_01":
+	 {
+	 	"name":"Sirene",
+	 	"Version":2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C2" ,"C3" ,"C4" ,"C6" ,"C7" ,"C8" ,"C9", "C11" ,"C12"],
+	 	"observed_skills" : ["C11"]
+	 },
+	 
+	 "Exercise_13_02":
+	 {
+	 	"name":"Sirene",
+	 	"Version":3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C2" ,"C3" ,"C4" ,"C6" ,"C7" ,"C8" ,"C9" ,"C10" ,"C11" ,"C12"],
+	 	"observed_skills" : ["C11"]
+	 },
+
+	 "Exercise_13_03":
+	 {
+	 	"name":"Sirene",
+	 	"Version":4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C2" ,"C3" ,"C4" ,"C6" ,"C7" ,"C8" ,"C9" ,"C10" ,"C11" ,"C12"],
+	 	"observed_skills" : ["C11"]
+	 },
+
+	 "Exercise_14_01":
+	 {
+	 	"name":"Applaudimetre",
+	 	"Version":2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1", "C2", "C4", "C6", "C7", "C9", "C10", "C11"],
+	 	"observed_skills" : ["C11"]
+	 },
+	 
+	 "Exercise_14_02":
+	 {
+	 	"name":"Applaudimetre",
+	 	"Version":3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C6", "C7", "C9", "C10", "C11"],
+	 	"observed_skills" : ["C11"]
+	 },
+
+	 "Exercise_14_03":
+	 {
+	 	"name":"Applaudimetre",
+	 	"Version":4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C4", "C6", "C7", "C8", "C9", "C10", "C11"],
+	 	"observed_skills" : ["C11"]
+	 },
+
+	 "Exercise_15_01":
+	 {
+	 	"name":"Binaire",
+	 	"Version":2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C4", "C6", "C7", "C8", "C9", "C10", "C11"],
+	 	"observed_skills" : ["C11"]
+	 },
+	 
+	 "Exercise_15_02":
+	 {
+	 	"name":"Binaire",
+	 	"Version":3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C4", "C6", "C7", "C8", "C9", "C10", "C11"],
+	 	"observed_skills" : ["C11"]
+	 },
+
+	 "Exercise_15_03":
+	 {
+	 	"name":"Binaire",
+	 	"Version":4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C4", "C6", "C7", "C8", "C9", "C10", "C11"],
+	 	"observed_skills" : ["C11"]
+	 },
+
+	 "Exercise_16_01":
+	 {
+	 	"name":"Bille",
+	 	"Version":2,
+	 	"difficulty": 1,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C6", "C7", "C8", "C9", "C10", "C11"],
+	 	"observed_skills" : ["C11"]
+	 },
+	 
+	 "Exercise_16_02":
+	 {
+	 	"name":"Bille",
+	 	"Version":3,
+	 	"difficulty": 2,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C6", "C7", "C8", "C9", "C10", "C11"],
+	 	"observed_skills" : ["C11"]
+	 },
+
+	 "Exercise_16_03":
+	 {
+	 	"name":"Bille",
+	 	"Version":4,
+	 	"difficulty": 3,
+	 	"mobilised_skills": ["C1", "C2", "C3", "C6", "C7", "C8", "C9", "C10", "C11"],
+	 	"observed_skills" : ["C11"]
+	 }
+
+}

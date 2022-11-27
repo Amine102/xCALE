@@ -1,0 +1,36 @@
+FROM ubuntu:latest as libs
+
+ARG PROBT_CI_READ_TOKEN
+
+# apt s**u
+ENV DEBIAN_FRONTEND=noninteractive
+ENV HTTP_PROXY="http://proxy-serveur.univ-nantes.prive:3128"
+ENV HTTPS_PROXY="http://proxy-serveur.univ-nantes.prive:3128"
+ENV http_proxy="http://proxy-serveur.univ-nantes.prive:3128"
+ENV https_proxy="http://proxy-serveur.univ-nantes.prive:3128"
+
+# Pip is huge so I'd rather not even having installed it on the final image.
+# I could remove it or use the build pattern for docker image but the former do not work on the gitlab I use... weird
+RUN apt update && \
+    apt -y install python3 python3-pip cmake p7zip-full git g++ && \
+    apt-get -y clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install --no-cache-dir --upgrade --target /opt/ci/bin lxml
+
+RUN git clone "https://${PROBT_CI_READ_TOKEN}@gitlab.univ-nantes.fr/PILGRIM/libprobt.git" libprobt && \
+    cd libprobt && \
+    mkdir build && \
+    cd build && \
+    cmake -DPROBT_CI_PACKAGE_NAME=ON -DCMAKE_BUILD_TYPE=Release .. && \
+    cmake --build . --target package && \
+    apt install ./__package__.deb && \
+    cd ../.. && \
+    rm -rf libprobt
+
+COPY /devops/ci/common/ctest2junit.py    /opt/ci/bin/
+COPY /devops/ci/common/junittemplate.xsl /opt/ci/common/junittemplate.xsl
+
+RUN chmod +x /opt/ci/bin/ctest2junit.py
+
+ENV PATH="/opt/ci/bin:${PATH}"

@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="12">
+<probt_version>3.1.0</probt_version>
+<boost_version>105800</boost_version>
+<compiler_version>gcc 5.4.0 20160609</compiler_version>
+<name_>serial_s</name_>
+<objects_ class_id="0" tracking_level="0" version="0">
+	<count>1</count>
+	<item_version>0</item_version>
+	<item class_id="1" tracking_level="0" version="0">
+		<first>PED-use</first>
+		<second class_id="2" class_name="plJointDistribution" tracking_level="1" version="0" object_id="_0">
+			<plDistribution class_id="3" tracking_level="1" version="0" object_id="_1">
+				<plComputableObject class_id="4" tracking_level="1" version="255" object_id="_2">
+					<signature class_id="5" tracking_level="0" version="0">
+						<value>0b010010000100000000000000000000000000000</value>
+					</signature>
+					<root_kernel class_id="6" class_name="kplDescription" tracking_level="1" version="255" object_id="_3">
+						<variables class_id="7" tracking_level="0" version="0">
+							<count>5</count>
+							<item_version>0</item_version>
+							<item class_id="9" class_name="kplSymbol" tracking_level="1" version="0" object_id="_4">
+								<name>imc</name>
+								<type class_id="10" class_name="kplLabelType" tracking_level="1" version="0" object_id="_5">
+									<labels class_id="11" tracking_level="0" version="0">
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>p30</item>
+										<item>m30</item>
+									</labels>
+								</type>
+							</item>
+							<item class_id_reference="9" object_id="_6">
+								<name>bf</name>
+								<type class_id_reference="10" object_id="_7">
+									<labels>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>m15%</item>
+										<item>p15%</item>
+									</labels>
+								</type>
+							</item>
+							<item class_id_reference="9" object_id="_8">
+								<name>cheated</name>
+								<type class_id_reference="10" object_id="_9">
+									<labels>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>oui</item>
+										<item>non</item>
+									</labels>
+								</type>
+							</item>
+							<item class_id_reference="9" object_id="_10">
+								<name>PED</name>
+								<type class_id_reference="10" object_id="_11">
+									<labels>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>oui</item>
+										<item>non</item>
+									</labels>
+								</type>
+							</item>
+							<item class_id_reference="9" object_id="_12">
+								<name>top3</name>
+								<type class_id_reference="10" object_id="_13">
+									<labels>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>oui</item>
+										<item>non</item>
+									</labels>
+								</type>
+							</item>
+						</variables>
+						<functions class_id="12" tracking_level="0" version="0">
+							<count>5</count>
+							<item_version>0</item_version>
+							<item class_id="13" class_name="kplKernelMask" tracking_level="1" version="255" object_id="_14">
+								<root class_id="14" class_name="kplHistogram" tracking_level="1" version="0" object_id="_15">
+									<variables>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item class_id_reference="9" object_id_reference="_4"></item>
+									</variables>
+									<one_d_histogram>
+										<size>2</size>
+										<values>1.00000000000000006e-01 9.00000000000000022e-01 </values>
+									</one_d_histogram>
+									<is_normalized>1</is_normalized>
+								</root>
+								<rename_map class_id="16" tracking_level="0" version="0">
+									<count>0</count>
+									<item_version>0</item_version>
+								</rename_map>
+							</item>
+							<item class_id_reference="13" object_id="_16">
+								<root class_id_reference="14" object_id="_17">
+									<variables>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item class_id_reference="9" object_id_reference="_6"></item>
+									</variables>
+									<one_d_histogram>
+										<size>2</size>
+										<values>9.00000000000000022e-01 1.00000000000000006e-01 </values>
+									</one_d_histogram>
+									<is_normalized>1</is_normalized>
+								</root>
+								<rename_map>
+									<count>0</count>
+									<item_version>0</item_version>
+								</rename_map>
+							</item>
+							<item class_id_reference="13" object_id="_18">
+								<root class_id_reference="14" object_id="_19">
+									<variables>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item class_id_reference="9" object_id_reference="_8"></item>
+									</variables>
+									<one_d_histogram>
+										<size>2</size>
+										<values>1.00000000000000006e-01 9.00000000000000022e-01 </values>
+									</one_d_histogram>
+									<is_normalized>1</is_normalized>
+								</root>
+								<rename_map>
+									<count>0</count>
+									<item_version>0</item_version>
+								</rename_map>
+							</item>
+							<item class_id="17" class_name="kplKernelTable" tracking_level="1" version="255" object_id="_20">
+								<function_container class_id="18" class_name="kplFunctionVector" tracking_level="1" version="0" object_id="_21">
+									<search_variables>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item class_id_reference="9" object_id_reference="_10"></item>
+									</search_variables>
+									<known_variables>
+										<count>3</count>
+										<item_version>0</item_version>
+										<item class_id_reference="9" object_id_reference="_4"></item>
+										<item class_id_reference="9" object_id_reference="_6"></item>
+										<item class_id_reference="9" object_id_reference="_8"></item>
+									</known_variables>
+									<index_variables>
+										<count>3</count>
+										<item_version>0</item_version>
+										<item class_id_reference="9" object_id_reference="_4"></item>
+										<item class_id_reference="9" object_id_reference="_6"></item>
+										<item class_id_reference="9" object_id_reference="_8"></item>
+									</index_variables>
+									<elements class_id="19" tracking_level="0" version="0">
+										<count>8</count>
+										<item_version>0</item_version>
+										<item class_id="20" class_name="kplCndKernelFromKernel" tracking_level="1" version="0" object_id="_22">
+											<search_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_10"></item>
+											</search_variables>
+											<known_variables>
+												<count>3</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_4"></item>
+												<item class_id_reference="9" object_id_reference="_6"></item>
+												<item class_id_reference="9" object_id_reference="_8"></item>
+											</known_variables>
+											<from_kernel class_id_reference="13" object_id="_23">
+												<root class_id_reference="14" object_id="_24">
+													<variables>
+														<count>1</count>
+														<item_version>0</item_version>
+														<item class_id_reference="9" object_id_reference="_10"></item>
+													</variables>
+													<one_d_histogram>
+														<size>2</size>
+														<values>9.89999999999999991e-01 1.00000000000000002e-02 </values>
+													</one_d_histogram>
+													<is_normalized>1</is_normalized>
+												</root>
+												<rename_map>
+													<count>0</count>
+													<item_version>0</item_version>
+												</rename_map>
+											</from_kernel>
+										</item>
+										<item class_id_reference="20" object_id="_25">
+											<search_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_10"></item>
+											</search_variables>
+											<known_variables>
+												<count>3</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_4"></item>
+												<item class_id_reference="9" object_id_reference="_6"></item>
+												<item class_id_reference="9" object_id_reference="_8"></item>
+											</known_variables>
+											<from_kernel class_id_reference="13" object_id="_26">
+												<root class_id_reference="14" object_id="_27">
+													<variables>
+														<count>1</count>
+														<item_version>0</item_version>
+														<item class_id_reference="9" object_id_reference="_10"></item>
+													</variables>
+													<one_d_histogram>
+														<size>2</size>
+														<values>6.99999999999999956e-01 2.99999999999999989e-01 </values>
+													</one_d_histogram>
+													<is_normalized>1</is_normalized>
+												</root>
+												<rename_map>
+													<count>0</count>
+													<item_version>0</item_version>
+												</rename_map>
+											</from_kernel>
+										</item>
+										<item class_id_reference="20" object_id="_28">
+											<search_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_10"></item>
+											</search_variables>
+											<known_variables>
+												<count>3</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_4"></item>
+												<item class_id_reference="9" object_id_reference="_6"></item>
+												<item class_id_reference="9" object_id_reference="_8"></item>
+											</known_variables>
+											<from_kernel class_id_reference="13" object_id="_29">
+												<root class_id_reference="14" object_id="_30">
+													<variables>
+														<count>1</count>
+														<item_version>0</item_version>
+														<item class_id_reference="9" object_id_reference="_10"></item>
+													</variables>
+													<one_d_histogram>
+														<size>2</size>
+														<values>6.99999999999999956e-01 2.99999999999999989e-01 </values>
+													</one_d_histogram>
+													<is_normalized>1</is_normalized>
+												</root>
+												<rename_map>
+													<count>0</count>
+													<item_version>0</item_version>
+												</rename_map>
+											</from_kernel>
+										</item>
+										<item class_id_reference="20" object_id="_31">
+											<search_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_10"></item>
+											</search_variables>
+											<known_variables>
+												<count>3</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_4"></item>
+												<item class_id_reference="9" object_id_reference="_6"></item>
+												<item class_id_reference="9" object_id_reference="_8"></item>
+											</known_variables>
+											<from_kernel class_id_reference="13" object_id="_32">
+												<root class_id_reference="14" object_id="_33">
+													<variables>
+														<count>1</count>
+														<item_version>0</item_version>
+														<item class_id_reference="9" object_id_reference="_10"></item>
+													</variables>
+													<one_d_histogram>
+														<size>2</size>
+														<values>6.99999999999999956e-01 2.99999999999999989e-01 </values>
+													</one_d_histogram>
+													<is_normalized>1</is_normalized>
+												</root>
+												<rename_map>
+													<count>0</count>
+													<item_version>0</item_version>
+												</rename_map>
+											</from_kernel>
+										</item>
+										<item class_id_reference="20" object_id="_34">
+											<search_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_10"></item>
+											</search_variables>
+											<known_variables>
+												<count>3</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_4"></item>
+												<item class_id_reference="9" object_id_reference="_6"></item>
+												<item class_id_reference="9" object_id_reference="_8"></item>
+											</known_variables>
+											<from_kernel class_id_reference="13" object_id="_35">
+												<root class_id_reference="14" object_id="_36">
+													<variables>
+														<count>1</count>
+														<item_version>0</item_version>
+														<item class_id_reference="9" object_id_reference="_10"></item>
+													</variables>
+													<one_d_histogram>
+														<size>2</size>
+														<values>9.89999999999999991e-01 1.00000000000000002e-02 </values>
+													</one_d_histogram>
+													<is_normalized>1</is_normalized>
+												</root>
+												<rename_map>
+													<count>0</count>
+													<item_version>0</item_version>
+												</rename_map>
+											</from_kernel>
+										</item>
+										<item class_id_reference="20" object_id="_37">
+											<search_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_10"></item>
+											</search_variables>
+											<known_variables>
+												<count>3</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_4"></item>
+												<item class_id_reference="9" object_id_reference="_6"></item>
+												<item class_id_reference="9" object_id_reference="_8"></item>
+											</known_variables>
+											<from_kernel class_id_reference="13" object_id="_38">
+												<root class_id_reference="14" object_id="_39">
+													<variables>
+														<count>1</count>
+														<item_version>0</item_version>
+														<item class_id_reference="9" object_id_reference="_10"></item>
+													</variables>
+													<one_d_histogram>
+														<size>2</size>
+														<values>5.00000000000000000e-01 5.00000000000000000e-01 </values>
+													</one_d_histogram>
+													<is_normalized>1</is_normalized>
+												</root>
+												<rename_map>
+													<count>0</count>
+													<item_version>0</item_version>
+												</rename_map>
+											</from_kernel>
+										</item>
+										<item class_id_reference="20" object_id="_40">
+											<search_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_10"></item>
+											</search_variables>
+											<known_variables>
+												<count>3</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_4"></item>
+												<item class_id_reference="9" object_id_reference="_6"></item>
+												<item class_id_reference="9" object_id_reference="_8"></item>
+											</known_variables>
+											<from_kernel class_id_reference="13" object_id="_41">
+												<root class_id_reference="14" object_id="_42">
+													<variables>
+														<count>1</count>
+														<item_version>0</item_version>
+														<item class_id_reference="9" object_id_reference="_10"></item>
+													</variables>
+													<one_d_histogram>
+														<size>2</size>
+														<values>5.00000000000000000e-01 5.00000000000000000e-01 </values>
+													</one_d_histogram>
+													<is_normalized>1</is_normalized>
+												</root>
+												<rename_map>
+													<count>0</count>
+													<item_version>0</item_version>
+												</rename_map>
+											</from_kernel>
+										</item>
+										<item class_id_reference="20" object_id="_43">
+											<search_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_10"></item>
+											</search_variables>
+											<known_variables>
+												<count>3</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_4"></item>
+												<item class_id_reference="9" object_id_reference="_6"></item>
+												<item class_id_reference="9" object_id_reference="_8"></item>
+											</known_variables>
+											<from_kernel class_id_reference="13" object_id="_44">
+												<root class_id_reference="14" object_id="_45">
+													<variables>
+														<count>1</count>
+														<item_version>0</item_version>
+														<item class_id_reference="9" object_id_reference="_10"></item>
+													</variables>
+													<one_d_histogram>
+														<size>2</size>
+														<values>5.00000000000000000e-01 5.00000000000000000e-01 </values>
+													</one_d_histogram>
+													<is_normalized>1</is_normalized>
+												</root>
+												<rename_map>
+													<count>0</count>
+													<item_version>0</item_version>
+												</rename_map>
+											</from_kernel>
+										</item>
+									</elements>
+								</function_container>
+								<default_function class_id="-1"></default_function>
+								<rename_map>
+									<count>0</count>
+									<item_version>0</item_version>
+								</rename_map>
+							</item>
+							<item class_id_reference="17" object_id="_46">
+								<function_container class_id_reference="18" object_id="_47">
+									<search_variables>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item class_id_reference="9" object_id_reference="_12"></item>
+									</search_variables>
+									<known_variables>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item class_id_reference="9" object_id_reference="_10"></item>
+									</known_variables>
+									<index_variables>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item class_id_reference="9" object_id_reference="_10"></item>
+									</index_variables>
+									<elements>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item class_id_reference="20" object_id="_48">
+											<search_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_12"></item>
+											</search_variables>
+											<known_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_10"></item>
+											</known_variables>
+											<from_kernel class_id_reference="13" object_id="_49">
+												<root class_id_reference="14" object_id="_50">
+													<variables>
+														<count>1</count>
+														<item_version>0</item_version>
+														<item class_id_reference="9" object_id_reference="_12"></item>
+													</variables>
+													<one_d_histogram>
+														<size>2</size>
+														<values>9.00000000000000022e-01 1.00000000000000006e-01 </values>
+													</one_d_histogram>
+													<is_normalized>1</is_normalized>
+												</root>
+												<rename_map>
+													<count>0</count>
+													<item_version>0</item_version>
+												</rename_map>
+											</from_kernel>
+										</item>
+										<item class_id_reference="20" object_id="_51">
+											<search_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_12"></item>
+											</search_variables>
+											<known_variables>
+												<count>1</count>
+												<item_version>0</item_version>
+												<item class_id_reference="9" object_id_reference="_10"></item>
+											</known_variables>
+											<from_kernel class_id_reference="13" object_id="_52">
+												<root class_id_reference="14" object_id="_53">
+													<variables>
+														<count>1</count>
+														<item_version>0</item_version>
+														<item class_id_reference="9" object_id_reference="_12"></item>
+													</variables>
+													<one_d_histogram>
+														<size>2</size>
+														<values>5.00000000000000000e-01 5.00000000000000000e-01 </values>
+													</one_d_histogram>
+													<is_normalized>1</is_normalized>
+												</root>
+												<rename_map>
+													<count>0</count>
+													<item_version>0</item_version>
+												</rename_map>
+											</from_kernel>
+										</item>
+									</elements>
+								</function_container>
+								<default_function class_id="-1"></default_function>
+								<rename_map>
+									<count>0</count>
+									<item_version>0</item_version>
+								</rename_map>
+							</item>
+						</functions>
+						<rename_map>
+							<count>0</count>
+							<item_version>0</item_version>
+						</rename_map>
+						<sorted_soft_evidence_variables>
+							<count>0</count>
+							<item_version>0</item_version>
+						</sorted_soft_evidence_variables>
+					</root_kernel>
+				</plComputableObject>
+			</plDistribution>
+		</second>
+	</item>
+</objects_>
+</boost_serialization>
+

@@ -1,0 +1,6 @@
+Package: vcpkg-cmake
+Version: 2022-10-30
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 104f53eb958a97a6b872cd1615f75ad4e03e8eaf29c8c5119d610c922d0df3d6
+Type: Port

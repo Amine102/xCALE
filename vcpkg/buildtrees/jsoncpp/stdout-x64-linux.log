@@ -1,0 +1,7 @@
+-- Downloading https://github.com/open-source-parsers/jsoncpp/archive/1.9.5.tar.gz -> open-source-parsers-jsoncpp-1.9.5.tar.gz...
+-- Extracting source /home/amine102/projects/vcpkg/downloads/open-source-parsers-jsoncpp-1.9.5.tar.gz
+-- Using source at /home/amine102/projects/vcpkg/buildtrees/jsoncpp/src/1.9.5-13b47286ba.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Installing: /home/amine102/projects/vcpkg/packages/jsoncpp_x64-linux/share/jsoncpp/copyright

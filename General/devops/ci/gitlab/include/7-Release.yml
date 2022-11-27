@@ -1,0 +1,35 @@
+########################################
+# Build a release and refer to the packages uploaded in publish
+########################################
+
+Release the packages:
+  extends:
+    - .7-Release:rules:Release the packages
+  image: registry.gitlab.com/gitlab-org/release-cli
+  stage: 7-Release
+  dependencies: # Replace with needs and artifacts: true
+    - Upload packages on tag action
+    - Generate release description based on tag description
+  script:
+    - echo "Creating a release for ${CI_COMMIT_TAG}"
+  release:
+    name: Release ${CI_COMMIT_TAG}
+    description: ${DESCRIPTION}
+    tag_name: ${CI_COMMIT_TAG}
+    ref: ${CI_COMMIT_TAG}
+    assets:
+      links: # TODO(Etienne M): automate asset generation
+        - name: ${PACKAGE_NAME}-${CI_COMMIT_TAG}.amd64.linux.gcc.deb
+          # ${TODO_FILE_name from Upload packages on tag action}
+          url: ${PACKAGE_REGISTRY_URL}/${PACKAGE_NAME}/${CI_COMMIT_TAG}/${PACKAGE_NAME}-${CI_COMMIT_TAG}.build.amd64.linux.gcc.deb
+
+        # - package.amd64.linux.clang
+        # - package.amd64.windows.clang
+        # - package.amd64.darwin.clang
+
+        # - package.arm.linux.gcc
+        # - package.arm.linux.clang
+
+        # - package.arm64.linux.gcc
+        # - package.arm64.linux.clang
+        # - package.arm64.darwin.clang

@@ -1,0 +1,67 @@
+########################################
+# Helper jobs
+########################################
+
+.BuildCIImageVariantAndPushItToGitlabRegistryBase: &BuildCIImageVariantAndPushItToGitlabRegistryBase
+  extends: 
+    - .0-Prepare:rules:BuildCIImageVariantAndPushItToGitlabRegistryBase
+  image:
+    # We need debug to run the script
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: ['']
+  stage: 0-Prepare
+  script:
+    # TODO(Etienne M): Not sure if setting up the proxies here is useful, we also do it in the image
+    - export HTTP_PROXY="http://proxy-serveur.univ-nantes.prive:3128"
+    - export HTTPS_PROXY="http://proxy-serveur.univ-nantes.prive:3128"
+    - export http_proxy="http://proxy-serveur.univ-nantes.prive:3128"
+    - export https_proxy="http://proxy-serveur.univ-nantes.prive:3128"
+    - export VARIANT=$(echo ${CI_JOB_NAME} | cut -d ' ' -f 5)
+    - echo "Exporting the image to ${DESTINATION}.${VARIANT}"
+    - echo "{\"auths\":{\"${CI_REGISTRY}\":{\"username\":\"${CI_REGISTRY_USER}\",\"password\":\"${CI_REGISTRY_PASSWORD}\"}}}" > /kaniko/.docker/config.json
+    # LOCAL_PROBT_CI_READ_TOKEN is obtained using the "schedule variable".
+    # --cache=true --cache-repo ${LOCAL_CI_IMAGE_REPO}/cache_image_layer # If we cache, it's useless to regenerate the 
+    # image each weeks for update !
+    - /kaniko/executor --build-arg PROBT_CI_READ_TOKEN=${LOCAL_PROBT_CI_READ_USER_TOKEN} --context ${CI_PROJECT_DIR} --dockerfile "${LOCAL_CI_DIR}/image/Dockerfile.${VARIANT}" --destination "${LOCAL_CI_IMAGE_REPO}/ci:${VARIANT}"
+
+
+########################################
+# Image variants
+########################################
+
+# Static tests images
+
+# Build CI image variant static.tests.format: *BuildCIImageVariantAndPushItToGitlabRegistryBase
+# Build CI image variant static.tests.tidy:   *BuildCIImageVariantAndPushItToGitlabRegistryBase
+
+# Builder images
+
+Build CI image variant build.amd64.linux.gcc:     *BuildCIImageVariantAndPushItToGitlabRegistryBase
+# Build CI image variant build.amd64.linux.clang:   *BuildCIImageVariantAndPushItToGitlabRegistryBase
+# Build CI image variant build.amd64.windows.clang: *BuildCIImageVariantAndPushItToGitlabRegistryBase # Will requiere some tweaks to the base
+# Build CI image variant build.amd64.darwin.clang:  *BuildCIImageVariantAndPushItToGitlabRegistryBase
+
+# Build CI image variant build.arm.linux.gcc:   *BuildCIImageVariantAndPushItToGitlabRegistryBase
+# Build CI image variant build.arm.linux.clang: *BuildCIImageVariantAndPushItToGitlabRegistryBase
+
+# Build CI image variant build.arm64.linux.gcc:    *BuildCIImageVariantAndPushItToGitlabRegistryBase
+# Build CI image variant build.arm64.linux.clang:  *BuildCIImageVariantAndPushItToGitlabRegistryBase
+# Build CI image variant build.arm64.darwin.clang: *BuildCIImageVariantAndPushItToGitlabRegistryBase
+
+# Tests images
+
+Build CI image variant test.amd64.linux: *BuildCIImageVariantAndPushItToGitlabRegistryBase
+
+# Coverage images
+
+Build CI image variant coverage.amd64.linux.gcc: *BuildCIImageVariantAndPushItToGitlabRegistryBase
+
+# Packaging images
+
+Build CI image variant package.amd64.linux: *BuildCIImageVariantAndPushItToGitlabRegistryBase
+
+# Publish images
+
+Build CI image variant publish: *BuildCIImageVariantAndPushItToGitlabRegistryBase
+
+# Release images

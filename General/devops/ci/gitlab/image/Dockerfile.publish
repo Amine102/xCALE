@@ -1,0 +1,9 @@
+FROM alpine:latest
+
+ENV HTTP_PROXY="http://proxy-serveur.univ-nantes.prive:3128"
+ENV HTTPS_PROXY="http://proxy-serveur.univ-nantes.prive:3128"
+ENV http_proxy="http://proxy-serveur.univ-nantes.prive:3128"
+ENV https_proxy="http://proxy-serveur.univ-nantes.prive:3128"
+
+RUN apk update && \
+    apk add git curl

@@ -1,0 +1,109 @@
+    {
+        "Skill_01":
+        {
+            "name": "C1",
+            "desc": "Savoir appeler une fonction sans argument",
+            "cognitive_obj": "application",
+            "dependency": 0,
+            "prerequisite": []
+        },
+    
+        "Skill_02":
+        {
+            "name": "C2",
+            "desc": "Savoir appeler une fonction avec argument",
+            "cognitive_obj": "application",
+            "dependency": 1,
+            "prerequisite": ["C1", "C11"]
+        },
+    
+        "Skill_03":
+        {
+            "name": "C3",
+            "desc": "Savoir ecrire une boucle repeter x fois",
+            "cognitive_obj": "application",
+            "dependency": 1,
+            "prerequisite": ["C11"]
+        },
+    
+        "Skill_04":
+        {
+            "name": "C4",
+            "desc": "Savoir ecrire une boucle tant-que",
+            "cognitive_obj": "application",
+            "dependency": 1,
+            "prerequisite": ["C9", "C11"]
+        },
+    
+        "Skill_05":
+        {
+            "name": "C5",
+            "desc": "Savoir imbriquer deux boucles",
+            "cognitive_obj": "application",
+            "dependency": 2,
+            "prerequisite": ["C3", "C4"]
+        },
+    
+        "Skill_06":
+        {
+            "name": "C6",
+            "desc": "Savoir utiliser un if",
+            "cognitive_obj": "application",
+            "dependency": 1,
+            "prerequisite": ["C9", "C10"]
+        },
+    
+        "Skill_07":
+        {
+            "name": "C7",
+            "desc": "Savoir utiliser un if-else",
+            "cognitive_obj": "application",
+            "dependency": 2,
+            "prerequisite": ["C6"]
+        },
+    
+        "Skill_08":
+        {
+            "name": "C8",
+            "desc": "Savoir utiliser les operateurs arithmetiques",
+            "cognitive_obj": "application",
+            "dependency": 0,
+            "prerequisite": []
+        },
+    
+        "Skill_09":
+        {
+            "name": "C9",
+            "desc": "Savoir utiliser les operatuers de comparaisons",
+            "cognitive_obj": "application",
+            "dependency": 0,
+            "prerequisite": []
+        },
+    
+        "Skill_10":
+        {
+            "name": "C10",
+            "desc": "Savoir utiliser le soperateurs logiques",
+            "cognitive_obj": "application",
+            "dependency": 0,
+            "prerequisite": []
+        },
+    
+        "Skill_11":
+        {
+            "name": "C11",
+            "desc": "Savoir utiliser une variable",
+            "cognitive_obj": "application",
+            "dependency": 0,
+            "prerequisite": []
+        },
+    
+        "Skill_12":
+        {
+            "name": "C12",
+            "desc": "Savoir incrementer une variable",
+            "cognitive_obj": "application",
+            "dependency": 1,
+            "prerequisite": ["C8", "C11"]
+        }
+    }

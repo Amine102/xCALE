@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Sub0" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="MinVol1">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<probabilities>0.97 0.01 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="Press2">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<probabilities>0.97 0.01 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="PAP3">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.01 0.19 0.8</probabilities>
+		</cpt>
+		<cpt id="ExpCO24">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<probabilities>0.97 0.01 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="HRBP5">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.98 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="ErrLowOutput6">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="HRSat7">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="HREKG8">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="ErrCauter9">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="BP10">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.98 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="History11">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="CO12">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.98 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="HR13">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.1 0.89 0.01</probabilities>
+		</cpt>
+		<cpt id="Catechol14">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="ArtCO215">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.01 0.01 0.98</probabilities>
+		</cpt>
+		<cpt id="TPR16">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.98 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="Anaphylaxis17">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="SaO218">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.98 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="PVSat19">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.98 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="FiO220">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="VentAlv21">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<probabilities>0.97 0.01 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="VentLung22">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<probabilities>0.97 0.01 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="VentTube23">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<probabilities>0.97 0.01 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="Disconnect24">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="VentMach25">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<probabilities>0.01 0.97 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="MinVolSet26">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.01 0.98 0.01</probabilities>
+		</cpt>
+		<cpt id="KinkedTube27">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.04 0.96</probabilities>
+		</cpt>
+		<cpt id="Shunt28">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Intubation29">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.92 0.03 0.05</probabilities>
+		</cpt>
+		<cpt id="PulmEmbolus30">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="InsuffAnesth31">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="PCWP32">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.95 0.04 0.01</probabilities>
+		</cpt>
+		<cpt id="CVP33">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.95 0.04 0.01</probabilities>
+		</cpt>
+		<cpt id="StrokeVolume34">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.98 0.01 0.01</probabilities>
+		</cpt>
+		<cpt id="LVEDVolume35">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.95 0.04 0.01</probabilities>
+		</cpt>
+		<cpt id="LVFailure36">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="Hypovolemia37">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="KinkedTube64">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>ArtCO215 ExpCO24 KinkedTube27</parents>
+			<probabilities>0.2878331863499559 0.712166813650044 0.04276082871717513 0.9572391712828248 0.03559060964409391 0.9644093903559061 0.02344983906200644 0.9765501609379936 0.007466432753607718 0.9925335672463923 0.006175946709730506 0.9938240532902696 0.0562142 0.9437858 0.04403571911928562 0.9559642808807145 0.06670329066703291 0.9332967093329672 0.003888213945565005 0.996111786054435 0.1288802 0.8711198 0.01785294910735254 0.9821470508926474 0.001302453929667488 0.9986975460703325 0.0412656 0.9587344 0.01149465057473253 0.9885053494252674 0.0161397098386029 0.9838602901613972 0.0272147902721479 0.972785209727852 0.05032861899342762 0.9496713810065723 0.05786237173587116 0.942137628264129 0.01808885891466846 0.9819111410853314 0.03823755770574654 0.9617624422942536 0.0233793 0.9766207 0.05361472839155815 0.9463852716084418 0.2079545 0.7920455</probabilities>
+		</cpt>
+		<cpt id="MinVolSet63">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.01 0.98 0.01</probabilities>
+		</cpt>
+		<cpt id="VentMach62">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<parents>MinVolSet63</parents>
+			<probabilities>0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97</probabilities>
+		</cpt>
+		<cpt id="Disconnect61">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>VentMach25</parents>
+			<probabilities>0.262306 0.737694 0.09183693632652255 0.9081630636734774 0.04758084762095763 0.9524191523790425 0.006385056280942478 0.9936149437190577</probabilities>
+		</cpt>
+		<cpt id="VentTube60">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<parents>VentMach62 Disconnect61</parents>
+			<probabilities>0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.01 0.97 0.01 0.97 0.01 0.01 0.01 0.01 0.01 0.01 0.97</probabilities>
+		</cpt>
+		<cpt id="Intubation66">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<probabilities>0.92 0.03 0.05</probabilities>
+		</cpt>
+		<cpt id="VentLung59">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<parents>KinkedTube64 VentTube60 Intubation66</parents>
+			<probabilities>0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.95 0.03 0.01 0.01 0.97 0.01 0.01 0.01 0.95 0.03 0.01 0.01 0.4 0.58 0.01 0.01 0.97 0.01 0.01 0.01 0.5 0.48 0.01 0.01 0.3 0.6800000000000001 0.01 0.01 0.97 0.01 0.01 0.01 0.3 0.6800000000000001 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.97 0.01 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.97 0.01 0.01 0.01 0.01 0.01 0.01 0.97</probabilities>
+		</cpt>
+		<cpt id="MinVol38">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<parents>VentLung59 Intubation66</parents>
+			<probabilities>0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.6 0.38 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.5 0.48 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.5 0.48 0.01 0.01 0.01 0.01 0.01 0.97</probabilities>
+		</cpt>
+		<cpt id="Press39">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<parents>KinkedTube64 Intubation66 VentTube60</parents>
+			<probabilities>0.97 0.01 0.01 0.01 0.01 0.49 0.3 0.2 0.01 0.01 0.08 0.9 0.01 0.01 0.01 0.97 0.97 0.01 0.01 0.01 0.1 0.84 0.05 0.01 0.05 0.25 0.25 0.45 0.01 0.15 0.25 0.59 0.97 0.01 0.01 0.01 0.01 0.29 0.3 0.4 0.01 0.01 0.08 0.9 0.01 0.01 0.01 0.97 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.97 0.01 0.01 0.01 0.4 0.58 0.01 0.01 0.2 0.75 0.04 0.01 0.2000000000000001 0.7000000000000001 0.09000000000000001 0.01 0.97 0.01 0.01 0.01 0.01 0.9 0.08 0.01 0.01 0.01 0.38 0.6 0.01 0.01 0.01 0.97</probabilities>
+		</cpt>
+		<cpt id="PulmEmbolus67">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>VentLung22 ArtCO215 PCWP32</parents>
+			<probabilities>0.00366131095972558 0.9963386890402745 0.0002162271941186203 0.9997837728058814 0.006826577157011275 0.9931734228429887 0.006819879143217462 0.9931801208567825 0.005502971159586164 0.9944970288404138 0.1294599 0.8705401 0.003574853806957894 0.996425146193042 0.002240638912615083 0.9977593610873851 0.02042608040852161 0.9795739195914783 0.142134 0.857866 0.004415898008831796 0.9955841019911683 0.03552973857881046 0.9644702614211895 0.002466860849521488 0.9975331391504786 0.002038272057071618 0.9979617279429286 0.0001856983003156871 0.9998143016996843 0.002061251892814902 0.997938748107185 0.001058997003176991 0.998941002996823 0.001987711976147456 0.9980122880238526 0.01391851972162961 0.9860814802783704 0.0002469470883687922 0.9997530529116313 0.003113667102751014 0.9968863328972488 0.0009879279723380167 0.9990120720276621 0.001476627958654417 0.9985233720413457 0.0009629645341852411 0.9990370354658148 0.0022935 0.9977065000000001 0.007128721843168119 0.9928712781568319 0.0004853506753927208 0.9995146493246073 0.00779659107016932 0.9922034089298306 0.001920510978874379 0.9980794890211256 0.002728400997271599 0.9972715990027283 0.002698786037783005 0.9973012139622171 0.001108067036566212 0.9988919329634337 0.004865541795647244 0.9951344582043529 0.002591555854872872 0.9974084441451272 0.001119044949642977 0.998880955050357 0.002689764096831507 0.9973102359031685</probabilities>
+		</cpt>
+		<cpt id="PAP40">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>PulmEmbolus67</parents>
+			<probabilities>0.01 0.19 0.8 0.05 0.9 0.05</probabilities>
+		</cpt>
+		<cpt id="VentAlv58">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<parents>Intubation66 VentLung59</parents>
+			<probabilities>0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.97 0.01 0.01 0.01 0.03 0.95 0.01 0.01 0.01 0.94 0.04 0.01 0.01 0.88 0.1 0.01</probabilities>
+		</cpt>
+		<cpt id="ArtCO252">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>VentAlv58</parents>
+			<probabilities>0.01 0.01 0.98 0.01 0.01 0.98 0.04 0.92 0.04 0.9 0.09 0.01</probabilities>
+		</cpt>
+		<cpt id="ExpCO241">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<state id="state4" />
+			<parents>ArtCO252 VentLung59</parents>
+			<probabilities>0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.97 0.01 0.01 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97</probabilities>
+		</cpt>
+		<cpt id="ErrLowOutput43">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>SaO218 PulmEmbolus30</parents>
+			<probabilities>0.08779733648810655 0.9122026635118935 0.0144621 0.9855379 0.1678053167805317 0.8321946832194683 0.08247238164944762 0.9175276183505523 0.03979503840819846 0.9602049615918015 0.01741182947764512 0.9825881705223548</probabilities>
+		</cpt>
+		<cpt id="InsuffAnesth68">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>CVP33</parents>
+			<probabilities>0.06789749746872471 0.9321025025312751 0.2375661237566124 0.7624338762433878 0.3106757 0.6893243</probabilities>
+		</cpt>
+		<cpt id="Shunt65">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PulmEmbolus67 Intubation66</parents>
+			<probabilities>0.1 0.9 0.1 0.9 0.01 0.99 0.95 0.05 0.95 0.05 0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="FiO257">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="PVSat56">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>VentAlv58 FiO257</parents>
+			<probabilities>0.98 0.01 0.01 0.98 0.01 0.01 0.98 0.01 0.01 0.98 0.01 0.01 0.95 0.04 0.01 0.01 0.95 0.04 0.95 0.04 0.01 0.01 0.01 0.98</probabilities>
+		</cpt>
+		<cpt id="SaO255">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>Shunt65 PVSat56</parents>
+			<probabilities>0.98 0.01 0.01 0.01 0.98 0.01 0.01 0.01 0.98 0.98 0.01 0.01 0.98 0.01 0.01 0.69 0.3 0.01</probabilities>
+		</cpt>
+		<cpt id="Anaphylaxis54">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>CO12 FiO220 StrokeVolume34</parents>
+			<probabilities>0.004763632842800116 0.9952363671571999 0.008955886125382406 0.9910441138746177 0.005000326864991174 0.9949996731350089 0.003356949832152509 0.9966430501678476 0.008893417839918479 0.9911065821600815 0.006667147679976913 0.9933328523200231 0.002462159100948523 0.9975378408990514 0.007526292060210336 0.9924737079397896 0.007263552348650514 0.9927364476513496 0.001297027963683217 0.9987029720363166 0.01689685084484255 0.9831031491551575 0.009174303963302783 0.9908256960366971 0.02373008047460161 0.9762699195253983 0.007891496031565984 0.9921085039684341 0.002360919952781601 0.9976390800472184 0.003005727915839618 0.9969942720841603 0.002475627930682419 0.9975243720693177 0.01636123934555043 0.9836387606544496</probabilities>
+		</cpt>
+		<cpt id="TPR53">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>Anaphylaxis54</parents>
+			<probabilities>0.98 0.01 0.01 0.3 0.4 0.3</probabilities>
+		</cpt>
+		<cpt id="Catechol51">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>InsuffAnesth68 SaO255 TPR53 ArtCO252</parents>
+			<probabilities>0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.1 0.9 0.1 0.9 0.1 0.9 0.95 0.05 0.95 0.05 0.3 0.7 0.95 0.05 0.95 0.05 0.3 0.7 0.95 0.05 0.95 0.05 0.3 0.7 0.99 0.01 0.99 0.01 0.99 0.01 0.95 0.05 0.99 0.01 0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="HR50">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>Catechol51</parents>
+			<probabilities>0.1 0.89 0.01 0.01 0.09 0.9</probabilities>
+		</cpt>
+		<cpt id="HRBP42">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>ErrLowOutput43 HR50</parents>
+			<probabilities>0.98 0.01 0.01 0.4 0.59 0.01 0.3 0.4 0.3 0.98 0.01 0.01 0.01 0.98 0.01 0.01 0.01 0.98</probabilities>
+		</cpt>
+		<cpt id="ErrCauter46">
+			<state id="state1" />
+			<state id="state2" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="HRSat44">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>HR50 ErrCauter46</parents>
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333 0.98 0.01 0.01 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.01 0.98 0.01 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.01 0.01 0.98</probabilities>
+		</cpt>
+		<cpt id="HREKG45">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>HR50 ErrCauter46</parents>
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333 0.98 0.01 0.01 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.01 0.98 0.01 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.01 0.01 0.98</probabilities>
+		</cpt>
+		<cpt id="LVFailure73">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>FiO220 PCWP32 PVSat19</parents>
+			<probabilities>0.004394710951658179 0.9956052890483418 0.02577352922679412 0.9742264707732058 0.05726391885472164 0.9427360811452785 0.06550638131012762 0.9344936186898724 0.1761968 0.8238032 0.055576 0.944424 0.03033538060670761 0.9696646193932923 0.09163356366534255 0.9083664363346574 0.02081527062445812 0.9791847293755419 0.007985604960071975 0.9920143950399279 0.04067914796604259 0.9593208520339573 0.2713600271360027 0.7286399728639973 0.1370526 0.8629474 0.02259517067785512 0.9774048293221449 0.06188422814347315 0.9381157718565268 0.03444830965551691 0.9655516903444832 0.1007136 0.8992864 0.02329934883503256 0.9767006511649675</probabilities>
+		</cpt>
+		<cpt id="Hypovolemia74">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>PCWP32 ErrCauter9</parents>
+			<probabilities>0.0922172 0.9077828 0.3257806 0.6742194 0.1923508 0.8076492 0.2762138 0.7237862000000001 0.159169 0.840831 0.2194007 0.7805993</probabilities>
+		</cpt>
+		<cpt id="StrokeVolume71">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>LVFailure73 Hypovolemia74</parents>
+			<probabilities>0.98 0.01 0.01 0.5 0.49 0.01 0.95 0.04 0.01 0.05 0.9 0.05</probabilities>
+		</cpt>
+		<cpt id="CO49">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>HR50 StrokeVolume71</parents>
+			<probabilities>0.98 0.01 0.01 0.95 0.04 0.01 0.3 0.69 0.01 0.95 0.04 0.01 0.04 0.95 0.01 0.01 0.3 0.69 0.8 0.19 0.01 0.01 0.04 0.95 0.01 0.01 0.98</probabilities>
+		</cpt>
+		<cpt id="BP47">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>CO49 TPR53</parents>
+			<probabilities>0.98 0.01 0.01 0.98 0.01 0.01 0.3 0.6000000000000001 0.1 0.98 0.01 0.01 0.1 0.85 0.05 0.05 0.4 0.55 0.9 0.09 0.01 0.05 0.2 0.75 0.01 0.09 0.9</probabilities>
+		</cpt>
+		<cpt id="History48">
+			<state id="state1" />
+			<state id="state2" />
+			<parents>LVFailure73</parents>
+			<probabilities>0.9 0.1 0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="LVEDVolume72">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>Hypovolemia74 LVFailure73</parents>
+			<probabilities>0.95 0.04 0.01 0.98 0.01 0.01 0.01 0.09 0.9 0.05 0.9 0.05</probabilities>
+		</cpt>
+		<cpt id="PCWP69">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>LVEDVolume72</parents>
+			<probabilities>0.95 0.04 0.01 0.04 0.95 0.01 0.01 0.04 0.95</probabilities>
+		</cpt>
+		<cpt id="CVP70">
+			<state id="state1" />
+			<state id="state2" />
+			<state id="state3" />
+			<parents>LVEDVolume72</parents>
+			<probabilities>0.95 0.04 0.01 0.04 0.95 0.01 0.01 0.29 0.7</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.3887.0" name="Sub0" faultnameformat="nodestate">
+			<node id="MinVol1">
+				<name>MinVol1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>36 444 112 480</position>
+			</node>
+			<node id="Press2">
+				<name>Press2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4 327 80 363</position>
+			</node>
+			<node id="PAP3">
+				<name>PAP3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>48 52 124 88</position>
+			</node>
+			<node id="ExpCO24">
+				<name>ExpCO24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>32 172 108 208</position>
+			</node>
+			<node id="HRBP5">
+				<name>HRBP5</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>78 242 154 278</position>
+			</node>
+			<node id="ErrLowOutput6">
+				<name>ErrLowOutput6</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>92 118 168 154</position>
+			</node>
+			<node id="HRSat7">
+				<name>HRSat7</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>142 24 218 60</position>
+			</node>
+			<node id="HREKG8">
+				<name>HREKG8</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>136 541 212 577</position>
+			</node>
+			<node id="ErrCauter9">
+				<name>ErrCauter9</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>340 510 416 546</position>
+			</node>
+			<node id="BP10">
+				<name>BP10</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>117 377 193 413</position>
+			</node>
+			<node id="History11">
+				<name>History11</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>136 445 212 481</position>
+			</node>
+			<node id="CO12">
+				<name>CO12</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>231 450 307 486</position>
+			</node>
+			<node id="HR13">
+				<name>HR13</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>214 366 290 402</position>
+			</node>
+			<node id="Catechol14">
+				<name>Catechol14</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>123 318 199 354</position>
+			</node>
+			<node id="ArtCO215">
+				<name>ArtCO215</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>153 75 229 111</position>
+			</node>
+			<node id="TPR16">
+				<name>TPR16</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>164 149 240 185</position>
+			</node>
+			<node id="Anaphylaxis17">
+				<name>Anaphylaxis17</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>179 222 255 258</position>
+			</node>
+			<node id="SaO218">
+				<name>SaO218</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>216 289 292 325</position>
+			</node>
+			<node id="PVSat19">
+				<name>PVSat19</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>236 40 312 76</position>
+			</node>
+			<node id="FiO220">
+				<name>FiO220</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>234 103 310 139</position>
+			</node>
+			<node id="VentAlv21">
+				<name>VentAlv21</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>249 170 325 206</position>
+			</node>
+			<node id="VentLung22">
+				<name>VentLung22</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>270 340 346 376</position>
+			</node>
+			<node id="VentTube23">
+				<name>VentTube23</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>411 414 487 450</position>
+			</node>
+			<node id="Disconnect24">
+				<name>Disconnect24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>314 381 390 417</position>
+			</node>
+			<node id="VentMach25">
+				<name>VentMach25</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>298 214 374 250</position>
+			</node>
+			<node id="MinVolSet26">
+				<name>MinVolSet26</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>307 9 383 45</position>
+			</node>
+			<node id="KinkedTube27">
+				<name>KinkedTube27</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>307 142 383 178</position>
+			</node>
+			<node id="Shunt28">
+				<name>Shunt28</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>332 294 408 330</position>
+			</node>
+			<node id="Intubation29">
+				<name>Intubation29</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>552 195 628 231</position>
+			</node>
+			<node id="PulmEmbolus30">
+				<name>PulmEmbolus30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>429 17 505 53</position>
+			</node>
+			<node id="InsuffAnesth31">
+				<name>InsuffAnesth31</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>376 124 452 160</position>
+			</node>
+			<node id="PCWP32">
+				<name>PCWP32</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>395 174 471 210</position>
+			</node>
+			<node id="CVP33">
+				<name>CVP33</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>413 255 489 291</position>
+			</node>
+			<node id="StrokeVolume34">
+				<name>StrokeVolume34</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>478 381 554 417</position>
+			</node>
+			<node id="LVEDVolume35">
+				<name>LVEDVolume35</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>498 448 574 484</position>
+			</node>
+			<node id="LVFailure36">
+				<name>LVFailure36</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>596 306 672 342</position>
+			</node>
+			<node id="Hypovolemia37">
+				<name>Hypovolemia37</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>466 194 542 230</position>
+			</node>
+			<node id="MinVol38">
+				<name>MinVol38</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1205 29 1281 65</position>
+			</node>
+			<node id="Press39">
+				<name>Press39</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1151 27 1227 63</position>
+			</node>
+			<node id="PAP40">
+				<name>PAP40</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1049 4 1125 40</position>
+			</node>
+			<node id="ExpCO241">
+				<name>ExpCO241</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>915 36 991 72</position>
+			</node>
+			<node id="HRBP42">
+				<name>HRBP42</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>912 120 988 156</position>
+			</node>
+			<node id="ErrLowOutput43">
+				<name>ErrLowOutput43</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>957 247 1033 283</position>
+			</node>
+			<node id="HRSat44">
+				<name>HRSat44</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1008 123 1084 159</position>
+			</node>
+			<node id="HREKG45">
+				<name>HREKG45</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1067 193 1143 229</position>
+			</node>
+			<node id="ErrCauter46">
+				<name>ErrCauter46</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1023 287 1099 323</position>
+			</node>
+			<node id="BP47">
+				<name>BP47</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1019 479 1095 515</position>
+			</node>
+			<node id="History48">
+				<name>History48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1067 370 1143 406</position>
+			</node>
+			<node id="CO49">
+				<name>CO49</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1161 313 1237 349</position>
+			</node>
+			<node id="HR50">
+				<name>HR50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1190 55 1266 91</position>
+			</node>
+			<node id="Catechol51">
+				<name>Catechol51</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1203 108 1279 144</position>
+			</node>
+			<node id="ArtCO252">
+				<name>ArtCO252</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1152 207 1228 243</position>
+			</node>
+			<node id="TPR53">
+				<name>TPR53</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>993 390 1069 426</position>
+			</node>
+			<node id="Anaphylaxis54">
+				<name>Anaphylaxis54</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>979 39 1055 75</position>
+			</node>
+			<node id="SaO255">
+				<name>SaO255</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1095 99 1171 135</position>
+			</node>
+			<node id="PVSat56">
+				<name>PVSat56</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1117 143 1193 179</position>
+			</node>
+			<node id="FiO257">
+				<name>FiO257</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1125 464 1201 500</position>
+			</node>
+			<node id="VentAlv58">
+				<name>VentAlv58</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1196 345 1272 381</position>
+			</node>
+			<node id="VentLung59">
+				<name>VentLung59</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1220 163 1296 199</position>
+			</node>
+			<node id="VentTube60">
+				<name>VentTube60</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>787 169 863 205</position>
+			</node>
+			<node id="Disconnect61">
+				<name>Disconnect61</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>814 23 890 59</position>
+			</node>
+			<node id="VentMach62">
+				<name>VentMach62</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>740 521 816 557</position>
+			</node>
+			<node id="MinVolSet63">
+				<name>MinVolSet63</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>812 556 888 592</position>
+			</node>
+			<node id="KinkedTube64">
+				<name>KinkedTube64</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>778 328 854 364</position>
+			</node>
+			<node id="Shunt65">
+				<name>Shunt65</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>937 508 1013 544</position>
+			</node>
+			<node id="Intubation66">
+				<name>Intubation66</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>773 446 849 482</position>
+			</node>
+			<node id="PulmEmbolus67">
+				<name>PulmEmbolus67</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>819 105 895 141</position>
+			</node>
+			<node id="InsuffAnesth68">
+				<name>InsuffAnesth68</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>826 287 902 323</position>
+			</node>
+			<node id="PCWP69">
+				<name>PCWP69</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>898 384 974 420</position>
+			</node>
+			<node id="CVP70">
+				<name>CVP70</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1086 506 1162 542</position>
+			</node>
+			<node id="StrokeVolume71">
+				<name>StrokeVolume71</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1145 391 1221 427</position>
+			</node>
+			<node id="LVEDVolume72">
+				<name>LVEDVolume72</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1100 53 1176 89</position>
+			</node>
+			<node id="LVFailure73">
+				<name>LVFailure73</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>926 79 1002 115</position>
+			</node>
+			<node id="Hypovolemia74">
+				<name>Hypovolemia74</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>900 182 976 218</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

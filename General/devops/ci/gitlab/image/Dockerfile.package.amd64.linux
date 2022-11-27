@@ -1,0 +1,12 @@
+FROM ubuntu:latest
+
+ENV HTTP_PROXY="http://proxy-serveur.univ-nantes.prive:3128"
+ENV HTTPS_PROXY="http://proxy-serveur.univ-nantes.prive:3128"
+ENV http_proxy="http://proxy-serveur.univ-nantes.prive:3128"
+ENV https_proxy="http://proxy-serveur.univ-nantes.prive:3128"
+
+# There is some problems with alpine so I used ubuntu
+RUN apt update && \
+    apt -y install cmake p7zip-full && \
+    apt-get -y clean && \
+    rm -rf /var/lib/apt/lists/*
