@@ -14,6 +14,14 @@
 #include "../../core/include/skill.h"
 #include "../../core/include/student.h"
 
+//-----------------------------------------------------------------------------
+// SECTION : Typedefs 
+//-----------------------------------------------------------------------------
+typedef int learnerID;
+typedef int exoDifficulty;
+typedef std::string exoLabel;
+
+
 namespace UsecaseXCale {
     void xCale_BKT_debug();
     void xcaleAUTO();

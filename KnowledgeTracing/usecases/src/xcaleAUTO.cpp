@@ -31,6 +31,36 @@
 //-----------------------------------------------------------------------------
 namespace UsecaseXCale 
 {
+    int labelToDiff(std::string diffLabel)
+    {
+        std::ifstream scaleConfigFile("metadata/scaleConfig.json");
+        Json::Reader jsonReader;
+        Json::Value scaleConfigData;
+        jsonReader.parse(scaleConfigFile, scaleConfigData);
+        int difficulty;
+        for(Json::ValueConstIterator it = scaleConfigData["difficulty_scale"].begin(); it != scaleConfigData["difficulty_scale"].end(); ++it)
+        {
+            if(diffLabel == (*it)["label"].asString())
+            {
+                difficulty = (*it)["scale"].asInt();
+                break;
+            }
+            else
+                continue;
+        }
+        if(difficulty == 0)
+        {
+            std::cerr << "Label Error : no matching difficulty for label = " << diffLabel << " in scaleConfig.json" << std::endl;
+            return -1;
+        }
+        else
+        {
+            if(debugtool_::UsecaseXCale::SCALE_CREATION_DIFFICULTY_DEBUG)
+                std::cout << "Difficulty Scale: " << difficulty << std::endl;                           /*FOR DEBUG PURPOSES*/
+            return difficulty;
+        }
+    }
+
     std::string diffToLabel(int difficulty)
     {
         std::ifstream scaleConfigFile("metadata/scaleConfig.json");
@@ -156,8 +186,54 @@ namespace UsecaseXCale
                         exoVec[i].linkSkill(skillMap[it2->asString()]);
 
         //-----------------------------------------------------------------------------------------
-        // Automatic creation of learners from ???
-        //-----------------------------------------------------------------------------------------      
+        // Automatic creation of learners from learner.json data file
+        //-----------------------------------------------------------------------------------------
+        std::ifstream learnerDataFile("data/learnerData.json");                                     /*Reading learner data in learnerData.json*/
+        Json::Value learnerData;                                                                    /*learner Data variable containing our learner traces*/
+        jsonReader.parse(learnerDataFile, learnerData);                                             /*jsonReader reads & parse the learnerData JSON file, then store the results in the learnerData variable*/
+        std::map<learnerID, Student> learnerMap;                                                    /*Create a maps of learners of vectors */
+        std::vector<Student> learnerVec; 
+        std::vector<Exercise> exoVecTemp;
+        for(Json::ValueConstIterator it = learnerData.begin(); it != learnerData.end(); ++it)
+        {
+            if(learnerMap.find((*it)["LEARNER"].asInt()) != learnerMap.end()) /* Check if key already exists in map to avoid overwriting it */
+            {
+                for(int i = 0; i < exoVec.size(); i++)
+                    if(exoVec[i].getName() == (*it)["SUJET"].asString() && exoVec[i].getDifficulty() == diffToLabel((*it)["VER"].asInt() - 1))
+                        learnerMap[(*it)["LEARNER"].asInt()].setExercise(exoVec[i]);
+            }
+            else
+            {
+                for(int i = 0; i < exoVec.size(); i++)
+                    if(exoVec[i].getName() == (*it)["SUJET"].asString() && exoVec[i].getDifficulty() == diffToLabel((*it)["VER"].asInt() - 1))
+                        exoVecTemp.push_back(exoVec[i]);
+                for(int i=0; i<exoVecTemp.size(); i++)
+                    std::cout << exoVecTemp[i] << std::endl;
+                if(!exoVecTemp.empty())
+                {
+                    std::cout << (*it)["LEARNER"].asInt() << std::endl;
+                    Student learner((*it)["LEARNER"].asString(), exoVecTemp);
+                    learnerMap.emplace((*it)["LEARNER"].asInt(), learner);          /* THROW A PlError 128*/
+                    exoVecTemp.clear();
+                    learner.setBKT(xcaleModel);
+                    ExercisesEvaluations evals(mastery_scale);
+                    for(int i=0; i<exoVec.size(); i++)
+                    {
+                        evals.addEvaluation(exoVec[i], skillMap[exoVec[i].getName()], labelToDiff(exoVec[i].getDifficulty()));
+                        learner.initDBN();
+                        learner.doExercise(exoVec[i], evals.getEvaluation(exoVec[i])); /* THROW A PlError 120 */
+                        std::cout << "------------LEARNER " << (*it)["LEARNER"].asString() << "----------------" << std::endl;
+                        std::cout << "---------------------------------------" << std::endl;
+                        std::cout << "Displaying probas after first exercice:" << std::endl;
+                        std::cout << "---------------------------------------" << std::endl;
+                        //print the initial probabilities for each skill
+                        //learner.getAllActualSkills();
+
+                    }
+
+                }
+            }
+        }
 
     }
 }

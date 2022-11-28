@@ -15,7 +15,7 @@
   ##   See the License for the specific language governing permissions and
   ##   limitations under the License.
   ##
-  ###################################################################################*/
+  ###########################################################################################*/
 
 #pragma once
 #ifndef DEBUG_TOOLS_H
@@ -38,23 +38,23 @@ namespace debugtool_
         //-----------------------------------------------------------------------------
         // The debug macros are used for debug purposes only. The macros are bolean values.
         // The truth values of these macros are checked using the #if #endif directives.
-        // TODO : change the comments by what these parameters actually do
-        static constexpr bool PL_ALWAYS_DISPLAY_WARNING           = false;    // Not sure what this is for (probably debugging PL library)
-        static constexpr bool SCALE_CREATION_DEBUG                = false;    // The truth values of these macros are checked using the #if #endif directives.
-        static constexpr bool SCALE_CREATION_DIFFICULTY_DEBUG     = false;    // The truth values of these macros are checked using the #if #endif directives.
-        static constexpr bool SCALE_JSON_DATA_DEBUG               = false;    // The truth values of these macros are checked using the #if #endif directives.
-        static constexpr bool SKILL_CREATION_DEBUG                = false;    // The truth values of these macros are checked using the #if #endif directives.
-        static constexpr bool EXERCISE_JSON_DATA_DEBUG            = false;    // The truth values of these macros are checked using the #if #endif directives.
-        static constexpr bool EXERCISE_CREATION_DEBUG             = false;    // The truth values of these macros are checked using the #if #endif directives.
-        static constexpr bool BKT_PARAM_PINIT_CREATION_DEBUG      = false;    // The truth values of these macros are checked using the #if #endif directives.
-        static constexpr bool BKT_PARAM_PLEARN_CREATION_DEBUG     = false;    // The truth values of these macros are checked using the #if #endif directives.
-        static constexpr bool BKT_CREATION_DISPLAY_SUMMARY_DEBUG  = false;    // Print a summary of the BKT model after it's creation
+        static constexpr bool PL_ALWAYS_DISPLAY_WARNING           = false;    // Parameter for debugging PL library erros
+        static constexpr bool SCALE_CREATION_DEBUG                = false;    // Parameter for debugging scale creation from scaleConfig.json
+        static constexpr bool SCALE_CREATION_DIFFICULTY_DEBUG     = false;    // Parameter for debugging difficulty screation from scaleConfig.json
+        static constexpr bool SCALE_JSON_DATA_DEBUG               = false;    // Parameter for debugging JSON scale data load (scaleConfig.json)
+        static constexpr bool SKILL_CREATION_DEBUG                = false;    // Parameter for debugging skill creation from skillConfig.json file
+        static constexpr bool EXERCISE_JSON_DATA_DEBUG            = false;    // Parameter for debugging JSON exercise load  from exoConfig.json file
+        static constexpr bool EXERCISE_CREATION_DEBUG             = false;    // Parameter for debugging exercise creation from exoConfig.json file
+        static constexpr bool BKT_PARAM_PINIT_CREATION_DEBUG      = false;    // Parameter for debugging Pinit values load from bktConfig.json file
+        static constexpr bool BKT_PARAM_PLEARN_CREATION_DEBUG     = false;    // Parameter for debugging PLearn values load from bktConfig.json file
+        static constexpr bool BKT_CREATION_DISPLAY_SUMMARY_DEBUG  = false;    // Parameter to print a summary of the BKT model after it's creation
 
         //-----------------------------------------------------------------------------
         // SUBSECTION : Definition of DEBUG flags
         //-----------------------------------------------------------------------------
         // The debug macros are used for debug purposes only. The macros are bolean values.
         // The truth values of these macros are checked using the #if #endif directives.
+        // TODO : change the comments by what these parameters actually do
         enum class eDebug_flag_
         {
             SCALE_CREATION_FLAG                                   = 0,        // The truth values of these macros are checked using the #if #endif directives.

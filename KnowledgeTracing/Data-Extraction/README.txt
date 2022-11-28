@@ -1,0 +1,1 @@
++ Install the requirements ----------------x INSTALL > COMMAND TYPE : pip3 install -r requirements.txt

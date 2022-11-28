@@ -2,6 +2,8 @@
 // Created by stage on 03/05/22.
 //
 
+// New push needed to be done by Quentin : add a setExercise for serialization purposes
+
 #ifndef KNOWLEDGE_TRACING_STUDENT_H
 #define KNOWLEDGE_TRACING_STUDENT_H
 
@@ -68,7 +70,7 @@ struct PGscore {
 
 class Student {
 public :
-
+    Student(); /*Default constructor needed for setExercise tgo work in iterations*/ 
     /**
      * Constructor for the Student class.
      * @params name The name of the student.
@@ -162,6 +164,9 @@ public :
      * @return Returns a boolean.
      */
     bool isDisplayed(std::vector<std::string> &list, const std::string &skillName);
+
+    void setExercises(std::vector<Exercise> exoVec);
+    void setExercise(Exercise ex);
 
 
     /**

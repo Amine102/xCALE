@@ -1,0 +1,8 @@
+PROJECT REQUIREMENT : 
++ Microsoft Visual Code
++ WSL2 
++ PILGRIM (develop branch)
++ Knowledge Tracing library (master branch)
++ C++ 17 compiler
++ CMake
++ 

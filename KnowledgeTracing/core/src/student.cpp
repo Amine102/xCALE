@@ -1,3 +1,4 @@
+/* Need to tell Quentin to make an additional modification by adding a setExercise method*/
 
 #include "../include/student.h"
 
@@ -12,6 +13,20 @@ BKTModel& Student::getBKT() {
     return this->BKT;
 }
 
+/* Modification that needs to be pushed by Quentin */
+Student::Student() {
+
+}
+
+/* Modification that needs to be pushed by Quentin */
+void Student::setExercises(std::vector<Exercise> exoVec) {
+    this->exercisesNotDone = exoVec;
+}
+
+/* Modification that needs to be pushed by Quentin */
+void Student::setExercise(Exercise ex) {
+    exercisesNotDone.push_back(ex);
+}
 
 void Student::getActualSkill(const Skill& skill) {
     getMultipleActualSkills(std::vector<Skill>{skill});
