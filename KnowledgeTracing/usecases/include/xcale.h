@@ -10,6 +10,7 @@
 #include <pl.h>
 #include "../../core/include/debugtools.h"
 #include "../../core/include/genericBKTModel.h"
+#include "../../core/include/BKTParam.h"
 #include "../../core/include/scale.h"
 #include "../../core/include/skill.h"
 #include "../../core/include/student.h"

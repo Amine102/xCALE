@@ -1549,6 +1549,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/main.cpp.o: \
  /home/amine102/projects/KnowledgeTracing/usecases/include/serialize_deserialize.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/xcale.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/debugtools.h \
+ /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/BKTParam.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/scale.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/skill.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/prerequisite.h

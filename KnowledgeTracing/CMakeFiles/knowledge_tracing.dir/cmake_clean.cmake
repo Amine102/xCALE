@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o"
+  "CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o.d"
   "CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o"
   "CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o.d"
   "CMakeFiles/knowledge_tracing.dir/core/src/exercise.cpp.o"

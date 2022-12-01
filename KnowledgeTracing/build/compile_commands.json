@@ -26,6 +26,11 @@
 },
 {
   "directory": "/home/amine102/projects/KnowledgeTracing/build",
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/BKTParam.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/core/src/BKTParam.cpp"
+},
+{
+  "directory": "/home/amine102/projects/KnowledgeTracing/build",
   "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/debugtools.cpp",
   "file": "/home/amine102/projects/KnowledgeTracing/core/src/debugtools.cpp"
 },

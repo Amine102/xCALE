@@ -12,7 +12,7 @@
 		{
 			"name" : "DIFF_NORMAL",
 			"label": "2 - moyen",
-			"scale":2
+			"scale": 2
 		},
 
 		"difficulty_scale_03":

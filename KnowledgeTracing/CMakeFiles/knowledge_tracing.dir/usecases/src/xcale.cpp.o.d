@@ -1532,6 +1532,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o: \
  /usr/include/c++/7/chrono /usr/include/c++/7/ratio \
  /usr/include/c++/7/bits/parse_numbers.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/exercise.h \
+ /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/BKTParam.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/scale.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/skill.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/student.h \

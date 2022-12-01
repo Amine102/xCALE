@@ -25,7 +25,6 @@
 
 #include "../include/xcale.h"
 #include "../include/serialize_deserialize.h"
-#include <fstream>
 
 //-----------------------------------------------------------------------------
 // SECTION : xCALE usecase implementation
@@ -79,37 +78,17 @@ namespace UsecaseXCale
             + PF    = 0                      - Initializing Probability of Forgetting Skill. In this setting, we assume that a learner can't forget a skill once learned
         -----------------------------------------------------------------------------------------------------------------------------------------------------------------
         */
-       struct BKTParam
-        {
-            const float pguess    = 0.10f;
-            const std::vector<double> pinit  = {0.80f, 0.10f, 0.08f, 0.02f};                                          // ! BEWARE ! sum(pinit) =1 AND pinit(n)  > pinit(n+1)
-            const std::vector<double> plearn = {0.10f, 0.30f, 0.60f};                                                 // ! BEWARE ! sum(plearn)=1 AND plearn(n) < plearn(n+1) [The plearn vector size is proportional to the speed scale size - 1]
-            const float pslip     = 0.05f;
-            const float pforget   = 0.0f;
-            std::pair<bool,float> checksum(std::vector<double> vec)
-            {
-                float checksum = 0.f;
-                for(size_t i = 0; i < vec.size(); i++)
-                    checksum += vec[i];
-                if(checksum != 1)
-                    return std::make_pair(false, checksum);
-                else
-                    return std::make_pair(true, checksum);
-
-            }
-            BKTParam(){
-                if(!checksum(this->pinit).first)
-                    std::cerr << "BKT PINIT PARAM ERROR : probability values do not sum to 1 (checksum = "  << checksum(this->pinit).second << "). Check your pinit probabilities." << std::endl;
-                if(!checksum(this->plearn).first)
-                    std::cerr << "BKT PLEARN PARAM ERROR : probability values do not sum to 1 (checksum = " << checksum(this->plearn).second << ") . Check your plearn probabilities." << std::endl;
-
-            }
-        };
+    
         BKTModel xcaleModel;                                                                                           // Creation of the BKT model
         BKTParam param;
-        xcaleModel.addSkill(C01, param.pinit, param.plearn, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C01 linkage
-        xcaleModel.addSkill(C02, param.pinit, param.plearn, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C02 linkage
-        xcaleModel.addSkill(C03, param.pinit, param.plearn, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C11 linkage
+        param.setPguess(0.10f);
+        param.setPinit({0.80f, 0.10f, 0.08f, 0.02f});                                                                  // ! BEWARE ! sum(pinit) =1 AND pinit(n)  > pinit(n+1)
+        param.setPlearn({0.10f, 0.30f, 0.60f});                                                                        // ! BEWARE ! sum(plearn)=1 AND plearn(n) < plearn(n+1) [The plearn vector size is proportional to the speed scale size - 1]
+        param.setPslip(0.05f);
+        param.setPforget(0.0f);
+        xcaleModel.addSkill(C01, param.getPinit(), param.getPlearn(), param.getPguess(), param.getPslip(), param.getPforget());                 // Configuration of the BKT Model + Skill C01 linkage
+        xcaleModel.addSkill(C02, param.getPinit(), param.getPlearn(), param.getPguess(), param.getPslip(), param.getPforget());                 // Configuration of the BKT Model + Skill C02 linkage
+        xcaleModel.addSkill(C03, param.getPinit(), param.getPlearn(), param.getPguess(), param.getPslip(), param.getPforget());                 // Configuration of the BKT Model + Skill C11 linkage
         if(debugtool_::UsecaseXCale::BKT_CREATION_DISPLAY_SUMMARY_DEBUG)                                               // PRINT FOR DEBUG PURPOSES
             xcaleModel.getDBN()->summary();
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
@@ -133,8 +112,16 @@ namespace UsecaseXCale
         E01_03.linkSkill(C02);                                                                                       // E01_03 mobilizes also skill C02
 
         E02_01.linkSkill(C01);                                                                                       // E02_01 mobilizes      skill C01
+        E02_01.linkSkill(C02);                                                                                       // E02_01 mobilizes also skill C02
+        E02_01.linkSkill(C03);                                                                                       // E02_01 mobilizes also skill C03
+
+        E02_02.linkSkill(C01);                                                                                       // E02_02 mobilizes      skill C01
         E02_02.linkSkill(C02);                                                                                       // E02_02 mobilizes also skill C02
-        E02_01.linkSkill(C03);                                                                                       // E02_03 mobilizes also skill C03
+        E02_02.linkSkill(C03);                                                                                       // E02_02 mobilizes also skill C03
+
+        E02_03.linkSkill(C01);                                                                                       // E02_03 mobilizes      skill C01
+        E02_03.linkSkill(C02);                                                                                       // E02_03 mobilizes also skill C02
+        E02_03.linkSkill(C03);                                                                                       // E02_03 mobilizes also skill C03
 
         //-----------------------------------------------------------------------------------------
         // SUBSECTION : Manual Creation learners and link them with their exercises
@@ -214,42 +201,42 @@ namespace UsecaseXCale
         //-----------------------------------------------------------------------------------------
         // SUBSECTION : Manual Vizualisations of learners' skills after doing exercises
         //-----------------------------------------------------------------------------------------
-        Learner_162.doExercise(E01_01, eval_162.getEvaluation(E01_01));                                             // Do Exercise Melodie of Diff=1 for learner 162 and get it's evaluation
-        displayLearnerSkills(Learner_162, E01_01, true);                                                            // Display the actual skills of learner 162 after doing Melodie of Diff=1
-        Learner_162.doExercise(E01_02, eval_162.getEvaluation(E01_02));                                             // Do Exercise Melodie of Diff=2 for learner 162 and get it's evaluation
-        displayLearnerSkills(Learner_162, E01_02, true);                                                           // Display the actual skills of learner 162 after doing Melodie of Diff=2
-        Learner_162.doExercise(E01_03, eval_162.getEvaluation(E01_03));                                             // Do Exercise Melodie of Diff=3 for learner 162 and get it's evaluation
-        displayLearnerSkills(Learner_162, E01_03, true);                                                           // Display the actual skills of learner 162 after doing Melodie of Diff=3
-        Learner_162.doExercise(E02_01, eval_162.getEvaluation(E02_01));                                             // Do Exercise Alternance of Diff=1 for learner 162 and get it's evaluation
+        // Learner_162.doExercise(E01_01, eval_162.getEvaluation(E01_01));                                              // Do Exercise Melodie of Diff=1 for learner 162 and get it's evaluation
+        // displayLearnerSkills(Learner_162, E01_01, true);                                                             // Display the actual skills of learner 162 after doing Melodie of Diff=1
+        // Learner_162.doExercise(E01_02, eval_162.getEvaluation(E01_02));                                              // Do Exercise Melodie of Diff=2 for learner 162 and get it's evaluation
+        // displayLearnerSkills(Learner_162, E01_02, true);                                                             // Display the actual skills of learner 162 after doing Melodie of Diff=2
+        // Learner_162.doExercise(E01_03, eval_162.getEvaluation(E01_03));                                              // Do Exercise Melodie of Diff=3 for learner 162 and get it's evaluation
+        // displayLearnerSkills(Learner_162, E01_03, true);                                                             // Display the actual skills of learner 162 after doing Melodie of Diff=3
+        Learner_162.doExercise(E02_01, eval_162.getEvaluation(E02_01));                                              // Do Exercise Alternance of Diff=1 for learner 162 and get it's evaluation
         displayLearnerSkills(Learner_162, E02_01, true);                                                            // Display the actual skills of learner 162 after doing Alternance of Diff=3
         Learner_162.doExercise(E02_02, eval_162.getEvaluation(E02_02));                                             // Do Exercise Alternance of Diff=2 for learner 162 and get it's evaluation
         displayLearnerSkills(Learner_162, E02_02, false);                                                           // Display the actual skills of learner 162 after doing Alternance of Diff=2
 
-        Learner_167.doExercise(E01_01, eval_167.getEvaluation(E01_01));                                             // Do Exercise Melodie of Diff=1 for learner 167 and get it's evaluation    
-        displayLearnerSkills(Learner_162, E01_01, false);                                                           // Display the actual skills of learner 167 after doing Melodie of Diff=1   
-        Learner_167.doExercise(E01_02, eval_167.getEvaluation(E01_02));                                             // Do Exercise Melodie of Diff=2 for learner 167 and get it's evaluation   
-        displayLearnerSkills(Learner_162, E01_02, false);                                                           // Display the actual skills of learner 167 after doing Melodie of Diff=2   
-        Learner_167.doExercise(E01_03, eval_167.getEvaluation(E01_03));                                             // Do Exercise Melodie of Diff=3 for learner 167 and get it's evaluation    
-        displayLearnerSkills(Learner_162, E01_03, false);                                                           // Display the actual skills of learner 167 after doing Melodie of Diff=3   
-        Learner_167.doExercise(E02_01, eval_167.getEvaluation(E02_01));                                             // Do Exercise Alternance of Diff=1 for learner 167 and get it's evaluation 
-        displayLearnerSkills(Learner_162, E02_01, false);                                                           // Display the actual skills of learner 167 after doing Alternance of Diff=1
-        Learner_167.doExercise(E02_02, eval_167.getEvaluation(E02_02));                                             // Do Exercise Alternance of Diff=2 for learner 167 and get it's evaluation 
-        displayLearnerSkills(Learner_162, E02_02, false);                                                           // Display the actual skills of learner 167 after doing Alternance of Diff=2 
-        Learner_167.doExercise(E02_03, eval_167.getEvaluation(E02_03));                                             // Do Exercise Alternance of Diff=3 for learner 167 and get it's evaluation  
-        displayLearnerSkills(Learner_162, E02_03, false);                                                           // Display the actual skills of learner 167 after doing Alternance of Diff=3
+        // Learner_167.doExercise(E01_01, eval_167.getEvaluation(E01_01));                                             // Do Exercise Melodie of Diff=1 for learner 167 and get it's evaluation    
+        // displayLearnerSkills(Learner_162, E01_01, false);                                                           // Display the actual skills of learner 167 after doing Melodie of Diff=1   
+        // Learner_167.doExercise(E01_02, eval_167.getEvaluation(E01_02));                                             // Do Exercise Melodie of Diff=2 for learner 167 and get it's evaluation   
+        // displayLearnerSkills(Learner_162, E01_02, false);                                                           // Display the actual skills of learner 167 after doing Melodie of Diff=2   
+        // Learner_167.doExercise(E01_03, eval_167.getEvaluation(E01_03));                                             // Do Exercise Melodie of Diff=3 for learner 167 and get it's evaluation    
+        // displayLearnerSkills(Learner_162, E01_03, false);                                                           // Display the actual skills of learner 167 after doing Melodie of Diff=3   
+        // Learner_167.doExercise(E02_01, eval_167.getEvaluation(E02_01));                                             // Do Exercise Alternance of Diff=1 for learner 167 and get it's evaluation 
+        // displayLearnerSkills(Learner_162, E02_01, false);                                                           // Display the actual skills of learner 167 after doing Alternance of Diff=1
+        // Learner_167.doExercise(E02_02, eval_167.getEvaluation(E02_02));                                             // Do Exercise Alternance of Diff=2 for learner 167 and get it's evaluation 
+        // displayLearnerSkills(Learner_162, E02_02, false);                                                           // Display the actual skills of learner 167 after doing Alternance of Diff=2 
+        // Learner_167.doExercise(E02_03, eval_167.getEvaluation(E02_03));                                             // Do Exercise Alternance of Diff=3 for learner 167 and get it's evaluation  
+        // displayLearnerSkills(Learner_162, E02_03, false);                                                           // Display the actual skills of learner 167 after doing Alternance of Diff=3
 
-        Learner_173.doExercise(E01_01, eval_173.getEvaluation(E01_01));                                             // Do Exercise Melodie of Diff=1 for learner 173 and get it's evaluation    
-        displayLearnerSkills(Learner_173, E01_01, false);                                                           // Display the actual skills of learner 173 after doing Melodie of Diff=1   
-        Learner_173.doExercise(E01_02, eval_173.getEvaluation(E01_02));                                             // Do Exercise Melodie of Diff=2 for learner 173 and get it's evaluation    
-        displayLearnerSkills(Learner_173, E01_02, false);                                                           // Display the actual skills of learner 173 after doing Melodie of Diff=2   
-        Learner_173.doExercise(E01_03, eval_173.getEvaluation(E01_03));                                             // Do Exercise Melodie of Diff=3 for learner 173 and get it's evaluation    
-        displayLearnerSkills(Learner_173, E01_03, false);                                                           // Display the actual skills of learner 173 after doing Melodie of Diff=3   
-        Learner_173.doExercise(E02_01, eval_173.getEvaluation(E02_01));                                             // Do Exercise Alternance of Diff=1 for learner 173 and get it's evaluation 
-        displayLearnerSkills(Learner_173, E02_01, false);                                                           // Display the actual skills of learner 173 after doing Alternance of Diff=1
-        Learner_173.doExercise(E02_02, eval_173.getEvaluation(E02_02));                                             // Do Exercise Alternance of Diff=2 for learner 173 and get it's evaluation 
-        displayLearnerSkills(Learner_173, E02_02, false);                                                           // Display the actual skills of learner 173 after doing Alternance of Diff=2
-        Learner_173.doExercise(E02_03, eval_173.getEvaluation(E02_03));                                             // Do Exercise Alternance of Diff=3 for learner 173 and get it's evaluation 
-        displayLearnerSkills(Learner_173, E02_03, false);                                                           // Display the actual skills of learner 173 after doing Alternance of Diff=3
+        // Learner_173.doExercise(E01_01, eval_173.getEvaluation(E01_01));                                             // Do Exercise Melodie of Diff=1 for learner 173 and get it's evaluation    
+        // displayLearnerSkills(Learner_173, E01_01, false);                                                           // Display the actual skills of learner 173 after doing Melodie of Diff=1   
+        // Learner_173.doExercise(E01_02, eval_173.getEvaluation(E01_02));                                             // Do Exercise Melodie of Diff=2 for learner 173 and get it's evaluation    
+        // displayLearnerSkills(Learner_173, E01_02, false);                                                           // Display the actual skills of learner 173 after doing Melodie of Diff=2   
+        // Learner_173.doExercise(E01_03, eval_173.getEvaluation(E01_03));                                             // Do Exercise Melodie of Diff=3 for learner 173 and get it's evaluation    
+        // displayLearnerSkills(Learner_173, E01_03, false);                                                           // Display the actual skills of learner 173 after doing Melodie of Diff=3   
+        // Learner_173.doExercise(E02_01, eval_173.getEvaluation(E02_01));                                             // Do Exercise Alternance of Diff=1 for learner 173 and get it's evaluation 
+        // displayLearnerSkills(Learner_173, E02_01, false);                                                           // Display the actual skills of learner 173 after doing Alternance of Diff=1
+        // Learner_173.doExercise(E02_02, eval_173.getEvaluation(E02_02));                                             // Do Exercise Alternance of Diff=2 for learner 173 and get it's evaluation 
+        // displayLearnerSkills(Learner_173, E02_02, false);                                                           // Display the actual skills of learner 173 after doing Alternance of Diff=2
+        // Learner_173.doExercise(E02_03, eval_173.getEvaluation(E02_03));                                             // Do Exercise Alternance of Diff=3 for learner 173 and get it's evaluation 
+        // displayLearnerSkills(Learner_173, E02_03, false);                                                           // Display the actual skills of learner 173 after doing Alternance of Diff=3
 
         
 

@@ -129,6 +129,30 @@ knowledge_tracing/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/knowledge_tracing.dir/build.make CMakeFiles/knowledge_tracing.dir/build
 .PHONY : knowledge_tracing/fast
 
+core/src/BKTParam.o: core/src/BKTParam.cpp.o
+.PHONY : core/src/BKTParam.o
+
+# target to build an object file
+core/src/BKTParam.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/knowledge_tracing.dir/build.make CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o
+.PHONY : core/src/BKTParam.cpp.o
+
+core/src/BKTParam.i: core/src/BKTParam.cpp.i
+.PHONY : core/src/BKTParam.i
+
+# target to preprocess a source file
+core/src/BKTParam.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/knowledge_tracing.dir/build.make CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.i
+.PHONY : core/src/BKTParam.cpp.i
+
+core/src/BKTParam.s: core/src/BKTParam.cpp.s
+.PHONY : core/src/BKTParam.s
+
+# target to generate assembly for a file
+core/src/BKTParam.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/knowledge_tracing.dir/build.make CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.s
+.PHONY : core/src/BKTParam.cpp.s
+
 core/src/debugtools.o: core/src/debugtools.cpp.o
 .PHONY : core/src/debugtools.o
 
@@ -498,6 +522,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... knowledge_tracing"
+	@echo "... core/src/BKTParam.o"
+	@echo "... core/src/BKTParam.i"
+	@echo "... core/src/BKTParam.s"
 	@echo "... core/src/debugtools.o"
 	@echo "... core/src/debugtools.i"
 	@echo "... core/src/debugtools.s"

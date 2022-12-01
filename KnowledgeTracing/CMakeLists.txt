@@ -27,6 +27,7 @@ SET (APP_SRC usecases/main.cpp
         core/src/student.cpp
         core/src/exercise.cpp
         core/src/tools.cpp
+        core/src/BKTParam.cpp
         core/src/debugtools.cpp
 
         core/include/resultStorage.h

@@ -139,10 +139,24 @@ CMakeFiles/knowledge_tracing.dir/core/src/tools.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/knowledge_tracing.dir/core/src/tools.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amine102/projects/KnowledgeTracing/core/src/tools.cpp -o CMakeFiles/knowledge_tracing.dir/core/src/tools.cpp.s
 
+CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
+CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o: /home/amine102/projects/KnowledgeTracing/core/src/BKTParam.cpp
+CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o -MF CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/BKTParam.cpp
+
+CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amine102/projects/KnowledgeTracing/core/src/BKTParam.cpp > CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.i
+
+CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amine102/projects/KnowledgeTracing/core/src/BKTParam.cpp -o CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.s
+
 CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
 CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o: /home/amine102/projects/KnowledgeTracing/core/src/debugtools.cpp
 CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o -MF CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/debugtools.cpp
 
 CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.s: cmake_force
 CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
 CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o: /home/amine102/projects/jsoncpp/dist/jsoncpp.cpp
 CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o -MF CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o -c /home/amine102/projects/jsoncpp/dist/jsoncpp.cpp
 
 CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp
 CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
 CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.o: /home/amine102/projects/KnowledgeTracing/usecases/src/progressiveBKT.cpp
 CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.o -MF CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/progressiveBKT.cpp
 
 CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.s: cmake_force
 CMakeFiles/knowledge_tracing.dir/usecases/src/studentTest.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
 CMakeFiles/knowledge_tracing.dir/usecases/src/studentTest.cpp.o: /home/amine102/projects/KnowledgeTracing/usecases/src/studentTest.cpp
 CMakeFiles/knowledge_tracing.dir/usecases/src/studentTest.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/studentTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/studentTest.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/usecases/src/studentTest.cpp.o -MF CMakeFiles/knowledge_tracing.dir/usecases/src/studentTest.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/usecases/src/studentTest.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/studentTest.cpp
 
 CMakeFiles/knowledge_tracing.dir/usecases/src/studentTest.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/studentTest.cpp.s: cmake_force
 CMakeFiles/knowledge_tracing.dir/usecases/src/scalabilityTest.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
 CMakeFiles/knowledge_tracing.dir/usecases/src/scalabilityTest.cpp.o: /home/amine102/projects/KnowledgeTracing/usecases/src/scalabilityTest.cpp
 CMakeFiles/knowledge_tracing.dir/usecases/src/scalabilityTest.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/scalabilityTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/scalabilityTest.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/usecases/src/scalabilityTest.cpp.o -MF CMakeFiles/knowledge_tracing.dir/usecases/src/scalabilityTest.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/usecases/src/scalabilityTest.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/scalabilityTest.cpp
 
 CMakeFiles/knowledge_tracing.dir/usecases/src/scalabilityTest.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/scalabilityTest.cpp.s: cmake_force
 CMakeFiles/knowledge_tracing.dir/usecases/src/impacted.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
 CMakeFiles/knowledge_tracing.dir/usecases/src/impacted.cpp.o: /home/amine102/projects/KnowledgeTracing/usecases/src/impacted.cpp
 CMakeFiles/knowledge_tracing.dir/usecases/src/impacted.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/impacted.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/impacted.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/usecases/src/impacted.cpp.o -MF CMakeFiles/knowledge_tracing.dir/usecases/src/impacted.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/usecases/src/impacted.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/impacted.cpp
 
 CMakeFiles/knowledge_tracing.dir/usecases/src/impacted.cpp.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/impacted.cpp.s: cmake_force
 CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
 CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.o: /home/amine102/projects/KnowledgeTracing/usecases/src/serialize_deserialize.cpp
 CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.o -MF CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/serialize_deserialize.cpp
 
 CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.i: cmake_force
@@ -240,7 +254,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.s: cmake
 CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
 CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.o: /home/amine102/projects/KnowledgeTracing/usecases/src/xcaleAUTO.cpp
 CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.o -MF CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/xcaleAUTO.cpp
 
 CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.s: cmake_force
 CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
 CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o: /home/amine102/projects/KnowledgeTracing/usecases/src/xcale.cpp
 CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o -MF CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/xcale.cpp
 
 CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.s: cmake_force
 CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
 CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.o: /home/amine102/projects/KnowledgeTracing/usecases/src/prerequisite.cpp
 CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.o -MF CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.o -c /home/amine102/projects/KnowledgeTracing/usecases/src/prerequisite.cpp
 
 CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.i: cmake_force
@@ -286,6 +300,7 @@ knowledge_tracing_OBJECTS = \
 "CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o" \
 "CMakeFiles/knowledge_tracing.dir/core/src/exercise.cpp.o" \
 "CMakeFiles/knowledge_tracing.dir/core/src/tools.cpp.o" \
+"CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o" \
 "CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o" \
 "CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o" \
 "CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.o" \
@@ -305,6 +320,7 @@ knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/genericBKTModel.cpp
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/exercise.cpp.o
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/tools.cpp.o
+knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/usecases/src/progressiveBKT.cpp.o
@@ -321,7 +337,7 @@ knowledge_tracing: /usr/lib/x86_64-linux-gnu/libboost_system.so
 knowledge_tracing: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 knowledge_tracing: /usr/lib/libprobt.so
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable knowledge_tracing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable knowledge_tracing"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/knowledge_tracing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
