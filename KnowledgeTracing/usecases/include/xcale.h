@@ -23,7 +23,7 @@ typedef std::string exoLabel;
 
 
 namespace UsecaseXCale {
-    void xCale_BKT_debug();
+    void xcaleMANUAL();
     void xcaleAUTO();
 }
 

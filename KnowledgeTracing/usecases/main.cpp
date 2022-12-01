@@ -66,7 +66,7 @@ void usecaseSelection() {
             break;
 
         case 7:
-            UsecaseXCale::xCale_BKT_debug();
+            UsecaseXCale::xcaleMANUAL();
             break;
 
         case 8:

@@ -1,121 +1,241 @@
+/*###################################-XCALE_CPP-#######################################
+  ##	XCALE Lib C++20, v1.0
+  ##   	Copyright (C) 2022-2024 Amine Boulahmel: <amine.boulahmel@imt-atlantique.fr>
+  ##                            Quentin Couland: <quentin.coulandl@univ-nantes.fr>
+  ##
+  ##   	Licensed under the Apache License, Version 2.0 (the "License");
+  ##  	you may not use this file except in compliance with the License.
+  ##   	You may obtain a copy of the License at
+  ##
+  ##       http://www.apache.org/licenses/LICENSE-2.0
+  ##
+  ##   Unless required by applicable law or agreed to in writing, software
+  ##   distributed under the License is distributed on an "AS IS" BASIS,
+  ##   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ##   See the License for the specific language governing permissions and
+  ##   limitations under the License.
+  ##
+  ###################################################################################*/
 //
-// Created by couland-q on 24/10/22.
-//
+// Created by Couland-Q   on 24/10/22.
 //
 // Created by Boulahmel-A on 15/09/2022.
+// 
 //
 
 #include "../include/xcale.h"
+#include "../include/serialize_deserialize.h"
 #include <fstream>
 
-/* Find a C++ library to connect to database phpmydmin, and automatically create
-   student class inside the code*/
+//-----------------------------------------------------------------------------
+// SECTION : xCALE usecase implementation
+//-----------------------------------------------------------------------------
+namespace UsecaseXCale 
+{
 
-/*Retracer les appels de fonctions sur son exemple pour comprendre les Z*/
+    void displayLearnerSkills(Student learner, Exercise ex, bool display=true)
+    {
+        if(display)
+        {
+            std::string exerciseName = ex.getName();
+            std::string exerciseDiff = ex.getDifficulty();
+            std::string learnerName  = learner.getName();
 
-namespace UsecaseXCale {
+            std::cout << "--------------------------LEARNER " << learnerName << "--------------------------" << std::endl;
+            std::cout << "---------------------------------------------------------------" << std::endl;
+            std::cout << "Displaying probas after exercice " << exerciseName << " with difficulty = " << exerciseDiff << std::endl;
+            std::cout << "---------------------------------------------------------------" << std::endl;
+            learner.getAllActualSkills();
+        }
+    }
+    void xcaleMANUAL() 
+    {
 
-    void xCale_BKT_debug() {
+        plError::always_display_warning(debugtool_::UsecaseXCale::PL_ALWAYS_DISPLAY_WARNING);                       // PL library warning Debug
+        //-----------------------------------------------------------------------------
+        // SUBSECTION : Manual creation of scales
+        //-----------------------------------------------------------------------------
+        Scale mastery_scale(plLabelType({"1 - insuffisant", "2 - fragile", "3 - satisfaisant"}));                   // Creation of the skill mastery level. in our case, the skill can be mastered from 1 to 3 (1: M_FRG, 2: M_SAT, 3: M_TB)
+        Scale difficulty_scale(plLabelType({"1 - facile", "2 - moyen", "3 - dur"}));                                // Creation of the difficulty scale. For this use case, three difficulty will be created
+        Scale speed_scale(plLabelType({"1 - nulle", "2 - lent", "3 - moyen", "4 - rapide"}));                       // Creation of the speed scale. 
 
-    plError::always_display_warning(false);
+        //-----------------------------------------------------------------------------
+        // SUBSECTION : Manual creation of skill topology
+        //-----------------------------------------------------------------------------
+        Skill C01("S01", mastery_scale, difficulty_scale, speed_scale);                                              // For this usecase, only three skills will be created
+        Skill C02("S02", mastery_scale, difficulty_scale, speed_scale);                                              // For this usecase, only three skills will be created
+        Skill C03("S03", mastery_scale, difficulty_scale, speed_scale);                                              // For this usecase, only three skills will be created
 
-    BKTModel xcaleModel;  // Creation of the BKT model
-    //MasteryLevel echelle({"1 - M_FRG", "2 - M_SAT", "3 - M_TB"});   // Creation of the skill mastery level. in our case, the skill can be mastered from 1 to 3 (1: M_FRG, 2: M_SAT, 3: M_TB)
-    Scale mastery_scale(plLabelType({"1 - insuffisant", "2 - fragile", "3 - satisfaisant", "4 - très bien"}));  // Creation of the skill mastery level. in our case, the skill can be mastered from 1 to 3 (1: M_FRG, 2: M_SAT, 3: M_TB)
-    Scale difficulty_scale(plLabelType({"1 - facile", "2 - moyen", "3 - dur"}));
-    Scale speed_scale(plLabelType({"1 - nulle", "2 - lent", "3 - moyen", "4 - rapide"}));
+        //-----------------------------------------------------------------------------------------
+        // SUBSECTION : Manual Creation & Configuration of BKT model
+        //-----------------------------------------------------------------------------------------
+        // NOTE : as created skills requires pre-requisites, the order of variable creation would be from the less dependent skill to the most dependent
+        /* Add the skills to the Model : in our setting :
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+            + PG    = 0.10                   - Initializing Probability of Guessing
+            + PInit = (0.80, 0.10,0.08,0.02) - Initializing Prior Probabilities for the four Mastery level
+            + PL    = (0.60, 0.10, 0.10)     - Initializing Probabilities of Learning. In this case, all PLs are the same for all mastery level
+            + PS    = 0.05                   - Initializing Probability of Slip
+            + PF    = 0                      - Initializing Probability of Forgetting Skill. In this setting, we assume that a learner can't forget a skill once learned
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+        */
+       struct BKTParam
+        {
+            float pguess    = 0.10f;
+            float pinit[4]  = {0.80f, 0.10f, 0.08f, 0.02f};
+            float plearn[3] = {0.60f, 0.10f, 0.10f};
+            float pslip     = 0.05f;
+            float pforget   = 0.0f;
+        };
+        BKTModel xcaleModel;                                                                                         // Creation of the BKT model
+        BKTParam param;
+        xcaleModel.addSkill(C01, {param.pinit[0], param.pinit[1], param.pinit[2], param.pinit[3]}, {param.plearn[0], param.plearn[1], param.plearn[2]}, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C01 linkage
+        xcaleModel.addSkill(C02, {param.pinit[0], param.pinit[1], param.pinit[2], param.pinit[3]}, {param.plearn[0], param.plearn[1], param.plearn[2]}, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C02 linkage
+        xcaleModel.addSkill(C03, {param.pinit[0], param.pinit[1], param.pinit[2], param.pinit[3]}, {param.plearn[0], param.plearn[1], param.plearn[2]}, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C11 linkage
+        if(debugtool_::UsecaseXCale::BKT_CREATION_DISPLAY_SUMMARY_DEBUG)                                             // PRINT FOR DEBUG PURPOSES
+            xcaleModel.getDBN()->summary();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        //-----------------------------------------------------------------------------------------
+        // SUBSECTION : Manual Creation & configuration of exercises 
+        //-----------------------------------------------------------------------------------------
+        Exercise E01_01("Melodie#1",    difficulty_scale,    "1 - facile");                                            // Exercise Melodie of version 2 -> Difficulty 1
+        Exercise E01_02("Melodie#2",    difficulty_scale,    "2 - moyen");                                             // Exercise Melodie of version 3 -> Difficulty 2
+        Exercise E01_03("Melodie#3",    difficulty_scale,    "3 - dur");                                               // Exercise Melodie of version 4 -> Difficulty 3
 
-    // NOTE : as created skills requires pre-requisites, the order of variable creation would be from the less dependent skill to the most dependent
+        Exercise E02_01("Alternance#1", difficulty_scale,    "1 - facile");                                            // Exercise Alternance of version 2 -> Difficulty 1
+        Exercise E02_02("Alternance#2", difficulty_scale,    "2 - moyen");                                             // Exercise Alternance of version 3 -> Difficulty 2
+        Exercise E02_03("Alternance#3", difficulty_scale,    "3 - dur");                                               // Exercise Alternance of version 4 -> Difficulty 3
 
-    Skill C1("S1", mastery_scale, difficulty_scale, speed_scale);
 
-    /*link the skills to the Model : in our setting :
-    -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-        + PG    = 0.10                   - Initializing Probability of Guessing
-        + PInit = (0.80, 0.10,0.08,0.02) - Initializing Prior Probabilities for the four Mastery level
-        + PL    = (0.60, 0.10, 0.10)     - Initializing Probabilities of Learning. In this case, all PLs are the same for all mastery level
-        + PS    = 0.05                   - Initializing Probability of Slip
-        + PF    = 0                      - Initializing Probability of Forgetting Skill. In this setting, we assume that a learner can't forget a skill once learned
-       --------------------------------------------------------------------------------------------------------------------------------------------------------------
-        + flatten   = 0                  - Initializing Probability of Forgetting Skill. In this setting, we assume that a learner can't forget a skill once learned
-    */ 
-   
-    // Pull la librairie sur Master
-    // Je rajoute toutes les compétences dans le modèle 
-    // Créer des profils étudiants 
-    // 
+        //-----------------------------------------------------------------------------------------
+        // SUBSECTION : Manual Skill linking for each exercise
+        //-----------------------------------------------------------------------------------------
+        E01_01.linkSkill(C01);                                                                                       // E01_01 mobilizes only skill C01
+        E01_02.linkSkill(C02);                                                                                       // E01_02 mobilizes only skill C02
+        E01_03.linkSkill(C02);                                                                                       // E01_03 mobilizes also skill C02
 
-    xcaleModel.addSkill(C1, {0.8f, 0.1f, 0.08f, 0.02f}, {0.6f, 0.4f, 0.1f}, 0.1f, 0.05f, 0.0f);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-    //create the exercises
-    Exercise ex1_1("Melodie_1",    difficulty_scale,    "1 - facile");
-    Exercise ex2_1("Alternance_1", difficulty_scale,    "1 - facile");
-    
+        E02_01.linkSkill(C01);                                                                                       // E02_01 mobilizes      skill C01
+        E02_02.linkSkill(C02);                                                                                       // E02_02 mobilizes also skill C02
+        E02_01.linkSkill(C03);                                                                                       // E02_03 mobilizes also skill C03
 
-    // Link the competences with their exercices
+        //-----------------------------------------------------------------------------------------
+        // SUBSECTION : Manual Creation learners and link them with their exercises
+        //-----------------------------------------------------------------------------------------
+        Student Learner_162("162",{E01_01, E01_02, E01_03});                                                         // Learner 162 -> index: 0 : made Exercise Melodie in three difficulties
+        Student Learner_167("167",{E01_01, E01_02, E01_03});                                                         // Learner 167 -> index: 1 : made Exercise Melodie in three difficulties
+        Student Learner_173("173",{E01_01, E01_02, E01_03});                                                         // Learner 173 -> index: 2 : made Exercise Melodie in three difficulties
 
-    /*Exercice Melodie*/
-    ex1_1.linkSkill(C1); /*Observed*/
+        //-----------------------------------------------------------------------------------------
+        // SUBSECTION : Manual model linking with their learners
+        //-----------------------------------------------------------------------------------------
+        Learner_162.setBKT(xcaleModel);                                                                              // Linking Learner 162 with the xcaleModel
+        Learner_167.setBKT(xcaleModel);                                                                              // Linking Learner 167 with the xcaleModel
+        Learner_173.setBKT(xcaleModel);                                                                              // Linking Learner 173 with the xcaleModel
 
-    /*Exercice Alternance*/
-    ex2_1.linkSkill(C1);
+        //-----------------------------------------------------------------------------------------
+        // SUBSECTION : Manual Creation of evaluations for each Learner along with their exercisess
+        //-----------------------------------------------------------------------------------------
+        ExercisesEvaluations eval_162(mastery_scale);                                                                // Exercise Evaluation of learner 162
+        ExercisesEvaluations eval_167(mastery_scale);                                                                // Exercise Evaluation of learner 167
+        ExercisesEvaluations eval_173(mastery_scale);                                                                // Exercise Evaluation of learner 173
 
-    // create the student and liking its genericBKTmodel
-    Student Learner_461("461",{ex1_1, ex2_1});
-    Learner_461.setBKT(xcaleModel);
+        //-----------------------------------------------------------------------------------------
+        // SUBSECTION : Manual evaluation of the observed skill for each learner
+        //-----------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------
+        /* link the skills to the Model : in our setting :
+        // NOTE : In this use case, the evaluation model goes as follow : if a learner perform on an exercise of difficulty n, then the eval = n
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+            + E01_01 : [C01]                 - Exercise Melodie,    with Difficulty diff=1 observes skill C01
+            + E01_02 : [C02]                 - Exercise Melodie,    with Difficulty diff=2 observes skill C02
+            + E01_03 : [C02]                 - Exercise Melodie,    with Difficulty diff=3 observes skill C03
+            + E02_01 : [C03]                 - Exercise Alternance, with Difficulty diff=1 observes skill C03
+            + E02_02 : [C03]                 - Exercise Alternance, with Difficulty diff=2 observes skill C03
+            + E02_03 : [C03]                 - Exercise Alternance, with Difficulty diff=3 observes skill C03
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+        /* link the skills to the Model : in our setting :
+        // NOTE : In this use case, the evaluation model goes as follow : if a learner perform on an exercise of difficulty n, then the eval = n
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+            + eval  = 0                      - Learner have not acquired any skill
+            + eval  = 1                      - Learner have performed and validated an exercise of difficulty 1, therefore eval = 1
+            + eval  = 2                      - Learner have performed and validated an exercise of difficulty 2, therefore eval = 2
+            + eval  = 3                      - Learner have performed and validated an exercise of difficulty 3, therefore eval = 3
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+        */ 
 
-    //xcaleModel.getDBN()->summary();
+        eval_162.addEvaluation(E01_01, C01, 1);                                                                      // E01_01 Observes skill C01, AND learner 162 validated the exercise  -------x CHECK
+        eval_162.addEvaluation(E01_02, C02, 2);                                                                      // E01_02 Observes skill C02, AND learner 162 validated the exercise  -------x CHECK
+        eval_162.addEvaluation(E01_03, C02, 3);                                                                      // E01_03 Observes skill C02, AND learner 162 validated the exercise  -------x CHECK
+        eval_162.addEvaluation(E02_01, C03, 1);                                                                      // E02_01 Observes skill C03, AND learner 162 validated the exercise  -------x CHECK
+        eval_162.addEvaluation(E02_02, C03, 2);                                                                      // E02_02 Observes skill C03, AND learner 162 validated the exercise  -------x CHECK
+        /*eval_162.addEvaluation(E02_03, C03, 3);*/                                                                  // E02_03 Observes skill C03, AND learner 162 didn't do the exxercise -------x CHECK
 
-    // create the evaluations for each exercise : 0 for fail, >0 represents the level of skill in which the learner is currently in
-    ExercisesEvaluations evals_461(mastery_scale);
-    evals_461.addEvaluation(ex1_1, C1, 1);
-    evals_461.addEvaluation(ex2_1, C1, 1);
+        eval_167.addEvaluation(E01_01, C01, 0);                                                                      // E01_01 Observes skill C01, AND learner 167 didn't validate the exercise --x CHECK
+        eval_167.addEvaluation(E01_02, C02, 0);                                                                      // E01_02 Observes skill C02, AND learner 167 didn't validate the exercise --x CHECK
+        eval_167.addEvaluation(E01_03, C02, 3);                                                                      // E01_03 Observes skill C02, AND learner 167 validated the exercise  -------x CHECK
+        eval_167.addEvaluation(E02_01, C03, 0);                                                                      // E02_01 Observes skill C03, AND learner 167 validated the exercise  -------x CHECK
+        eval_167.addEvaluation(E02_02, C03, 2);                                                                      // E02_02 Observes skill C03, AND learner 167 validated the exercise  -------x CHECK
+        eval_167.addEvaluation(E02_03, C03, 0);                                                                      // E02_03 Observes skill C03, AND learner 167 didn't validate the exercise --x CHECK
 
-    //std::vector<ExerciseEvaluation> evals = {exEval1, exEval2}; // 2 exercices évalué : MelodieV2, AlternanceV2
+        eval_173.addEvaluation(E01_01, C01, 1);                                                                      // E01_01 Observes skill C01, AND learner 173 validated the exercise --------x CHECK
+        eval_173.addEvaluation(E01_02, C02, 2);                                                                      // E01_02 Observes skill C02, AND learner 173 validated the exercise --------x CHECK
+        eval_173.addEvaluation(E01_03, C02, 0);                                                                      // E01_03 Observes skill C02, AND learner 173 validated the exercise --------x CHECK
+        eval_173.addEvaluation(E02_01, C03, 1);                                                                      // E02_01 Observes skill C03, AND learner 173 validated the exercise --------x CHECK
+        eval_173.addEvaluation(E02_02, C03, 2);                                                                      // E02_02 Observes skill C03, AND learner 173 validated the exercise --------x CHECK
+        eval_173.addEvaluation(E02_03, C03, 3);                                                                      // E02_03 Observes skill C03, AND learner 173 validated the exercise --------x CHECK
 
-    //instanciate the model with any exercise, it won't really be used
-    Learner_461.initDBN();
-    Learner_461.doExercise(ex1_1, evals_461.getEvaluation(ex1_1));
-    std::cout << "------------LEARNER 461----------------" << std::endl;
-    std::cout << "---------------------------------------" << std::endl;
-    std::cout << "Displaying probas after first exercice:" << std::endl;
-    std::cout << "---------------------------------------" << std::endl;
-    //print the initial probabilities for each skill
-    Learner_461.getAllActualSkills();
+        // TODO : add also evaluations for learner 173
 
-    Learner_461.doExercise(ex2_1, evals_461.getEvaluation(ex2_1));
-    std::cout << "------------LEARNER 461----------------"  << std::endl;
-    std::cout << "---------------------------------------"  << std::endl;
-    std::cout << "Displaying probas after second exercice:" << std::endl;
-    std::cout << "---------------------------------------"  << std::endl;
-    //print the  probabilities for each skill
-    Learner_461.getAllActualSkills();
+        //std::vector<ExerciseEvaluation> evals = {exEval1, exEval2}; // 2 exercices évalué : MelodieV2, AlternanceV2
+        //Instanciate the model with any exercise, it won't really be used
+        //-----------------------------------------------------------------------------------------
+        // SUBSECTION : Manual initialization of each learners with their DBN (in this case, all learners will have the same model)
+        //-----------------------------------------------------------------------------------------
+        Learner_162.initDBN();
+        Learner_167.initDBN();
+        Learner_173.initDBN();
 
-    // Creating a vector of learners
-    // ----------------------------------------Learner 162:--------------------------------------------------
-    /*Create our learner and link the exercices*/
-    Student Learner_162("162",{ex1_1, ex2_1});
-    Learner_162.setBKT(xcaleModel);
-    /*create the evaluations for each exercise 1 for succeed, 0 for fail*/
-    ExercisesEvaluations evals_162(mastery_scale);
-    evals_162.addEvaluation(ex1_1, C1, 1);
-    evals_162.addEvaluation(ex2_1, C1, 1);
+        //-----------------------------------------------------------------------------------------
+        // SUBSECTION : Manual Vizualisations of learners' skills after doing exercises
+        //-----------------------------------------------------------------------------------------
+        Learner_162.doExercise(E01_01, eval_162.getEvaluation(E01_01));                                             // Do Exercise Melodie of Diff=1 for learner 162 and get it's evaluation
+        displayLearnerSkills(Learner_162, E01_01, true);                                                            // Display the actual skills of learner 162 after doing Melodie of Diff=1
+        Learner_162.doExercise(E01_02, eval_162.getEvaluation(E01_02));                                             // Do Exercise Melodie of Diff=2 for learner 162 and get it's evaluation
+        displayLearnerSkills(Learner_162, E01_02, true);                                                           // Display the actual skills of learner 162 after doing Melodie of Diff=2
+        Learner_162.doExercise(E01_03, eval_162.getEvaluation(E01_03));                                             // Do Exercise Melodie of Diff=3 for learner 162 and get it's evaluation
+        displayLearnerSkills(Learner_162, E01_03, true);                                                           // Display the actual skills of learner 162 after doing Melodie of Diff=3
+        Learner_162.doExercise(E02_01, eval_162.getEvaluation(E02_01));                                             // Do Exercise Alternance of Diff=1 for learner 162 and get it's evaluation
+        displayLearnerSkills(Learner_162, E02_01, true);                                                            // Display the actual skills of learner 162 after doing Alternance of Diff=3
+        Learner_162.doExercise(E02_02, eval_162.getEvaluation(E02_02));                                             // Do Exercise Alternance of Diff=2 for learner 162 and get it's evaluation
+        displayLearnerSkills(Learner_162, E02_02, false);                                                           // Display the actual skills of learner 162 after doing Alternance of Diff=2
 
-    Learner_162.initDBN();
-    Learner_162.doExercise(ex1_1, evals_162.getEvaluation(ex1_1));
-    std::cout << "------------LEARNER 162----------------" << std::endl;
-    std::cout << "---------------------------------------" << std::endl;
-    std::cout << "Displaying probas after first exercice:" << std::endl;
-    std::cout << "---------------------------------------" << std::endl;
-    //print the initial probabilities for each skill
-    Learner_162.getAllActualSkills();
-    Learner_162.doExercise(ex2_1, evals_162.getEvaluation(ex2_1));
-    std::cout << "------------LEARNER 162----------------" << std::endl;
-    std::cout << "---------------------------------------" << std::endl;
-    std::cout << "Displaying probas after second exercice:"<< std::endl;
-    std::cout << "---------------------------------------" << std::endl;
-    //print the  probabilities for each skill
-    Learner_162.getAllActualSkills();
+        Learner_167.doExercise(E01_01, eval_167.getEvaluation(E01_01));                                             // Do Exercise Melodie of Diff=1 for learner 167 and get it's evaluation    
+        displayLearnerSkills(Learner_162, E01_01, false);                                                           // Display the actual skills of learner 167 after doing Melodie of Diff=1   
+        Learner_167.doExercise(E01_02, eval_167.getEvaluation(E01_02));                                             // Do Exercise Melodie of Diff=2 for learner 167 and get it's evaluation   
+        displayLearnerSkills(Learner_162, E01_02, false);                                                           // Display the actual skills of learner 167 after doing Melodie of Diff=2   
+        Learner_167.doExercise(E01_03, eval_167.getEvaluation(E01_03));                                             // Do Exercise Melodie of Diff=3 for learner 167 and get it's evaluation    
+        displayLearnerSkills(Learner_162, E01_03, false);                                                           // Display the actual skills of learner 167 after doing Melodie of Diff=3   
+        Learner_167.doExercise(E02_01, eval_167.getEvaluation(E02_01));                                             // Do Exercise Alternance of Diff=1 for learner 167 and get it's evaluation 
+        displayLearnerSkills(Learner_162, E02_01, false);                                                           // Display the actual skills of learner 167 after doing Alternance of Diff=1
+        Learner_167.doExercise(E02_02, eval_167.getEvaluation(E02_02));                                             // Do Exercise Alternance of Diff=2 for learner 167 and get it's evaluation 
+        displayLearnerSkills(Learner_162, E02_02, false);                                                           // Display the actual skills of learner 167 after doing Alternance of Diff=2 
+        Learner_167.doExercise(E02_03, eval_167.getEvaluation(E02_03));                                             // Do Exercise Alternance of Diff=3 for learner 167 and get it's evaluation  
+        displayLearnerSkills(Learner_162, E02_03, false);                                                           // Display the actual skills of learner 167 after doing Alternance of Diff=3
+
+        Learner_173.doExercise(E01_01, eval_173.getEvaluation(E01_01));                                             // Do Exercise Melodie of Diff=1 for learner 173 and get it's evaluation    
+        displayLearnerSkills(Learner_173, E01_01, false);                                                           // Display the actual skills of learner 173 after doing Melodie of Diff=1   
+        Learner_173.doExercise(E01_02, eval_173.getEvaluation(E01_02));                                             // Do Exercise Melodie of Diff=2 for learner 173 and get it's evaluation    
+        displayLearnerSkills(Learner_173, E01_02, false);                                                           // Display the actual skills of learner 173 after doing Melodie of Diff=2   
+        Learner_173.doExercise(E01_03, eval_173.getEvaluation(E01_03));                                             // Do Exercise Melodie of Diff=3 for learner 173 and get it's evaluation    
+        displayLearnerSkills(Learner_173, E01_03, false);                                                           // Display the actual skills of learner 173 after doing Melodie of Diff=3   
+        Learner_173.doExercise(E02_01, eval_173.getEvaluation(E02_01));                                             // Do Exercise Alternance of Diff=1 for learner 173 and get it's evaluation 
+        displayLearnerSkills(Learner_173, E02_01, false);                                                           // Display the actual skills of learner 173 after doing Alternance of Diff=1
+        Learner_173.doExercise(E02_02, eval_173.getEvaluation(E02_02));                                             // Do Exercise Alternance of Diff=2 for learner 173 and get it's evaluation 
+        displayLearnerSkills(Learner_173, E02_02, false);                                                           // Display the actual skills of learner 173 after doing Alternance of Diff=2
+        Learner_173.doExercise(E02_03, eval_173.getEvaluation(E02_03));                                             // Do Exercise Alternance of Diff=3 for learner 173 and get it's evaluation 
+        displayLearnerSkills(Learner_173, E02_03, false);                                                           // Display the actual skills of learner 173 after doing Alternance of Diff=3
+
+        
 
 
     }

@@ -18359,6 +18359,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o
  /home/amine102/projects/KnowledgeTracing/core/include/exercisesEvaluations.h
  /home/amine102/projects/KnowledgeTracing/core/include/types.h
  /home/amine102/projects/KnowledgeTracing/core/include/resultStorage.h
+ /home/amine102/projects/KnowledgeTracing/usecases/include/serialize_deserialize.h
 
 CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.o
  /home/amine102/projects/KnowledgeTracing/usecases/src/xcaleAUTO.cpp

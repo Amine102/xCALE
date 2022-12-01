@@ -28,6 +28,9 @@ void Student::setExercise(Exercise ex) {
     exercisesNotDone.push_back(ex);
 }
 
+std::string Student::getName() {
+    return this->name;
+}
 void Student::getActualSkill(const Skill& skill) {
     getMultipleActualSkills(std::vector<Skill>{skill});
 }

@@ -27,7 +27,7 @@
 //-----------------------------------------------------------------------------
 // SECTION : Global Definition of DEBUG FUNCTIONS
 //-----------------------------------------------------------------------------
-#define GET_VARIABLE_NAME__(name) print_VAR_NAME__(#name)                       // Debug function printing the actual name of the variable
+#define GET_VARIABLE_NAME__(name) print_VAR_NAME__(#name)                       // Debug MACRO function printing the actual name of the variable
 
 namespace debugtool_
 {
@@ -36,11 +36,11 @@ namespace debugtool_
         //-----------------------------------------------------------------------------
         // SUBSECTION : Definition of DEBUG constant
         //-----------------------------------------------------------------------------
-        // The debug macros are used for debug purposes only. The macros are bolean values.
-        // The truth values of these macros are checked using the #if #endif directives.
+        // The debug constant are used for debug purposes only. The macros are bolean values.
+        // The truth values of these debug constants are checked using the if else statement (to avoid making real MACROS and run dirty checks with #if #endif).
         static constexpr bool PL_ALWAYS_DISPLAY_WARNING           = false;    // Parameter for debugging PL library erros
         static constexpr bool SCALE_CREATION_DEBUG                = false;    // Parameter for debugging scale creation from scaleConfig.json
-        static constexpr bool SCALE_CREATION_DIFFICULTY_DEBUG     = false;    // Parameter for debugging difficulty screation from scaleConfig.json
+        static constexpr bool SCALE_CREATION_DIFFICULTY_DEBUG     = false;    // Parameter for debugging difficulty creation from scaleConfig.json
         static constexpr bool SCALE_JSON_DATA_DEBUG               = false;    // Parameter for debugging JSON scale data load (scaleConfig.json)
         static constexpr bool SKILL_CREATION_DEBUG                = false;    // Parameter for debugging skill creation from skillConfig.json file
         static constexpr bool EXERCISE_JSON_DATA_DEBUG            = false;    // Parameter for debugging JSON exercise load  from exoConfig.json file
@@ -48,6 +48,7 @@ namespace debugtool_
         static constexpr bool BKT_PARAM_PINIT_CREATION_DEBUG      = false;    // Parameter for debugging Pinit values load from bktConfig.json file
         static constexpr bool BKT_PARAM_PLEARN_CREATION_DEBUG     = false;    // Parameter for debugging PLearn values load from bktConfig.json file
         static constexpr bool BKT_CREATION_DISPLAY_SUMMARY_DEBUG  = false;    // Parameter to print a summary of the BKT model after it's creation
+        static constexpr bool LEARNER_JSON_DATA_DEBUG             = false;    // Parameter for debugging JSON learner load  from learnerData.json file
 
         //-----------------------------------------------------------------------------
         // SUBSECTION : Definition of DEBUG flags
@@ -66,16 +67,12 @@ namespace debugtool_
             BKT_PARAM_PINIT_CREATION_FLAG                         = 6 << 5,   // The truth values of these macros are checked using the #if #endif directives.
             BKT_PARAM_PLEARN_CREATION_FLAG                        = 7 << 6    // The truth values of these macros are checked using the #if #endif directives.
         };
-
-
-
         //-----------------------------------------------------------------------------
         // SUBSECTION : Forward Declaration
         //-----------------------------------------------------------------------------
         // The debug macros are used for debug purposes only. The macros are bolean values.
         // The truth values of these macros are checked using the #if #endif directives.
         constexpr void xcale_debug_(eDebug_flag_ flag);
-
     }
 
 }
@@ -85,7 +82,7 @@ namespace debugtool_
     void print_VAR_NAME__(const char *name);                                    // Debug function printing the actual name of the variable
     template<class T>   
     void print_VECTOR__(std::vector<T> vec, bool endline=true);                 // Debug function printing the actual name of the variable
-    void dprint_STR__(std::string expr, unsigned int delay=121211);             // Debug function printing the actual name of the variable
+    void dprint_STR__(std::string expr, unsigned int delay=121211);             // Debug function printing string in a delayed time
 
 }
 #endif // DEBUG_TOOLS_H

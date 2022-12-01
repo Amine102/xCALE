@@ -1,5 +1,5 @@
-/*###################################-XCALE_CPP-###########################################
-  ##	Syntaxor Lib C++20, v1.0
+/*###################################-XCALE_AUTO_CPP-###################################
+  ##	XCALE Lib C++20, v1.0
   ##   	Copyright (C) 2021-2024 Amine Boulahmel: <amine.boulahmel@imt-atlantique.fr>
   ##
   ##
@@ -128,7 +128,7 @@ namespace UsecaseXCale
             std::cout << "skill data: " << std::endl << skillConfigData<< std::endl;                    /* PRINT FOR DEBUG PURPOSES*/
         std::map<std::string, Skill> skillMap;                                                                    /*creation of a skill vector to store all skills*/
         for(Json::ValueConstIterator it = skillConfigData.begin(); it != skillConfigData.end(); ++it)   /*Iterating over skillConfigData and loading skills into skilLVec*/
-            skillMap.emplace((*it)["name"].asString() ,Skill((*it)["name"].asString(),  mastery_scale, difficulty_scale, speed_scale)); /*Pushing back the skills from the skillConfig.json to skillMap*/
+            skillMap.emplace((*it)["name"].asString(), Skill((*it)["name"].asString(),  mastery_scale, difficulty_scale, speed_scale)); /*Pushing back the skills from the skillConfig.json to skillMap*/
         
         //-----------------------------------------------------------------------------------------
         // SUBSECTION : Creation and Automatic configuration of BKT model from bktConfig.json file
@@ -141,7 +141,7 @@ namespace UsecaseXCale
         std::vector<double> PInit;                                                                       /*Creating a vector to store Pinit values*/
         std::vector<double> PLearn;                                                                      /*Creating a vector to store PLearn values*/
         for(Json::ValueConstIterator it = bktConfigData["Bkt_params"]["pinit"].begin(); it != bktConfigData["Bkt_params"]["pinit"].end(); ++it)   /*Iterating over bktConfig's pinit list and loading pinit values into PInit vector*/
-            PInit.push_back(it->asDouble());                                                           /*Pushing back the PInit values into PInit Vector*/
+            PInit.push_back(it->asDouble());                                                             /*Pushing back the PInit values into PInit Vector*/
         if(debugtool_::UsecaseXCale::BKT_PARAM_PINIT_CREATION_DEBUG)
             debugtool_::print_VECTOR__<double>(PInit, false);
         /*Iterating over bktConfig's plearn list and loading PL values into PLearn vector*/
@@ -177,7 +177,7 @@ namespace UsecaseXCale
         }
 
         //-----------------------------------------------------------------------------------------
-        // Automatic Skill linking to each exercises in exoVec
+        // SUBSECTION : Automatic Skill linking to each exercises in exoVec
         //-----------------------------------------------------------------------------------------
         for(size_t i = 0; i < exoVec.size(); i++)
             for(Json::ValueConstIterator it = exoConfigData.begin(); it != exoConfigData.end(); ++it)
@@ -186,11 +186,13 @@ namespace UsecaseXCale
                         exoVec[i].linkSkill(skillMap[it2->asString()]);
 
         //-----------------------------------------------------------------------------------------
-        // Automatic creation of learners from learner.json data file
+        // SUBSECTION : Automatic creation of learners from learner.json data file
         //-----------------------------------------------------------------------------------------
         std::ifstream learnerDataFile("data/learnerData.json");                                     /*Reading learner data in learnerData.json*/
         Json::Value learnerData;                                                                    /*learner Data variable containing our learner traces*/
         jsonReader.parse(learnerDataFile, learnerData);                                             /*jsonReader reads & parse the learnerData JSON file, then store the results in the learnerData variable*/
+        if(debugtool_::UsecaseXCale::LEARNER_JSON_DATA_DEBUG)
+            std::cout << "Learner data: " << std::endl << learnerData<< std::endl;                  /* PRINT FOR DEBUG PURPOSES */
         std::map<learnerID, Student> learnerMap;                                                    /*Create a maps of learners of vectors */
         std::vector<Student> learnerVec; 
         std::vector<Exercise> exoVecTemp;
@@ -213,15 +215,16 @@ namespace UsecaseXCale
                 {
                     std::cout << (*it)["LEARNER"].asInt() << std::endl;
                     Student learner((*it)["LEARNER"].asString(), exoVecTemp);
-                    learnerMap.emplace((*it)["LEARNER"].asInt(), learner);          /* THROW A PlError 128*/
+                    learnerVec.push_back(Student{(*it)["LEARNER"].asString(), exoVecTemp});
+                    //learnerMap.emplace((*it)["LEARNER"].asInt(),  Student{(*it)["LEARNER"].asString(), exoVecTemp});           /* THROW A PlError 128*/
                     exoVecTemp.clear();
                     learner.setBKT(xcaleModel);
                     ExercisesEvaluations evals(mastery_scale);
                     for(int i=0; i<exoVec.size(); i++)
                     {
-                        evals.addEvaluation(exoVec[i], skillMap[exoVec[i].getName()], labelToDiff(exoVec[i].getDifficulty()));
-                        learner.initDBN();
-                        learner.doExercise(exoVec[i], evals.getEvaluation(exoVec[i])); /* THROW A PlError 120 */
+                        // evals.addEvaluation(exoVec[i], skillMap[exoVec[i].getName()], labelToDiff(exoVec[i].getDifficulty()));
+                        // learner.initDBN();
+                        // learner.doExercise(exoVec[i], evals.getEvaluation(exoVec[i])); /* THROW A PlError 120 */
                         std::cout << "------------LEARNER " << (*it)["LEARNER"].asString() << "----------------" << std::endl;
                         std::cout << "---------------------------------------" << std::endl;
                         std::cout << "Displaying probas after first exercice:" << std::endl;

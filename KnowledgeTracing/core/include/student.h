@@ -78,6 +78,8 @@ public :
      */
     Student(const std::string &name, const std::vector<Exercise> &exs);
 
+    std::string getName();
+
     /**
      * Getter for the BKT attribute in the Student class.
      * @return The BKT.

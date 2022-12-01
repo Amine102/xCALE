@@ -18344,7 +18344,8 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o: usecases/src/xcale.cp
   core/include/genericBKTModel.h \
   core/include/exercisesEvaluations.h \
   core/include/types.h \
-  core/include/resultStorage.h
+  core/include/resultStorage.h \
+  usecases/include/serialize_deserialize.h
 
 CMakeFiles/knowledge_tracing.dir/usecases/src/xcaleAUTO.cpp.o: usecases/src/xcaleAUTO.cpp \
   /usr/include/stdc-predef.h \

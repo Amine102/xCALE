@@ -1544,4 +1544,5 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o: \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/genericBKTModel.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/exercisesEvaluations.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/types.h \
- /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/resultStorage.h
+ /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/resultStorage.h \
+ /home/amine102/projects/KnowledgeTracing/usecases/src/../include/serialize_deserialize.h
