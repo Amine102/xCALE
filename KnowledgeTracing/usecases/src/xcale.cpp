@@ -43,7 +43,7 @@ namespace UsecaseXCale
 
             std::cout << "--------------------------LEARNER " << learnerName << "--------------------------" << std::endl;
             std::cout << "---------------------------------------------------------------" << std::endl;
-            std::cout << "Displaying probas after exercice " << exerciseName << " with difficulty = " << exerciseDiff << std::endl;
+            std::cout << "Displaying probas after exercice "  << exerciseName << " with difficulty = " << exerciseDiff << std::endl;
             std::cout << "---------------------------------------------------------------" << std::endl;
             learner.getAllActualSkills();
         }
@@ -51,13 +51,13 @@ namespace UsecaseXCale
     void xcaleMANUAL() 
     {
 
-        plError::always_display_warning(debugtool_::UsecaseXCale::PL_ALWAYS_DISPLAY_WARNING);                       // PL library warning Debug
+        plError::always_display_warning(debugtool_::UsecaseXCale::PL_ALWAYS_DISPLAY_WARNING);                        // PL library warning Debug
         //-----------------------------------------------------------------------------
         // SUBSECTION : Manual creation of scales
         //-----------------------------------------------------------------------------
-        Scale mastery_scale(plLabelType({"1 - insuffisant", "2 - fragile", "3 - satisfaisant"}));                   // Creation of the skill mastery level. in our case, the skill can be mastered from 1 to 3 (1: M_FRG, 2: M_SAT, 3: M_TB)
-        Scale difficulty_scale(plLabelType({"1 - facile", "2 - moyen", "3 - dur"}));                                // Creation of the difficulty scale. For this use case, three difficulty will be created
-        Scale speed_scale(plLabelType({"1 - nulle", "2 - lent", "3 - moyen", "4 - rapide"}));                       // Creation of the speed scale. 
+        Scale mastery_scale(plLabelType({"0 - invalide, 1 - insuffisant", "2 - fragile", "3 - satisfaisant"}));      // Creation of the skill mastery level. in our case, the skill can be mastered from 1 to 3 (1: M_FRG, 2: M_SAT, 3: M_TB)
+        Scale difficulty_scale(plLabelType({"1 - facile", "2 - moyen", "3 - dur"}));                                 // Creation of the difficulty scale. For this use case, three difficulty will be created
+        Scale speed_scale(plLabelType({"0 - nulle", "1 - lent", "2 - moyen", "3 - rapide"}));                        // Creation of the speed scale. 
 
         //-----------------------------------------------------------------------------
         // SUBSECTION : Manual creation of skill topology
@@ -81,18 +81,36 @@ namespace UsecaseXCale
         */
        struct BKTParam
         {
-            float pguess    = 0.10f;
-            float pinit[4]  = {0.80f, 0.10f, 0.08f, 0.02f};
-            float plearn[3] = {0.60f, 0.10f, 0.10f};
-            float pslip     = 0.05f;
-            float pforget   = 0.0f;
+            const float pguess    = 0.10f;
+            const std::vector<double> pinit  = {0.80f, 0.10f, 0.08f, 0.02f};                                          // ! BEWARE ! sum(pinit) =1 AND pinit(n)  > pinit(n+1)
+            const std::vector<double> plearn = {0.10f, 0.30f, 0.60f};                                                 // ! BEWARE ! sum(plearn)=1 AND plearn(n) < plearn(n+1) [The plearn vector size is proportional to the speed scale size - 1]
+            const float pslip     = 0.05f;
+            const float pforget   = 0.0f;
+            std::pair<bool,float> checksum(std::vector<double> vec)
+            {
+                float checksum = 0.f;
+                for(size_t i = 0; i < vec.size(); i++)
+                    checksum += vec[i];
+                if(checksum != 1)
+                    return std::make_pair(false, checksum);
+                else
+                    return std::make_pair(true, checksum);
+
+            }
+            BKTParam(){
+                if(!checksum(this->pinit).first)
+                    std::cerr << "BKT PINIT PARAM ERROR : probability values do not sum to 1 (checksum = "  << checksum(this->pinit).second << "). Check your pinit probabilities." << std::endl;
+                if(!checksum(this->plearn).first)
+                    std::cerr << "BKT PLEARN PARAM ERROR : probability values do not sum to 1 (checksum = " << checksum(this->plearn).second << ") . Check your plearn probabilities." << std::endl;
+
+            }
         };
-        BKTModel xcaleModel;                                                                                         // Creation of the BKT model
+        BKTModel xcaleModel;                                                                                           // Creation of the BKT model
         BKTParam param;
-        xcaleModel.addSkill(C01, {param.pinit[0], param.pinit[1], param.pinit[2], param.pinit[3]}, {param.plearn[0], param.plearn[1], param.plearn[2]}, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C01 linkage
-        xcaleModel.addSkill(C02, {param.pinit[0], param.pinit[1], param.pinit[2], param.pinit[3]}, {param.plearn[0], param.plearn[1], param.plearn[2]}, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C02 linkage
-        xcaleModel.addSkill(C03, {param.pinit[0], param.pinit[1], param.pinit[2], param.pinit[3]}, {param.plearn[0], param.plearn[1], param.plearn[2]}, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C11 linkage
-        if(debugtool_::UsecaseXCale::BKT_CREATION_DISPLAY_SUMMARY_DEBUG)                                             // PRINT FOR DEBUG PURPOSES
+        xcaleModel.addSkill(C01, param.pinit, param.plearn, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C01 linkage
+        xcaleModel.addSkill(C02, param.pinit, param.plearn, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C02 linkage
+        xcaleModel.addSkill(C03, param.pinit, param.plearn, param.pguess, param.pslip, param.pforget);                 // Configuration of the BKT Model + Skill C11 linkage
+        if(debugtool_::UsecaseXCale::BKT_CREATION_DISPLAY_SUMMARY_DEBUG)                                               // PRINT FOR DEBUG PURPOSES
             xcaleModel.getDBN()->summary();
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
         //-----------------------------------------------------------------------------------------
@@ -184,16 +202,14 @@ namespace UsecaseXCale
         eval_173.addEvaluation(E02_02, C03, 2);                                                                      // E02_02 Observes skill C03, AND learner 173 validated the exercise --------x CHECK
         eval_173.addEvaluation(E02_03, C03, 3);                                                                      // E02_03 Observes skill C03, AND learner 173 validated the exercise --------x CHECK
 
-        // TODO : add also evaluations for learner 173
-
-        //std::vector<ExerciseEvaluation> evals = {exEval1, exEval2}; // 2 exercices évalué : MelodieV2, AlternanceV2
-        //Instanciate the model with any exercise, it won't really be used
-        //-----------------------------------------------------------------------------------------
-        // SUBSECTION : Manual initialization of each learners with their DBN (in this case, all learners will have the same model)
-        //-----------------------------------------------------------------------------------------
-        Learner_162.initDBN();
-        Learner_167.initDBN();
-        Learner_173.initDBN();
+        //------------------------------------------------------------------------------------------
+        // SUBSECTION : + Manual initialization of each learners with their DBN 
+        //              + (in this case, all learners will have the same model)
+        //              + Shouldn't the initDBN() method be renamed to initBKT() ?
+        //------------------------------------------------------------------------------------------
+        Learner_162.initDBN();                                                                                       // Initialize BKT Model for learner 162
+        Learner_167.initDBN();                                                                                       // Initialize BKT Model for learner 167
+        Learner_173.initDBN();                                                                                       // Initialize BKT Model for learner 173
 
         //-----------------------------------------------------------------------------------------
         // SUBSECTION : Manual Vizualisations of learners' skills after doing exercises
