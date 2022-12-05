@@ -26,6 +26,10 @@
 #include <vector>
 #include <string>
 
+/**
+ * Class that defines BKTParam which will later on configure the BKTModel parameters.
+ * Performs consistency checks of model parameter initialization.
+ */
 class BKTParam
 {
   private:
