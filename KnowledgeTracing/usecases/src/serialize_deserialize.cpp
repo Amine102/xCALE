@@ -14,7 +14,7 @@ namespace UsecaseSerializeDeserialize {
         Scale difficulty_scale(plLabelType({"1 - facile", "2 - moyen", "3 - dur"}));
         Scale speed_scale(plLabelType({"1 - nulle", "2 - lent", "3 - moyen", "4 - rapide"}));
 
-        Student pierre = createStudent(mastery_scale, difficulty_scale, speed_scale);
+        Learner pierre = createLearner(mastery_scale, difficulty_scale, speed_scale);
 
         serialize(pierre, filename);
 
@@ -24,7 +24,7 @@ namespace UsecaseSerializeDeserialize {
             std::cout << exo << std::endl;
         }
 
-        Student new_pierre("New Pierre", exo_deserialized);
+        Learner new_pierre("New Pierre", exo_deserialized);
         deserialize(new_pierre, filename);
 
         new_pierre.initDBN();
@@ -39,16 +39,16 @@ namespace UsecaseSerializeDeserialize {
 
     }
 
-    void serialize(Student& student, const std::string& filename) {
-        student.serialize(filename);
+    void serialize(Learner& Learner, const std::string& filename) {
+        Learner.serialize(filename);
     }
 
-    void deserialize(Student& student, const std::string& filename) {
-        student.deserialize(filename);
+    void deserialize(Learner& Learner, const std::string& filename) {
+        Learner.deserialize(filename);
     }
 
     // Code taken from testEtudiant.cpp
-    Student createStudent(Scale& mastery_scale, Scale& difficulty_scale, Scale& speed_scale) {
+    Learner createLearner(Scale& mastery_scale, Scale& difficulty_scale, Scale& speed_scale) {
         //create the genericBKTModel
         BKTModel genericModel;
 
@@ -84,8 +84,8 @@ namespace UsecaseSerializeDeserialize {
 
         Tools::writeExercisesToCSV({ex1, ex2, ex3}, "dirty_test");
 
-        //create the student and liking its genericBKTmodel
-        Student Pierre("Pierre", {ex1, ex2, ex3});
+        //create the Learner and liking its genericBKTmodel
+        Learner Pierre("Pierre", {ex1, ex2, ex3});
         Pierre.setBKT(genericModel);
 
         Pierre.initDBN();

@@ -53,7 +53,7 @@ namespace UsecaseImpacted {
 
         std::vector<Exercise> exs = {ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8};
 
-        Student Pierre("Pierre", exs);
+        Learner Pierre("Pierre", exs);
         Pierre.setBKT(genericModel);
 
         ExercisesEvaluations evals(mastery_scale);
@@ -148,7 +148,7 @@ namespace UsecaseImpacted {
 
     std::vector<Exercise> exs = {ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8};
 
-    Student Pierre("Pierre", exs);
+    Leaner Pierre("Pierre", exs);
     Pierre.setBKT(genericModel);
 
     std::map<std::string, int> eval1;

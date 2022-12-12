@@ -118,7 +118,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.o: \
  /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/c++/7/bits/basic_string.tcc \
- /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/student.h \
+ /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/learner.h \
  /usr/include/c++/7/algorithm /usr/include/c++/7/utility \
  /usr/include/c++/7/bits/stl_relops.h /usr/include/c++/7/bits/stl_algo.h \
  /usr/include/c++/7/bits/algorithmfwd.h \
@@ -1539,4 +1539,9 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/serialize_deserialize.cpp.o: \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/exercise.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/exercisesEvaluations.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/types.h \
- /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/resultStorage.h
+ /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/resultStorage.h \
+ /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/autolink.h \
+ /usr/include/jsoncpp/json/config.h /usr/include/jsoncpp/json/version.h \
+ /usr/include/jsoncpp/json/value.h /usr/include/jsoncpp/json/forwards.h \
+ /usr/include/jsoncpp/json/reader.h /usr/include/jsoncpp/json/features.h \
+ /usr/include/jsoncpp/json/writer.h

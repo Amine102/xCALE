@@ -43,8 +43,8 @@ namespace UsecasePrerequisite {
         ex2.linkSkill(C2);
         ex3.linkSkills({C1, C3});
 
-        //create the student and liking its genericBKTmodel
-        Student Pierre("Pierre", {ex1, ex2, ex3});
+        //create the Learner and liking its genericBKTmodel
+        Learner Pierre("Pierre", {ex1, ex2, ex3});
         Pierre.setBKT(genericModel);
 
         //genericModel.getDBN()->summary();
@@ -68,7 +68,7 @@ namespace UsecasePrerequisite {
         Pierre.getAllActualSkills();
         //genericModel.getDBN()->summary();
 
-        //Student does the recommended exercise
+        //Learner does the recommended exercise
         Pierre.doExercise(ex1, evals.getEvaluation(ex1));
 
         std::cout << "----------------------------------" << std::endl;

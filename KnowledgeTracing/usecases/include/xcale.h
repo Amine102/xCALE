@@ -13,7 +13,7 @@
 #include "../../core/include/BKTParam.h"
 #include "../../core/include/scale.h"
 #include "../../core/include/skill.h"
-#include "../../core/include/student.h"
+#include "../../core/include/learner.h"
 
 //-----------------------------------------------------------------------------
 // SECTION : Typedefs 

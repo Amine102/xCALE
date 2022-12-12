@@ -12,7 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/amine102/projects/KnowledgeTracing/core/src/debugtools.cpp" "CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o" "gcc" "CMakeFiles/knowledge_tracing.dir/core/src/debugtools.cpp.o.d"
   "/home/amine102/projects/KnowledgeTracing/core/src/exercise.cpp" "CMakeFiles/knowledge_tracing.dir/core/src/exercise.cpp.o" "gcc" "CMakeFiles/knowledge_tracing.dir/core/src/exercise.cpp.o.d"
   "/home/amine102/projects/KnowledgeTracing/core/src/genericBKTModel.cpp" "CMakeFiles/knowledge_tracing.dir/core/src/genericBKTModel.cpp.o" "gcc" "CMakeFiles/knowledge_tracing.dir/core/src/genericBKTModel.cpp.o.d"
-  "/home/amine102/projects/KnowledgeTracing/core/src/student.cpp" "CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o" "gcc" "CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o.d"
+  "/home/amine102/projects/KnowledgeTracing/core/src/learner.cpp" "CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o" "gcc" "CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o.d"
   "/home/amine102/projects/KnowledgeTracing/core/src/tools.cpp" "CMakeFiles/knowledge_tracing.dir/core/src/tools.cpp.o" "gcc" "CMakeFiles/knowledge_tracing.dir/core/src/tools.cpp.o.d"
   "/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp" "CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o" "gcc" "CMakeFiles/knowledge_tracing.dir/home/amine102/projects/jsoncpp/dist/jsoncpp.cpp.o.d"
   "/home/amine102/projects/KnowledgeTracing/usecases/main.cpp" "CMakeFiles/knowledge_tracing.dir/usecases/main.cpp.o" "gcc" "CMakeFiles/knowledge_tracing.dir/usecases/main.cpp.o.d"

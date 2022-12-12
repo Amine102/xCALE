@@ -193,8 +193,8 @@ namespace UsecaseXCale
         jsonReader.parse(learnerDataFile, learnerData);                                             /*jsonReader reads & parse the learnerData JSON file, then store the results in the learnerData variable*/
         if(debugtool_::UsecaseXCale::LEARNER_JSON_DATA_DEBUG)
             std::cout << "Learner data: " << std::endl << learnerData<< std::endl;                  /* PRINT FOR DEBUG PURPOSES */
-        std::map<learnerID, Student> learnerMap;                                                    /*Create a maps of learners of vectors */
-        std::vector<Student> learnerVec; 
+        std::map<learnerID, Learner> learnerMap;                                                    /*Create a maps of learners of vectors */
+        std::vector<Learner> learnerVec; 
         std::vector<Exercise> exoVecTemp;
         for(Json::ValueConstIterator it = learnerData.begin(); it != learnerData.end(); ++it)
         {
@@ -214,9 +214,9 @@ namespace UsecaseXCale
                 if(!exoVecTemp.empty())
                 {
                     std::cout << (*it)["LEARNER"].asInt() << std::endl;
-                    Student learner((*it)["LEARNER"].asString(), exoVecTemp);
-                    learnerVec.push_back(Student{(*it)["LEARNER"].asString(), exoVecTemp});
-                    //learnerMap.emplace((*it)["LEARNER"].asInt(),  Student{(*it)["LEARNER"].asString(), exoVecTemp});           /* THROW A PlError 128*/
+                    Learner learner((*it)["LEARNER"].asString(), exoVecTemp);
+                    learnerVec.push_back(Learner{(*it)["LEARNER"].asString(), exoVecTemp});
+                    //learnerMap.emplace((*it)["LEARNER"].asInt(),  Learner{(*it)["LEARNER"].asString(), exoVecTemp});           /* THROW A PlError 128*/
                     exoVecTemp.clear();
                     learner.setBKT(xcaleModel);
                     ExercisesEvaluations evals(mastery_scale);

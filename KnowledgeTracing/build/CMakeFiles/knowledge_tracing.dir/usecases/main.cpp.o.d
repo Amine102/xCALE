@@ -1534,7 +1534,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/main.cpp.o: \
  /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/tools.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/progressiveBKT.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/studentTest.h \
- /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/student.h \
+ /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/learner.h \
  /usr/include/c++/7/experimental/filesystem \
  /usr/include/c++/7/experimental/bits/fs_fwd.h \
  /usr/include/c++/7/experimental/bits/fs_path.h \
@@ -1545,10 +1545,16 @@ CMakeFiles/knowledge_tracing.dir/usecases/main.cpp.o: \
  /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/exercisesEvaluations.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/types.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/resultStorage.h \
+ /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/autolink.h \
+ /usr/include/jsoncpp/json/config.h /usr/include/jsoncpp/json/version.h \
+ /usr/include/jsoncpp/json/value.h /usr/include/jsoncpp/json/forwards.h \
+ /usr/include/jsoncpp/json/reader.h /usr/include/jsoncpp/json/features.h \
+ /usr/include/jsoncpp/json/writer.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/impacted.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/serialize_deserialize.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/xcale.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/debugtools.h \
+ /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/BKTParam.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/scale.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/../../core/include/skill.h \
  /home/amine102/projects/KnowledgeTracing/usecases/include/prerequisite.h

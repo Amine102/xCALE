@@ -5,7 +5,7 @@
 #ifndef KNOWLEDGE_TRACING_STUDENTTEST_H
 #define KNOWLEDGE_TRACING_STUDENTTEST_H
 
-#include "../../core/include/student.h"
+#include "../../core/include/learner.h"
 
 namespace UsecaseStudent {
     void studentTest();

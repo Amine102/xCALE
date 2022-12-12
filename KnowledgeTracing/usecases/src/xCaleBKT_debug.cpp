@@ -6,7 +6,7 @@
 
 
 /* Find a C++ library to connect to database phpmydmin, and automatically create 
-   student class inside the code*/
+   Learner class inside the code*/
 
 /*Retracer les appels de fonctions sur son exemple pour comprendre les Z*/
  
@@ -55,8 +55,8 @@ void xCale_BKT_debug() {
     /*Exercice Alternance*/
     ex2_1.linkSkill(C1);
 
-    // create the student and liking its genericBKTmodel
-    Student Learner_461("461",{ex1_1, ex2_1});
+    // create the Learner and liking its genericBKTmodel
+    Learner Learner_461("461",{ex1_1, ex2_1});
     Learner_461.setBKT(xcaleModel);
 
     //xcaleModel.getDBN()->summary();
@@ -89,7 +89,7 @@ void xCale_BKT_debug() {
     // Creating a vector of learners
     // ----------------------------------------Learner 162:--------------------------------------------------
     /*Create our learner and link the exercices*/
-    Student Learner_162("162",{ex1_1, ex2_1});
+    Learner Learner_162("162",{ex1_1, ex2_1});
     Learner_162.setBKT(xcaleModel);
     /*create the evaluations for each exercise 1 for succeed, 0 for fail*/
     ExercisesEvaluations evals_162(mastery_scale);

@@ -45,9 +45,21 @@ struct Skill{
     };
 
     /**
-     * Default constructor for the Skill class.
+     * Default constructor for the Skill struct
      */
     Skill() = default;
+
+    /**
+     * Copy constructor for the Skill struct
+     * @param o_skill The Skill to copy
+     */
+    Skill(const Skill& o_skill) {
+        this->mastery_scale = o_skill.mastery_scale;
+        this->difficulty_scale = o_skill.difficulty_scale;
+        this->speed_scale = o_skill.speed_scale;
+        this->name = o_skill.name;
+        this->prerequisites = o_skill.prerequisites;
+    }
 
     /**
      * Returns the highest mastery value for the skill.

@@ -16,6 +16,11 @@
 
 #include "exercise.h"
 
+#define FULL_LOCATION "[" << __FILE__ << " | " << __FUNCTION__ << " | l." << __LINE__ << "]" << std::endl
+#define FILE_NAME "[" << __FILE__ << "]"
+#define FUNCTION_NAME "[" << __FUNCTION__ << "]"
+#define LINE "l." << __LINE__
+
 namespace Tools {
     /**
      * Checks if a string ends with a substring.
@@ -86,41 +91,6 @@ namespace Tools {
      * @return A vector of Exercises
      */
     std::vector<Exercise> loadExercisesFromCSV(const std::string& filename, std::vector<Skill>& skills);
-
-    namespace Logger {
-        /**
-         * A simple logging system that allows to specify a debug level (so that you have control over what's printed
-         * and what's not). Should be used instead of the standard output for debugging purpose.
-         * The log_level variable must be set to 0 or higher for any output.
-         */
-        struct Logger {
-            /* The logging level (display messages from 0 to log_level). */
-            int log_level = -1;
-            /* The logging level of all future messages. */
-            int future_msg_log_level = -1;
-
-            /**
-             * Prints the message, using the Logger's parameters.
-             * @param message Message to display.
-             */
-            void print(const std::string& message) const {
-                if (future_msg_log_level >= log_level) {
-                    std::cout << message << std::endl;
-                }
-            }
-
-            /**
-             * Prints the message if the log_level is inferior or equal to the current log_level.
-             * @param message Message to display.
-             * @param message_log_level The log level of the message.
-             */
-            void print(const std::string& message, int message_log_level) const {
-                if (log_level >= 0 && message_log_level <= log_level) {
-                    std::cout << message << std::endl;
-                }
-            }
-        };
-    }
 
     namespace Time {
         /**

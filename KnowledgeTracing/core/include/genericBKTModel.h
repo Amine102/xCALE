@@ -27,6 +27,12 @@ public:
      */
     BKTModel();
 
+    /**
+     * Copy constructor for the BKTModel class
+     * @param o_bkt The BKt to copy
+     */
+    BKTModel(BKTModel& o_bkt);
+
 
     /**
      * Default destructor for the BKTModel class.

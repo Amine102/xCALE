@@ -5,7 +5,7 @@
 #ifndef KNOWLEDGE_TRACING_IMPACTED_H
 #define KNOWLEDGE_TRACING_IMPACTED_H
 
-#include "../../core/include/student.h"
+#include "../../core/include/learner.h"
 
 namespace UsecaseImpacted {
     void usecase();

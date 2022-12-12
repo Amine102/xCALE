@@ -225,29 +225,29 @@ core/src/genericBKTModel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/knowledge_tracing.dir/build.make CMakeFiles/knowledge_tracing.dir/core/src/genericBKTModel.cpp.s
 .PHONY : core/src/genericBKTModel.cpp.s
 
-core/src/student.o: core/src/student.cpp.o
-.PHONY : core/src/student.o
+core/src/learner.o: core/src/learner.cpp.o
+.PHONY : core/src/learner.o
 
 # target to build an object file
-core/src/student.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/knowledge_tracing.dir/build.make CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o
-.PHONY : core/src/student.cpp.o
+core/src/learner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/knowledge_tracing.dir/build.make CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o
+.PHONY : core/src/learner.cpp.o
 
-core/src/student.i: core/src/student.cpp.i
-.PHONY : core/src/student.i
+core/src/learner.i: core/src/learner.cpp.i
+.PHONY : core/src/learner.i
 
 # target to preprocess a source file
-core/src/student.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/knowledge_tracing.dir/build.make CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.i
-.PHONY : core/src/student.cpp.i
+core/src/learner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/knowledge_tracing.dir/build.make CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.i
+.PHONY : core/src/learner.cpp.i
 
-core/src/student.s: core/src/student.cpp.s
-.PHONY : core/src/student.s
+core/src/learner.s: core/src/learner.cpp.s
+.PHONY : core/src/learner.s
 
 # target to generate assembly for a file
-core/src/student.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/knowledge_tracing.dir/build.make CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.s
-.PHONY : core/src/student.cpp.s
+core/src/learner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/knowledge_tracing.dir/build.make CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.s
+.PHONY : core/src/learner.cpp.s
 
 core/src/tools.o: core/src/tools.cpp.o
 .PHONY : core/src/tools.o
@@ -534,9 +534,9 @@ help:
 	@echo "... core/src/genericBKTModel.o"
 	@echo "... core/src/genericBKTModel.i"
 	@echo "... core/src/genericBKTModel.s"
-	@echo "... core/src/student.o"
-	@echo "... core/src/student.i"
-	@echo "... core/src/student.s"
+	@echo "... core/src/learner.o"
+	@echo "... core/src/learner.i"
+	@echo "... core/src/learner.s"
 	@echo "... core/src/tools.o"
 	@echo "... core/src/tools.i"
 	@echo "... core/src/tools.s"

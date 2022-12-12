@@ -6,7 +6,7 @@
 
 
 /* Find a C++ library to connect to database phpmydmin, and automatically create 
-   student class inside the code*/
+   Learner class inside the code*/
 
 /*Retracer les appels de fonctions sur son exemple pour comprendre les Z*/
  
@@ -494,16 +494,16 @@ void xCale_BKT() {
 
 
 
-    // create the student and liking its genericBKTmodel
+    // create the Learner and liking its genericBKTmodel
     // 
 
-    std::vector<Student> learners;
-    Student Learner_461("461",{ex1_1, ex2_1});
-    //Student Learner_4691("4691",{ex1_1, ex_1_2, ex1_3});
-    //Student Learner_4686("4686",{});
-    //Student Learner_4674("4674",{});
-    //Student Learner_4673("4673",{});
-    //Student Pierre("Pierre", {ex1, ex2, ex3});    
+    std::vector<Learner> learners;
+    Learner Learner_461("461",{ex1_1, ex2_1});
+    //Learner Learner_4691("4691",{ex1_1, ex_1_2, ex1_3});
+    //Learner Learner_4686("4686",{});
+    //Learner Learner_4674("4674",{});
+    //Learner Learner_4673("4673",{});
+    //Learner Pierre("Pierre", {ex1, ex2, ex3});    
     Learner_461.setBKT(xcaleModel);
 
     //xcaleModel.getDBN()->summary();
@@ -534,7 +534,7 @@ void xCale_BKT() {
 
     // AnswersPrediction
     // None : no evidences on the results of the exercise.
-    // Optimistic : the student always answers correctly on the prediction.
+    // Optimistic : the Learner always answers correctly on the prediction.
     //AnswersPrediction ans = AnswersPrediction::Optimistic;
 
     // Metric
@@ -584,7 +584,7 @@ void xCale_BKT() {
     //recommendedExercises.push_back(recommendedFirst);
     //std::cout << "Recommended exercise is : " << recommendedFirst.getName() << std::endl;
 
-    //Student does the recommended exercise
+    //Learner does the recommended exercise
     //Pierre.doExercise(recommendedFirst, evals[recommendedFirst.getName().back() - '0' - 1]);
 
     //std::cout << "----------------------------------" << std::endl;
@@ -658,7 +658,7 @@ void xCale_BKT() {
 
     std::vector<Exercise> exs = {ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8};
 
-    Student Pierre("Pierre", exs);
+    Learner Pierre("Pierre", exs);
     Pierre.setBKT(xcaleModel);
 
     std::map<std::string, int> eval1;

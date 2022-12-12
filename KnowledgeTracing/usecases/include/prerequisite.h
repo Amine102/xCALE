@@ -6,7 +6,7 @@
 #define KNOWLEDGE_TRACING_PREREQUISITE_H
 
 #include <pl.h>
-#include "../../core/include/student.h"
+#include "../../core/include/learner.h"
 
 namespace UsecasePrerequisite {
     void prerequisite();

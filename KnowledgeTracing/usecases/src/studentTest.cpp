@@ -43,8 +43,8 @@ namespace UsecaseStudent {
         ex2.linkSkill(C2);
         ex3.linkSkills({C1, C3});
 
-        //create the student and liking its genericBKTmodel
-        Student Pierre("Pierre", {ex1, ex2, ex3});
+        //create the Learner and liking its genericBKTmodel
+        Learner Pierre("Pierre", {ex1, ex2, ex3});
         Pierre.setBKT(genericModel);
 
         //genericModel.getDBN()->summary();
@@ -60,7 +60,7 @@ namespace UsecaseStudent {
 
         // AnswersPrediction
         // None : no evidences on the results of the exercise.
-        // Optimistic : the student always answers correctly on the prediction.
+        // Optimistic : the Learner always answers correctly on the prediction.
         AnswersPrediction ans = AnswersPrediction::Optimistic;
 
         // Metric
@@ -83,7 +83,7 @@ namespace UsecaseStudent {
         recommendedExercises.push_back(recommendedFirst);
         std::cout << "Recommended exercise is : " << recommendedFirst.getName() << std::endl;
 
-        //Student does the recommended exercise
+        //Learner does the recommended exercise
         Pierre.doExercise(recommendedFirst, evals.getEvaluation(recommendedFirst));
 
         std::cout << "----------------------------------" << std::endl;

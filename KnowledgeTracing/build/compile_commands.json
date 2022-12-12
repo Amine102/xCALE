@@ -11,8 +11,8 @@
 },
 {
   "directory": "/home/amine102/projects/KnowledgeTracing/build",
-  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/student.cpp",
-  "file": "/home/amine102/projects/KnowledgeTracing/core/src/student.cpp"
+  "command": "/usr/bin/g++  -I/usr/include/probt -g -std=gnu++1z -o CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/learner.cpp",
+  "file": "/home/amine102/projects/KnowledgeTracing/core/src/learner.cpp"
 },
 {
   "directory": "/home/amine102/projects/KnowledgeTracing/build",

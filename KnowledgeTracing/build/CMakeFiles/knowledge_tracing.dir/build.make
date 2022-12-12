@@ -97,19 +97,19 @@ CMakeFiles/knowledge_tracing.dir/core/src/genericBKTModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/knowledge_tracing.dir/core/src/genericBKTModel.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amine102/projects/KnowledgeTracing/core/src/genericBKTModel.cpp -o CMakeFiles/knowledge_tracing.dir/core/src/genericBKTModel.cpp.s
 
-CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
-CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o: /home/amine102/projects/KnowledgeTracing/core/src/student.cpp
-CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o -MF CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/student.cpp
+CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
+CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o: /home/amine102/projects/KnowledgeTracing/core/src/learner.cpp
+CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o: CMakeFiles/knowledge_tracing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amine102/projects/KnowledgeTracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o -MF CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o.d -o CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o -c /home/amine102/projects/KnowledgeTracing/core/src/learner.cpp
 
-CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amine102/projects/KnowledgeTracing/core/src/student.cpp > CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.i
+CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amine102/projects/KnowledgeTracing/core/src/learner.cpp > CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.i
 
-CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amine102/projects/KnowledgeTracing/core/src/student.cpp -o CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.s
+CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amine102/projects/KnowledgeTracing/core/src/learner.cpp -o CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.s
 
 CMakeFiles/knowledge_tracing.dir/core/src/exercise.cpp.o: CMakeFiles/knowledge_tracing.dir/flags.make
 CMakeFiles/knowledge_tracing.dir/core/src/exercise.cpp.o: /home/amine102/projects/KnowledgeTracing/core/src/exercise.cpp
@@ -297,7 +297,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.s: cmake_force
 knowledge_tracing_OBJECTS = \
 "CMakeFiles/knowledge_tracing.dir/usecases/main.cpp.o" \
 "CMakeFiles/knowledge_tracing.dir/core/src/genericBKTModel.cpp.o" \
-"CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o" \
+"CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o" \
 "CMakeFiles/knowledge_tracing.dir/core/src/exercise.cpp.o" \
 "CMakeFiles/knowledge_tracing.dir/core/src/tools.cpp.o" \
 "CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o" \
@@ -317,7 +317,7 @@ knowledge_tracing_EXTERNAL_OBJECTS =
 
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/usecases/main.cpp.o
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/genericBKTModel.cpp.o
-knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/student.cpp.o
+knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/learner.cpp.o
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/exercise.cpp.o
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/tools.cpp.o
 knowledge_tracing: CMakeFiles/knowledge_tracing.dir/core/src/BKTParam.cpp.o

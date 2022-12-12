@@ -4,6 +4,13 @@ BKTModel::BKTModel() {
     DBN = nullptr;
 }
 
+BKTModel::BKTModel(BKTModel& o_bkt) {
+    pmBayesianNetwork* g0 = new pmBayesianNetwork(o_bkt.getDBN()->getInitial_G(), true, true);
+    pmBayesianNetwork* gT = new pmBayesianNetwork(o_bkt.getDBN()->getTransition_G(), true, true);
+    DBN = new pmDynamicBayesianNetwork(g0, gT);
+    this->list_skills = o_bkt.list_skills;
+}
+
 BKTModel::~BKTModel() {
 
 }

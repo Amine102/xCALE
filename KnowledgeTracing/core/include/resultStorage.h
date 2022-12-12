@@ -9,6 +9,9 @@
 #include <string>
 #include <utility> // std::pair
 #include <set>
+#include <iostream>
+
+#include <jsoncpp/json/json.h>  // data export
 
 #include <pl.h>
 #include "tools.h"
@@ -237,6 +240,83 @@ struct ResultStorage {
 
             getLastResultsForVars(vars_to_query_t);
         }
+    }
+
+    void outputToFile(const std::string& export_type, const std::string& filename, const std::string& path = "") {
+        std::string final_filename = filename;
+        if (!Tools::endsWith(filename, export_type)) {
+            final_filename.append("." + export_type);
+        }
+
+        if (export_type == "csv") {
+            csvExport(final_filename, path);
+        }
+
+        if (export_type == "json") {
+            jsonExport(final_filename, path);
+        }
+
+        else {
+            std::cerr << FULL_LOCATION /*<< WARNING*/ << "WARNING: filetype for export (" << export_type << ") isn't supported. "
+                      << "Supported types are csv, json and xml." << std::endl;
+        }
+    }
+
+    void csvExport(const std::string& filename, const std::string& path) {
+
+        std::ofstream o_file;
+        o_file.open(path + filename);
+
+        int instant = 0;
+
+        for (auto& val: results_and_vars) {
+            for(auto& name: val.first) {
+                std::cout << name << std::endl;
+            }
+
+            for (auto& val2: val.second) {
+                std::cout << val2.to_string() << std::endl;
+            }
+
+            ++instant;
+        }
+
+        o_file.close();
+    }
+
+    void jsonExport(const std::string& filename, const std::string& path) {
+    //     using json = nlohmann::json;
+
+    //     json json_object;
+
+    //     int instant = 0;
+
+    //     for (auto& val: results_and_vars) {
+    //         json var_names = json::array();
+
+    //         for(auto& name: val.first) {
+    //             var_names.emplace_back(name);
+    //         }
+
+    //         json to_strings = json::array();
+
+    //         for (auto& val2: val.second) {
+    //             to_strings.push_back(val2.to_string());
+    //         }
+
+    //         json merged = json::object();
+    //         merged["vars"] = var_names;
+    //         merged["to_string"] = to_strings;
+
+    //         json_object[std::to_string(instant)] = merged;
+
+    //         ++instant;
+    //     }
+
+    //     std::ofstream o_file;
+    //     o_file.open(path + filename);
+    //     o_file << json_object;
+    //     o_file.close();
     }
 };
 

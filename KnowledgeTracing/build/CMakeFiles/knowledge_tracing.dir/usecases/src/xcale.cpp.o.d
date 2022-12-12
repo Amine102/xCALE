@@ -1532,9 +1532,10 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o: \
  /usr/include/c++/7/chrono /usr/include/c++/7/ratio \
  /usr/include/c++/7/bits/parse_numbers.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/exercise.h \
+ /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/BKTParam.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/scale.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/skill.h \
- /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/student.h \
+ /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/learner.h \
  /usr/include/c++/7/experimental/filesystem \
  /usr/include/c++/7/experimental/bits/fs_fwd.h \
  /usr/include/c++/7/experimental/bits/fs_path.h \
@@ -1544,4 +1545,10 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/xcale.cpp.o: \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/genericBKTModel.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/exercisesEvaluations.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/types.h \
- /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/resultStorage.h
+ /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/resultStorage.h \
+ /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/autolink.h \
+ /usr/include/jsoncpp/json/config.h /usr/include/jsoncpp/json/version.h \
+ /usr/include/jsoncpp/json/value.h /usr/include/jsoncpp/json/forwards.h \
+ /usr/include/jsoncpp/json/reader.h /usr/include/jsoncpp/json/features.h \
+ /usr/include/jsoncpp/json/writer.h \
+ /home/amine102/projects/KnowledgeTracing/usecases/src/../include/serialize_deserialize.h

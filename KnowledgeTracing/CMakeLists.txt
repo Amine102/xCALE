@@ -24,7 +24,7 @@ ENDIF()
 # deprecated folder is not compiled, but feel free to add it to the list
 SET (APP_SRC usecases/main.cpp
         core/src/genericBKTModel.cpp
-        core/src/student.cpp
+        core/src/learner.cpp
         core/src/exercise.cpp
         core/src/tools.cpp
         core/src/BKTParam.cpp

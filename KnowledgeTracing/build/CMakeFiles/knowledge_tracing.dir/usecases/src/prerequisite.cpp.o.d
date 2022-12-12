@@ -295,7 +295,7 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.o: \
  /usr/include/probt/plKMeans.h \
  /usr/include/probt/plConcurrentHmmSetLearner.h \
  /usr/include/probt/plBackwardCompatibilityV23.h \
- /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/student.h \
+ /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/learner.h \
  /usr/include/c++/7/random /usr/include/c++/7/bits/random.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/opt_random.h \
  /usr/include/c++/7/bits/random.tcc /usr/include/c++/7/numeric \
@@ -1539,4 +1539,9 @@ CMakeFiles/knowledge_tracing.dir/usecases/src/prerequisite.cpp.o: \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/exercise.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/exercisesEvaluations.h \
  /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/types.h \
- /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/resultStorage.h
+ /home/amine102/projects/KnowledgeTracing/usecases/src/../include/../../core/include/resultStorage.h \
+ /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/autolink.h \
+ /usr/include/jsoncpp/json/config.h /usr/include/jsoncpp/json/version.h \
+ /usr/include/jsoncpp/json/value.h /usr/include/jsoncpp/json/forwards.h \
+ /usr/include/jsoncpp/json/reader.h /usr/include/jsoncpp/json/features.h \
+ /usr/include/jsoncpp/json/writer.h
